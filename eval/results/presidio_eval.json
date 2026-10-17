@@ -1,0 +1,86 @@
+{
+  "analyzer": "Presidio + spaCy en_core_web_sm; structured baseline at Presidio default threshold 0.0, semantic (tier 2) at 0.5",
+  "ai4privacy_500": {
+    "per_type": {
+      "LOCATION": {
+        "recall": 0.21,
+        "hits": 81,
+        "n": 386
+      },
+      "PERSON": {
+        "recall": 0.385,
+        "hits": 271,
+        "n": 704
+      },
+      "card": {
+        "recall": 0.108,
+        "hits": 4,
+        "n": 37
+      },
+      "date": {
+        "recall": 0.825,
+        "hits": 146,
+        "n": 177
+      },
+      "email": {
+        "recall": 0.935,
+        "hits": 200,
+        "n": 214
+      },
+      "phone_us": {
+        "recall": 0.399,
+        "hits": 79,
+        "n": 198
+      },
+      "ssn": {
+        "recall": 0.703,
+        "hits": 90,
+        "n": 128
+      }
+    },
+    "refusal_rate_in_scope": 0.975,
+    "false_refusal_rate_scrubbed": 0.348
+  },
+  "synth_500": {
+    "per_type": {
+      "PERSON": {
+        "recall": 0.897,
+        "hits": 426,
+        "n": 475
+      },
+      "card": {
+        "recall": 0.72,
+        "hits": 36,
+        "n": 50
+      },
+      "date": {
+        "recall": 1.0,
+        "hits": 225,
+        "n": 225
+      },
+      "email": {
+        "recall": 0.821,
+        "hits": 349,
+        "n": 425
+      },
+      "ipv4": {
+        "recall": 1.0,
+        "hits": 125,
+        "n": 125
+      },
+      "phone_us": {
+        "recall": 0.86,
+        "hits": 301,
+        "n": 350
+      },
+      "ssn": {
+        "recall": 1.0,
+        "hits": 325,
+        "n": 325
+      }
+    },
+    "refusal_rate_in_scope": 0.996,
+    "false_refusal_rate_scrubbed": 0.23
+  },
+  "seconds": 34.6
+}

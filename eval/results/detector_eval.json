@@ -1,0 +1,152 @@
+{
+  "ai4privacy_500": {
+    "per_type": {
+      "card": {
+        "recall": 0.216,
+        "hits": 8,
+        "n": 37,
+        "miss_examples": [
+          "6225427220412963",
+          "3640488653791651",
+          "344114832221482",
+          "3668278215464178",
+          "3587644055702407",
+          "8169200007361980",
+          "3862645848877651",
+          "6274139704818244"
+        ]
+      },
+      "date": {
+        "recall": 0.39,
+        "hits": 69,
+        "n": 177,
+        "miss_examples": [
+          "May/58",
+          "1960-08-01T00:00:00",
+          "August/72",
+          "8th January 1999",
+          "15th January 2020",
+          "January/12",
+          "1965-01-12T00:00:00",
+          "July 21st, 1998"
+        ]
+      },
+      "email": {
+        "recall": 0.991,
+        "hits": 212,
+        "n": 214,
+        "miss_examples": [
+          "1953\u00c1@outlook.com",
+          "christhard.rh\u00f4n\u00e9@gmail.com"
+        ]
+      },
+      "phone_us": {
+        "recall": 0.333,
+        "hits": 66,
+        "n": 198,
+        "miss_examples": [
+          "034.5324.2943",
+          "+12-66-414-3121",
+          "+4418568 5356",
+          "+69-07-706 4715",
+          "0137-79-112-7025",
+          "+2 08-348.3608",
+          "+18 93-764 5097",
+          "+245-66-907.2882"
+        ]
+      },
+      "ssn": {
+        "recall": 0.727,
+        "hits": 93,
+        "n": 128,
+        "miss_examples": [
+          "318 667 0376",
+          "4453378174",
+          "551 960 5055",
+          "228.463.8330",
+          "526.213.5169",
+          "8843128314",
+          "212.660.3985",
+          "72676 32249"
+        ]
+      }
+    },
+    "records": 500,
+    "records_with_in_scope_pii": 446,
+    "refusal_rate_in_scope": 0.85,
+    "false_refusal_rate_scrubbed": 0.226,
+    "max_len_bytes": 480
+  },
+  "synth_500": {
+    "per_type": {
+      "card": {
+        "recall": 1.0,
+        "hits": 50,
+        "n": 50,
+        "miss_examples": []
+      },
+      "date": {
+        "recall": 0.671,
+        "hits": 151,
+        "n": 225,
+        "miss_examples": [
+          "May 29, 1998",
+          "born on the 7th of March 1988",
+          "November 25, 2005",
+          "born on the 31th of December 1969",
+          "August 2, 2000",
+          "born on the 18th of February 1944",
+          "August 27, 1999",
+          "born on the 4th of April 1963"
+        ]
+      },
+      "email": {
+        "recall": 0.821,
+        "hits": 349,
+        "n": 425,
+        "miss_examples": [
+          "shinton AT hospital DOT org",
+          "andrewgray AT gmail DOT com",
+          "curtis62 AT gmail DOT com",
+          "kjones AT corp DOT com",
+          "jacobwilkinson AT gmail DOT com",
+          "mckenzie86 AT hospital DOT org",
+          "xwalters AT yahoo DOT com",
+          "huangcassandra AT gmail DOT com"
+        ]
+      },
+      "ipv4": {
+        "recall": 1.0,
+        "hits": 125,
+        "n": 125,
+        "miss_examples": []
+      },
+      "phone_us": {
+        "recall": 0.843,
+        "hits": 295,
+        "n": 350,
+        "miss_examples": [
+          "+44 7894 302408",
+          "+44 7723 750275",
+          "+44 7698 588614",
+          "+44 7723 587104",
+          "+44 7961 873213",
+          "+44 7391 797796",
+          "+44 7810 602304",
+          "+44 7155 292630"
+        ]
+      },
+      "ssn": {
+        "recall": 1.0,
+        "hits": 325,
+        "n": 325,
+        "miss_examples": []
+      }
+    },
+    "records": 500,
+    "records_with_in_scope_pii": 500,
+    "refusal_rate_in_scope": 1.0,
+    "false_refusal_rate_scrubbed": 0.0,
+    "max_len_bytes": 357
+  }
+}

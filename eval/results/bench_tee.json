@@ -1,0 +1,12 @@
+{
+  "N": 256,
+  "gates": 216041,
+  "runs": 10,
+  "ner_s": 0.007,
+  "sign_s": 0.0009,
+  "witness_s": 0.215,
+  "prove_s": 0.767,
+  "verify_s": 0.011,
+  "proof_bytes": 14656,
+  "prove_peak_mib": 432.0
+}

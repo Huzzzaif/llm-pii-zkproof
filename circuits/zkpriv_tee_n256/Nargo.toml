@@ -1,0 +1,6 @@
+[package]
+name = "zkpriv_tee_n256"
+type = "bin"
+authors = ["Huzaif Khan"]
+
+[dependencies]

@@ -1,0 +1,6 @@
+[package]
+name = "digest_n256"
+type = "bin"
+authors = ["Huzaif Khan"]
+
+[dependencies]

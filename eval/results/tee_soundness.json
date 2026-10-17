@@ -1,0 +1,30 @@
+{
+  "all_refused": true,
+  "cases": [
+    {
+      "case": "honest labels, names forbidden",
+      "outcome": "refused",
+      "reason": "error: Assertion failed: policy violation: semantic"
+    },
+    {
+      "case": "provider zeroes the labels",
+      "outcome": "refused",
+      "reason": "error: Assertion failed: bad enclave signature"
+    },
+    {
+      "case": "signature bit flipped",
+      "outcome": "refused",
+      "reason": "error: Assertion failed: bad enclave signature"
+    },
+    {
+      "case": "verification key of another enclave",
+      "outcome": "refused",
+      "reason": "error: Assertion failed: bad enclave signature"
+    },
+    {
+      "case": "attestation reused for another response",
+      "outcome": "refused",
+      "reason": "error: Assertion failed: bad enclave signature"
+    }
+  ]
+}
