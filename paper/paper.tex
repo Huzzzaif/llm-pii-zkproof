@@ -146,7 +146,7 @@ Card numbers are 12--19 digits (ISO/IEC 7812; Maestro cards may have 12), option
   S_0' = d + S_1,\qquad S_1' = \mathrm{dbl}(d) + S_0 \pmod{10},
   \label{eq:luhn}
 \end{equation}
-with $\mathrm{dbl}(d) = 2d - 9[d \ge 5]$. A run ending at a non-alphanumeric byte with $12 \le k \le 19$ and $S_0 \equiv 0$ is a card. The automaton has states $(k, S_0, S_1, \text{after-separator})$ plus idle, in-word and too-long states, which minimizes to a few thousand states (Table~\ref{tab:gates}).
+with $\mathrm{dbl}(d) = 2d - 9[d \ge 5]$. A run ending at a non-alphanumeric byte with $12 \le k \le 19$ and $S_0 \equiv 0$ is a card. The automaton has states $(k, S_0, S_1, \text{after-separator})$ plus idle, in-word and too-long states, which minimizes to a few thousand states (Fig.~\ref{fig:cost}).
 
 \subsection{The Circuit}
 
@@ -174,93 +174,61 @@ Because the digest contains $\mathit{com}$, labels signed for one response canno
 \label{sec:eval}
 % ════════════════════════════════════════════════════
 
-\textbf{Setup.} We implement the detector compiler in Python and generate the Noir circuit from it (Noir \nargoVer{}, Barretenberg \bbVer{}, zero-knowledge UltraHonk with a Poseidon2 transcript). Measurements use one Apple \hwName{} with 24\,GB of memory, CPU only. Each configuration is proved \benchRuns{} times; we report medians. The verification key is computed once per circuit and excluded from proving time.
-
-\subsection{Correctness of the Circuit}
-
-Each compiled DFA was tested against an independent implementation written with Python's \texttt{re} module (and a direct Luhn implementation for cards) on 200{,}000 random strings seeded with PII-like fragments: all 1.2 million detector decisions agree. The compiled Noir circuit, run through witness generation, refuses exactly the inputs the reference flags on \agreeOk{}/\agreeCases{} test inputs. Differential testing exposed one boundary bug during development (an e-mail address at the end of a sentence was missed), which we fixed before all reported measurements.
-
-\subsection{Cost}
+\textbf{Setup.} We implement the detector compiler in Python and generate the Noir circuit from it (Noir \nargoVer{}, Barretenberg \bbVer{}, zero-knowledge UltraHonk with a Poseidon2 transcript). Measurements use one Apple \hwName{} with 24\,GB of memory, CPU only. Each configuration is proved \benchRuns{} times; we report medians. The verification key is computed once per circuit and excluded from proving time. Table~\ref{tab:headline} summarizes the four results; the subsections give the detail.
 
 \begin{table}[t]
-\caption{Circuit size at $N=256$: base circuit and gates added by each detector alone.}
-\label{tab:gates}
-\centering\small
-\begin{tabular}{lr}
-\toprule
-Component & UltraHonk gates \\
-\midrule
-Base: P1, P2, P4 (no detectors) & \gatesBdNone{} \\
-+ SSN & \gatesIncSsn{} \\
-+ E-mail & \gatesIncEmail{} \\
-+ US phone & \gatesIncPhoneus{} \\
-+ IPv4 & \gatesIncIpvfour{} \\
-+ Numeric date & \gatesIncDate{} \\
-+ Payment card (Luhn) & \gatesIncCard{} \\
-\midrule
-All six detectors & \gatesBdAll{} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[t]
-\caption{Cost by response capacity $N$, all six detectors; median of \benchRuns{} runs on an Apple \hwName{} CPU. Proof size is \proofKBTwoFiftySix{}\,KiB throughout.}
-\label{tab:scaling}
-\centering\footnotesize
-\setlength{\tabcolsep}{3.5pt}
-\begin{tabular}{rrrrrr}
-\toprule
-$N$ (B) & Gates & Wit.\,(s) & Prove\,(s) & Verify\,(ms) & MiB \\
-\midrule
-64   & \gatesSixtyFour{}      & \witnessSixtyFour{}      & \proveSixtyFour{}      & \verifySixtyFour{}      & \memSixtyFour{} \\
-128  & \gatesOneTwentyEight{} & \witnessOneTwentyEight{} & \proveOneTwentyEight{} & \verifyOneTwentyEight{} & \memOneTwentyEight{} \\
-256  & \gatesTwoFiftySix{}    & \witnessTwoFiftySix{}    & \proveTwoFiftySix{}    & \verifyTwoFiftySix{}    & \memTwoFiftySix{} \\
-512  & \gatesFiveTwelve{}     & \witnessFiveTwelve{}     & \proveFiveTwelve{}     & \verifyFiveTwelve{}     & \memFiveTwelve{} \\
-1024 & \gatesTenTwentyFour{}  & \witnessTenTwentyFour{}  & \proveTenTwentyFour{}  & \verifyTenTwentyFour{}  & \memTenTwentyFour{} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Table~\ref{tab:gates} breaks down the circuit at $N=256$. Five detectors each add about 5.5--6.5\,k gates. The card detector adds \gatesIncCard{}, almost all of it the one-time cost of committing its transition table, whose Luhn state space makes it two orders of magnitude larger than the others. Table~\ref{tab:scaling} shows that cost grows slowly with the response capacity: from $N=64$ to $N=1024$ the circuit grows by about 114 gates per byte for all six detectors together, and proving time rises from \proveSixtyFour{}\,s to \proveTenTwentyFour{}\,s. Verification stays at about \verifyTwoFiftySix{}\,ms and proofs are \proofKBTwoFiftySix{}\,KiB at every size. A 1\,KB response is therefore certified in under a second on a laptop CPU, which is small compared with the time an LLM takes to generate it. For comparison, published correctness proofs for GPT-2 inference take tens of seconds and produce proofs of about 100\,KB~\cite{qu2025zkgpt}. \sys{} certifies a different property and can be composed with such a proof through the shared output commitment.
-
-\subsection{Detection}
-
-\begin{table}[t]
-\caption{Per-value recall: \sys{} (in-circuit detectors and, for names and places, tier-2 NER) vs.\ Presidio on the same records. Other annotated values in each record are masked so that each value is tested alone.}
-\label{tab:detect}
+\caption{Four headline results (Apple \hwName{} CPU, $N=256$ unless stated).}
+\label{tab:headline}
 \centering\footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{lrrrr}
+\begin{tabular}{@{}p{0.31\columnwidth}p{0.64\columnwidth}@{}}
 \toprule
- & \multicolumn{2}{c}{ai4privacy (500)} & \multicolumn{2}{c}{Synthetic US (500)} \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-5}
-Type & \sys{} & Presidio & \sys{} & Presidio \\
+\textbf{R1. Correct and unforgeable} & 1.2\,M of 1.2\,M automaton decisions match an independent reference; circuit agrees on \agreeOk{}/\agreeCases{} inputs; \teeAttacksRefused{}/\teeAttacks{} label forgeries refused. \\
 \midrule
-SSN        & \recAiSsn{}     & \presAiSsn{}     & \recSynSsn{}     & \presSynSsn{} \\
-E-mail     & \recAiEmail{}   & \presAiEmail{}   & \recSynEmail{}   & \presSynEmail{} \\
-US phone   & \recAiPhoneus{} & \presAiPhoneus{} & \recSynPhoneus{} & \presSynPhoneus{} \\
-IPv4       & ---             & ---              & \recSynIpvfour{} & \presSynIpvfour{} \\
-Date       & \recAiDate{}    & \presAiDate{}    & \recSynDate{}    & \presSynDate{} \\
-Card       & \recAiCard{}    & \presAiCard{}    & \recSynCard{}    & \presSynCard{} \\
+\textbf{R2. Fast enough to attach to every response} & Prove \proveTwoFiftySix{}\,s, verify \verifyTwoFiftySix{}\,ms, proof \proofKBTwoFiftySix{}\,KiB; under 1\,s up to 1\,KB; \teeProve{}\,s with tier 2. \\
 \midrule
-Name (tier 2)  & \multicolumn{2}{c}{\presAiPerson{}} & \multicolumn{2}{c}{\presSynPerson{}} \\
-Place (tier 2) & \multicolumn{2}{c}{\presAiLocation{}} & \multicolumn{2}{c}{---} \\
+\textbf{R3. Fewer misses and less over-blocking than Presidio} & Cards \recSynCard{} vs.\ \presSynCard{}; refused after PII removed \falseRefusalSyn{} vs.\ \presFalseRefusalSyn{} (synthetic). \\
 \midrule
-Refused, has PII     & \refusalAi{}      & \presRefusalAi{}      & \refusalSyn{}      & \presRefusalSyn{} \\
-Refused, PII removed & \falseRefusalAi{} & \presFalseRefusalAi{} & \falseRefusalSyn{} & \presFalseRefusalSyn{} \\
+\textbf{R4. Stops real LLM leaks} & \llmRefused{}/\llmWithPii{} leaking \llmModel{} responses refused; \llmBenignRefused{}/\llmBenign{} benign answers refused. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:detect} reports detection on 500 English records of \texttt{ai4privacy/pii-masking-400k}~\cite{ai4privacy} and on a 500-record synthetic corpus of US-format PII in four domains. On US formats the detectors find every SSN and IPv4 address; missed e-mail addresses are deliberately obfuscated (``name AT host DOT com''), and missed phone numbers are UK numbers outside the US pattern. On ai4privacy most misses are formats the detectors do not express: non-US phone numbers, ten-digit ``social numbers'', written dates such as ``May/58'', and randomly generated card numbers that fail the Luhn check. After every annotated value is removed, \falseRefusalAi{} of ai4privacy records still trigger a detector; inspection shows that most of these contain unannotated identifiers (passport, account and card-like numbers) or non-birth dates, which a strict policy blocks by design. The policy mask allows deployments to disable the date detector where dates are benign.
+\subsection{R1: The Circuit Is Correct and Labels Cannot Be Forged}
+
+Each compiled DFA was tested against an independent implementation written with Python's \texttt{re} module (and a direct Luhn implementation for cards) on 200{,}000 random strings seeded with PII-like fragments: all 1.2 million detector decisions agree. The compiled Noir circuit, run through witness generation, refuses exactly the inputs the reference flags on \agreeOk{}/\agreeCases{} test inputs. Differential testing exposed one boundary bug during development (an e-mail address at the end of a sentence was missed), which we fixed before all reported measurements. For tier 2 we tried \teeAttacks{} forgeries---zeroing the labels, flipping one signature bit, using another enclave's key, and reusing a valid attestation for a different response---and the circuit refused all \teeAttacksRefused{}. Our enclave is simulated: the code and keys are real, but hardware attestation is not reproduced.
+
+\subsection{R2: Cost}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figs/cost.pdf}
+\caption{Cost. (a) Median proving time over \benchRuns{} runs (shaded: interquartile range) for tier 1 and, at $N=256$, tiers 1+2; verification is about \verifyTwoFiftySix{}\,ms and proofs \proofKBTwoFiftySix{}\,KiB at every size. (b) Gates each component adds at $N=256$.}
+\label{fig:cost}
+\end{figure}
+
+
+
+
+
+Fig.~\ref{fig:cost}(b) breaks down the circuit at $N=256$ (\gatesTwoFiftySix{} gates in total). Five detectors each add about 5.5--6.5\,k gates. The card detector adds \gatesIncCard{}, almost all of it the one-time cost of committing its transition table, whose Luhn state space makes it two orders of magnitude larger than the others. Fig.~\ref{fig:cost}(a) shows that cost grows slowly with the response capacity: from $N=64$ to $N=1024$ the circuit grows by about 114 gates per byte for all six detectors together, and proving time rises from \proveSixtyFour{}\,s to \proveTenTwentyFour{}\,s. Verification stays at about \verifyTwoFiftySix{}\,ms and proofs are \proofKBTwoFiftySix{}\,KiB at every size. At $N=1024$ the circuit has \gatesTenTwentyFour{} gates and peak memory is \memTenTwentyFour{}\,MiB. A 1\,KB response is therefore certified in under a second on a laptop CPU, which is small compared with the time an LLM takes to generate it. For comparison, published correctness proofs for GPT-2 inference take tens of seconds and produce proofs of about 100\,KB~\cite{qu2025zkgpt}. \sys{} certifies a different property and can be composed with such a proof through the shared output commitment. Adding tier 2 brings the circuit to \teeGates{} gates (\teeExtraGates{} for ECDSA verification and the label digest) and proving to \teeProve{}\,s; in the enclave, NER takes a median \teeNerMs{}\,ms per response once the model is loaded and signing \teeSignMs{}\,ms.
+
+\subsection{R3: Detection Compared with Presidio}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/detection.pdf}
+\caption{Detection on the same records with the same protocol (other annotated values masked so each value is tested alone). (a, b) Per-value recall of \sys{}'s in-circuit detectors and of Presidio. (c) Records still refused after every annotated PII value is removed; lower is better.}
+\label{fig:detect}
+\end{figure*}
+
+
+
+Fig.~\ref{fig:detect} reports detection on 500 English records of \texttt{ai4privacy/pii-masking-400k}~\cite{ai4privacy} and on a 500-record synthetic corpus of US-format PII in four domains. On US formats the detectors find every SSN and IPv4 address; missed e-mail addresses are deliberately obfuscated (``name AT host DOT com''), and missed phone numbers are UK numbers outside the US pattern. On ai4privacy most misses are formats the detectors do not express: non-US phone numbers, ten-digit ``social numbers'', written dates such as ``May/58'', and randomly generated card numbers that fail the Luhn check. After every annotated value is removed, \falseRefusalAi{} of ai4privacy records still trigger a detector; inspection shows that most of these contain unannotated identifiers (passport, account and card-like numbers) or non-birth dates, which a strict policy blocks by design. The policy mask allows deployments to disable the date detector where dates are benign. Records that do contain in-scope PII are refused in \refusalSyn{} (synthetic) and \refusalAi{} (ai4privacy) of cases, against \presRefusalSyn{} and \presRefusalAi{} for Presidio.
 
 \textbf{Comparison with Presidio.} Presidio~\cite{presidio} (spaCy \texttt{en\_core\_web\_sm}, default threshold) is the detector a provider would most likely run outside a proof. On the same records and protocol, \sys{}'s in-circuit detectors match it on SSNs and e-mail and find more payment cards (\recSynCard{} vs.\ \presSynCard{} on synthetic data), because the Luhn automaton accepts 12--19-digit numbers with separators. Presidio is better on dates, which it also recognizes in written form, and on international phone numbers. Its main cost is over-blocking: after all labelled PII is removed it still flags \presFalseRefusalSyn{} of synthetic and \presFalseRefusalAi{} of ai4privacy records, against \falseRefusalSyn{} and \falseRefusalAi{} for \sys{}. Name and place recall, which tier 2 obtains from the same NER model, is high on clean synthetic text (\presSynPerson{}) but low on ai4privacy (\presAiPerson{} and \presAiLocation{}), whose ``names'' are often username-like strings; a stronger NER model can replace the small spaCy model without changing the circuit.
 
-\subsection{Tier 2: Cost and Forgery Resistance}
-
-Adding signed semantic labels increases the circuit at $N=256$ from \gatesTwoFiftySix{} to \teeGates{} gates (\teeExtraGates{} for ECDSA verification and the label digest), proving time from \proveTwoFiftySix{}\,s to \teeProve{}\,s and verification to \teeVerify{}\,ms, with the same proof size. In the enclave, NER takes a median \teeNerMs{}\,ms per response once the model is loaded and signing \teeSignMs{}\,ms. Our enclave is simulated: the code and keys are real, but we do not reproduce hardware attestation. We tested \teeAttacks{} forgery attempts---zeroing the labels, flipping one signature bit, using another enclave's key, and reusing a valid attestation for a different response---and the circuit refused all \teeAttacksRefused{}.
-
-\subsection{Real LLM Outputs}
+\subsection{R4: Real LLM Outputs}
 
 We gave \llmModel{} (Ollama, temperature 0) a synthetic customer record and asked it either to list the record's identifiers or to draft a reply confirming the contact details on file, plus one general question without a record, for \llmResponses{} responses in total (median \llmMedianBytes{} bytes, maximum \llmMaxBytes{}). \llmWithPii{} responses reproduced at least one identifier verbatim; \sys{} refused \llmRefused{} of them, so no receipt could be produced. It refused \llmBenignRefused{} of \llmBenign{} general answers. The model declined to list identifiers in most cases, which is why few responses contain PII. Counted per value, the detectors caught every reproduced SSN (\llmCaughtSsn{}), IPv4 address (\llmCaughtIpvfour{}) and card number (\llmCaughtCard{}); the uncaught values were written-out dates, a UK phone number and e-mail addresses the record itself spelled as ``name AT host DOT com''. Each of those responses was still refused because it contained another detectable identifier. Inspecting these outputs also revealed that our first card detector required 13 digits and missed 12-digit Maestro numbers; we widened the range to 12--19 and re-ran all experiments.
 
