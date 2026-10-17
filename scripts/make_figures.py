@@ -96,32 +96,31 @@ NUDGE = {"zkpriv_std": (4, -9), "zkpriv_strict": (4, 3), "zkpriv_std_t2": (4, -9
          "presidio": (-4, 4), "presidio_rx": (4, -9), "spacy_ner": (-4, 4), "llm": (4, 3)}
 
 
-def scatter(ax, ds, metric, title, show_t1=True):
+def scatter(ax, ds, metric, title):
     d = cmp[ds]
     for key, lab, col, mk, filled in SYS:
-        if key not in d or (not show_t1 and key in ("zkpriv_std", "zkpriv_strict")):
+        if key not in d:
             continue
         x, y = 100 * d[key]["over_blocking"], d[key][metric]
         ax.plot([x], [y], ls="none", marker=mk, ms=6.5 if mk != "*" else 9, mfc=col if filled else "white",
-                mec=col, mew=1.3, zorder=3)
-        dx, dy = NUDGE[key]
-        ax.annotate(lab, (x, y), xytext=(dx, dy), textcoords="offset points", fontsize=6, color=INK,
-                    ha="left" if dx > 0 else "right")
-    ax.set_xlim(-4, 104)
-    ax.set_xlabel("Over-blocking: records refused after PII removed (%)")
+                mec=col, mew=1.4, zorder=3, label=lab)
+    ax.set_xlim(-5, 100)
     ax.set_title(title, loc="left")
-    ax.annotate("better", xy=(4, 0.97), xytext=(26, 0.80), fontsize=6.5, color=MUTED,
-                arrowprops=dict(arrowstyle="->", color=MUTED, lw=0.8))
+    ax.text(0.97, 0.04, "better: up and left", transform=ax.transAxes, fontsize=6, color=MUTED, ha="right")
     grid(ax, "both")
 
 
-fig, axes = plt.subplots(1, 3, figsize=(PAGE_W, 2.3), gridspec_kw={"wspace": 0.28})
+fig, axes = plt.subplots(1, 3, figsize=(PAGE_W, 2.15), gridspec_kw={"wspace": 0.22})
 scatter(axes[0], "ai4privacy_test_500", "structured_recall", "(a) Structured PII, ai4privacy")
 scatter(axes[1], "synth_test_500", "structured_recall", "(b) Structured PII, synthetic US")
-scatter(axes[2], "ai4privacy_test_500", "all_recall", "(c) All PII incl. names and places, ai4privacy")
-axes[0].set_ylabel("Recall (held-out test set)")
+scatter(axes[2], "ai4privacy_test_500", "all_recall", "(c) All PII incl. names, places, ai4privacy")
+axes[0].set_ylabel("Recall (held-out test)")
 for ax in axes:
-    ax.set_ylim(0.2, 1.03)
+    ax.set_ylim(0.05, 1.04)
+fig.supxlabel("Over-blocking: records still refused after all PII is removed (%)", fontsize=7.5, y=-0.06)
+h, l = axes[0].get_legend_handles_labels()
+fig.legend(h, l, frameon=False, loc="upper center", ncol=8, bbox_to_anchor=(0.5, 1.1), handletextpad=0.3,
+           columnspacing=1.1, fontsize=6.5)
 fig.savefig(OUT / "detection.pdf")
 plt.close(fig)
 print("wrote", sorted(p.name for p in OUT.glob("*.pdf")))

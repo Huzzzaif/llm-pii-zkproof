@@ -59,7 +59,9 @@ def scaling(ns=(64, 128, 256, 512, 1024)):
 
 def breakdown(n=256):
     out = {}
-    for tag, dets in [("none", "")] + [(d, d) for d in ["ssn", "email", "phone_us", "ipv4", "date", "card"]]:
+    sys.path.insert(0, str(ROOT / "circuits" / "gen"))
+    from gen_noir import ORDER
+    for tag, dets in [("none", "")] + [(d, d) for d in ORDER]:
         subprocess.run([sys.executable, str(GEN), str(n), dets], check=True, capture_output=True)
         cdir = ROOT / "circuits" / "variants" / f"n{n}_{tag}"
         out[tag] = gates(cdir)
@@ -69,13 +71,43 @@ def breakdown(n=256):
     return out
 
 
+def throughput(n=256, total=24, workers=(1, 2, 4, 8)):
+    """Proofs per second with k independent provers in parallel (separate circuit copies)."""
+    import shutil
+    import time
+    from concurrent.futures import ThreadPoolExecutor
+    subprocess.run([sys.executable, str(GEN), str(n)], check=True, capture_output=True)
+    base = prover.circuit_dir(n)
+    gates(base)
+    text = (CLEAN * 3)[: int(n * 0.9)]
+    prover.run(text, n)  # warm the cached verification key
+    copies = []
+    for i in range(max(workers)):
+        d = ROOT / "circuits" / "variants" / f"tp_{i}"
+        shutil.rmtree(d, ignore_errors=True)
+        shutil.copytree(base, d)
+        copies.append(d)
+    out = {}
+    for k in workers:
+        def job(i):
+            return prover.run(text, n, cdir=copies[i % k])
+        t0 = time.perf_counter()
+        with ThreadPoolExecutor(k) as ex:
+            res = list(ex.map(job, range(total)))
+        dt = time.perf_counter() - t0
+        assert all(r["outcome"] == "verified" for r in res), res[:2]
+        out[str(k)] = {"proofs": total, "seconds": round(dt, 2), "proofs_per_s": round(total / dt, 2)}
+        print("throughput", k, out[str(k)], flush=True)
+    return out
+
+
 if __name__ == "__main__":
     import platform
     hw = subprocess.run(["sysctl", "-n", "machdep.cpu.brand_string"], capture_output=True, text=True).stdout.strip()
     res = {"hardware": hw, "macos": platform.mac_ver()[0], "runs": RUNS,
            "nargo": subprocess.run(["nargo", "--version"], capture_output=True, text=True).stdout.splitlines()[0],
            "bb": subprocess.run(["bb", "--version"], capture_output=True, text=True).stdout.strip(),
-           "breakdown_n256": breakdown(), "scaling": scaling()}
+           "breakdown_n256": breakdown(), "scaling": scaling(), "throughput_n256": throughput()}
     (ROOT / "eval/results").mkdir(exist_ok=True)
     (ROOT / "eval/results/bench.json").write_text(json.dumps(res, indent=2))
     print("wrote eval/results/bench.json")

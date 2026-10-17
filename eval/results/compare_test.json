@@ -1,0 +1,1526 @@
+{
+  "ai4privacy_test_500": {
+    "zkpriv_std": {
+      "per_group": {
+        "E-mail": {
+          "recall": 0.984,
+          "hits": 62,
+          "n": 63,
+          "ci95": [
+            0.915,
+            0.997
+          ]
+        },
+        "Place": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 132,
+          "ci95": [
+            0.0,
+            0.028
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.83,
+          "hits": 39,
+          "n": 47,
+          "ci95": [
+            0.699,
+            0.911
+          ]
+        },
+        "Name": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 222,
+          "ci95": [
+            -0.0,
+            0.017
+          ]
+        },
+        "Phone": {
+          "recall": 0.984,
+          "hits": 60,
+          "n": 61,
+          "ci95": [
+            0.913,
+            0.997
+          ]
+        },
+        "Other ID": {
+          "recall": 0.644,
+          "hits": 67,
+          "n": 104,
+          "ci95": [
+            0.549,
+            0.73
+          ]
+        },
+        "Card": {
+          "recall": 1.0,
+          "hits": 20,
+          "n": 20,
+          "ci95": [
+            0.839,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.467,
+          "hits": 14,
+          "n": 30,
+          "ci95": [
+            0.302,
+            0.639
+          ]
+        }
+      },
+      "structured_recall": 0.882,
+      "structured_ci95": [
+        0.833,
+        0.918
+      ],
+      "structured_n": 221,
+      "all_recall": 0.386,
+      "all_ci95": [
+        0.35,
+        0.423
+      ],
+      "all_n": 679,
+      "refusal_with_structured_pii": 0.917,
+      "over_blocking": 0.22,
+      "over_blocking_ci95": [
+        0.186,
+        0.258
+      ],
+      "records": 500
+    },
+    "zkpriv_strict": {
+      "per_group": {
+        "E-mail": {
+          "recall": 0.984,
+          "hits": 62,
+          "n": 63,
+          "ci95": [
+            0.915,
+            0.997
+          ]
+        },
+        "Place": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 132,
+          "ci95": [
+            0.0,
+            0.028
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.83,
+          "hits": 39,
+          "n": 47,
+          "ci95": [
+            0.699,
+            0.911
+          ]
+        },
+        "Name": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 222,
+          "ci95": [
+            -0.0,
+            0.017
+          ]
+        },
+        "Phone": {
+          "recall": 0.984,
+          "hits": 60,
+          "n": 61,
+          "ci95": [
+            0.913,
+            0.997
+          ]
+        },
+        "Other ID": {
+          "recall": 0.644,
+          "hits": 67,
+          "n": 104,
+          "ci95": [
+            0.549,
+            0.73
+          ]
+        },
+        "Card": {
+          "recall": 1.0,
+          "hits": 20,
+          "n": 20,
+          "ci95": [
+            0.839,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 1.0,
+          "hits": 30,
+          "n": 30,
+          "ci95": [
+            0.886,
+            1.0
+          ]
+        }
+      },
+      "structured_recall": 0.955,
+      "structured_ci95": [
+        0.919,
+        0.975
+      ],
+      "structured_n": 221,
+      "all_recall": 0.409,
+      "all_ci95": [
+        0.373,
+        0.447
+      ],
+      "all_n": 679,
+      "refusal_with_structured_pii": 0.979,
+      "over_blocking": 0.336,
+      "over_blocking_ci95": [
+        0.296,
+        0.379
+      ],
+      "records": 500
+    },
+    "zkpriv_std_t2": {
+      "per_group": {
+        "E-mail": {
+          "recall": 0.984,
+          "hits": 62,
+          "n": 63,
+          "ci95": [
+            0.915,
+            0.997
+          ]
+        },
+        "Place": {
+          "recall": 0.515,
+          "hits": 68,
+          "n": 132,
+          "ci95": [
+            0.431,
+            0.599
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.83,
+          "hits": 39,
+          "n": 47,
+          "ci95": [
+            0.699,
+            0.911
+          ]
+        },
+        "Name": {
+          "recall": 0.541,
+          "hits": 120,
+          "n": 222,
+          "ci95": [
+            0.475,
+            0.605
+          ]
+        },
+        "Phone": {
+          "recall": 0.984,
+          "hits": 60,
+          "n": 61,
+          "ci95": [
+            0.913,
+            0.997
+          ]
+        },
+        "Other ID": {
+          "recall": 0.654,
+          "hits": 68,
+          "n": 104,
+          "ci95": [
+            0.558,
+            0.738
+          ]
+        },
+        "Card": {
+          "recall": 1.0,
+          "hits": 20,
+          "n": 20,
+          "ci95": [
+            0.839,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.467,
+          "hits": 14,
+          "n": 30,
+          "ci95": [
+            0.302,
+            0.639
+          ]
+        }
+      },
+      "structured_recall": 0.882,
+      "structured_ci95": [
+        0.833,
+        0.918
+      ],
+      "structured_n": 221,
+      "all_recall": 0.664,
+      "all_ci95": [
+        0.628,
+        0.699
+      ],
+      "all_n": 679,
+      "refusal_with_structured_pii": 0.953,
+      "over_blocking": 0.48,
+      "over_blocking_ci95": [
+        0.437,
+        0.524
+      ],
+      "records": 500
+    },
+    "zkpriv_strict_t2": {
+      "per_group": {
+        "E-mail": {
+          "recall": 0.984,
+          "hits": 62,
+          "n": 63,
+          "ci95": [
+            0.915,
+            0.997
+          ]
+        },
+        "Place": {
+          "recall": 0.515,
+          "hits": 68,
+          "n": 132,
+          "ci95": [
+            0.431,
+            0.599
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.83,
+          "hits": 39,
+          "n": 47,
+          "ci95": [
+            0.699,
+            0.911
+          ]
+        },
+        "Name": {
+          "recall": 0.541,
+          "hits": 120,
+          "n": 222,
+          "ci95": [
+            0.475,
+            0.605
+          ]
+        },
+        "Phone": {
+          "recall": 0.984,
+          "hits": 60,
+          "n": 61,
+          "ci95": [
+            0.913,
+            0.997
+          ]
+        },
+        "Other ID": {
+          "recall": 0.654,
+          "hits": 68,
+          "n": 104,
+          "ci95": [
+            0.558,
+            0.738
+          ]
+        },
+        "Card": {
+          "recall": 1.0,
+          "hits": 20,
+          "n": 20,
+          "ci95": [
+            0.839,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 1.0,
+          "hits": 30,
+          "n": 30,
+          "ci95": [
+            0.886,
+            1.0
+          ]
+        }
+      },
+      "structured_recall": 0.955,
+      "structured_ci95": [
+        0.919,
+        0.975
+      ],
+      "structured_n": 221,
+      "all_recall": 0.688,
+      "all_ci95": [
+        0.652,
+        0.721
+      ],
+      "all_n": 679,
+      "refusal_with_structured_pii": 0.99,
+      "over_blocking": 0.566,
+      "over_blocking_ci95": [
+        0.522,
+        0.609
+      ],
+      "records": 500
+    },
+    "presidio": {
+      "per_group": {
+        "E-mail": {
+          "recall": 1.0,
+          "hits": 63,
+          "n": 63,
+          "ci95": [
+            0.943,
+            1.0
+          ]
+        },
+        "Place": {
+          "recall": 0.682,
+          "hits": 90,
+          "n": 132,
+          "ci95": [
+            0.598,
+            0.755
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.979,
+          "hits": 46,
+          "n": 47,
+          "ci95": [
+            0.889,
+            0.996
+          ]
+        },
+        "Name": {
+          "recall": 0.703,
+          "hits": 156,
+          "n": 222,
+          "ci95": [
+            0.64,
+            0.759
+          ]
+        },
+        "Phone": {
+          "recall": 0.557,
+          "hits": 34,
+          "n": 61,
+          "ci95": [
+            0.433,
+            0.675
+          ]
+        },
+        "Other ID": {
+          "recall": 0.692,
+          "hits": 72,
+          "n": 104,
+          "ci95": [
+            0.598,
+            0.773
+          ]
+        },
+        "Card": {
+          "recall": 0.9,
+          "hits": 18,
+          "n": 20,
+          "ci95": [
+            0.699,
+            0.972
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.933,
+          "hits": 28,
+          "n": 30,
+          "ci95": [
+            0.787,
+            0.982
+          ]
+        }
+      },
+      "structured_recall": 0.855,
+      "structured_ci95": [
+        0.803,
+        0.896
+      ],
+      "structured_n": 221,
+      "all_recall": 0.747,
+      "all_ci95": [
+        0.713,
+        0.778
+      ],
+      "all_n": 679,
+      "refusal_with_structured_pii": 0.984,
+      "over_blocking": 0.818,
+      "over_blocking_ci95": [
+        0.782,
+        0.849
+      ],
+      "records": 500
+    },
+    "presidio_rx": {
+      "per_group": {
+        "E-mail": {
+          "recall": 1.0,
+          "hits": 63,
+          "n": 63,
+          "ci95": [
+            0.943,
+            1.0
+          ]
+        },
+        "Place": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 132,
+          "ci95": [
+            0.0,
+            0.028
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.957,
+          "hits": 45,
+          "n": 47,
+          "ci95": [
+            0.858,
+            0.988
+          ]
+        },
+        "Name": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 222,
+          "ci95": [
+            -0.0,
+            0.017
+          ]
+        },
+        "Phone": {
+          "recall": 0.426,
+          "hits": 26,
+          "n": 61,
+          "ci95": [
+            0.31,
+            0.551
+          ]
+        },
+        "Other ID": {
+          "recall": 0.567,
+          "hits": 59,
+          "n": 104,
+          "ci95": [
+            0.471,
+            0.658
+          ]
+        },
+        "Card": {
+          "recall": 0.8,
+          "hits": 16,
+          "n": 20,
+          "ci95": [
+            0.584,
+            0.919
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.333,
+          "hits": 10,
+          "n": 30,
+          "ci95": [
+            0.192,
+            0.512
+          ]
+        }
+      },
+      "structured_recall": 0.724,
+      "structured_ci95": [
+        0.662,
+        0.779
+      ],
+      "structured_n": 221,
+      "all_recall": 0.323,
+      "all_ci95": [
+        0.288,
+        0.359
+      ],
+      "all_n": 679,
+      "refusal_with_structured_pii": 0.876,
+      "over_blocking": 0.368,
+      "over_blocking_ci95": [
+        0.327,
+        0.411
+      ],
+      "records": 500
+    },
+    "spacy_ner": {
+      "per_group": {
+        "E-mail": {
+          "recall": 0.095,
+          "hits": 6,
+          "n": 63,
+          "ci95": [
+            0.044,
+            0.193
+          ]
+        },
+        "Place": {
+          "recall": 0.667,
+          "hits": 88,
+          "n": 132,
+          "ci95": [
+            0.583,
+            0.741
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.255,
+          "hits": 12,
+          "n": 47,
+          "ci95": [
+            0.153,
+            0.395
+          ]
+        },
+        "Name": {
+          "recall": 0.68,
+          "hits": 151,
+          "n": 222,
+          "ci95": [
+            0.616,
+            0.738
+          ]
+        },
+        "Phone": {
+          "recall": 0.197,
+          "hits": 12,
+          "n": 61,
+          "ci95": [
+            0.116,
+            0.313
+          ]
+        },
+        "Other ID": {
+          "recall": 0.423,
+          "hits": 44,
+          "n": 104,
+          "ci95": [
+            0.333,
+            0.519
+          ]
+        },
+        "Card": {
+          "recall": 0.65,
+          "hits": 13,
+          "n": 20,
+          "ci95": [
+            0.433,
+            0.819
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.7,
+          "hits": 21,
+          "n": 30,
+          "ci95": [
+            0.521,
+            0.833
+          ]
+        }
+      },
+      "structured_recall": 0.29,
+      "structured_ci95": [
+        0.234,
+        0.353
+      ],
+      "structured_n": 221,
+      "all_recall": 0.511,
+      "all_ci95": [
+        0.473,
+        0.548
+      ],
+      "all_n": 679,
+      "refusal_with_structured_pii": 0.891,
+      "over_blocking": 0.742,
+      "over_blocking_ci95": [
+        0.702,
+        0.778
+      ],
+      "records": 500
+    },
+    "llm": {
+      "per_group": {
+        "E-mail": {
+          "recall": 0.286,
+          "hits": 18,
+          "n": 63,
+          "ci95": [
+            0.189,
+            0.407
+          ]
+        },
+        "Place": {
+          "recall": 0.068,
+          "hits": 9,
+          "n": 132,
+          "ci95": [
+            0.036,
+            0.125
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.255,
+          "hits": 12,
+          "n": 47,
+          "ci95": [
+            0.153,
+            0.395
+          ]
+        },
+        "Name": {
+          "recall": 0.104,
+          "hits": 23,
+          "n": 222,
+          "ci95": [
+            0.07,
+            0.151
+          ]
+        },
+        "Phone": {
+          "recall": 0.131,
+          "hits": 8,
+          "n": 61,
+          "ci95": [
+            0.068,
+            0.238
+          ]
+        },
+        "Other ID": {
+          "recall": 0.058,
+          "hits": 6,
+          "n": 104,
+          "ci95": [
+            0.027,
+            0.12
+          ]
+        },
+        "Card": {
+          "recall": 0.15,
+          "hits": 3,
+          "n": 20,
+          "ci95": [
+            0.052,
+            0.36
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.167,
+          "hits": 5,
+          "n": 30,
+          "ci95": [
+            0.073,
+            0.336
+          ]
+        }
+      },
+      "structured_recall": 0.208,
+      "structured_ci95": [
+        0.16,
+        0.266
+      ],
+      "structured_n": 221,
+      "all_recall": 0.124,
+      "all_ci95": [
+        0.101,
+        0.151
+      ],
+      "all_n": 679,
+      "refusal_with_structured_pii": 0.155,
+      "over_blocking": 0.018,
+      "over_blocking_ci95": [
+        0.009,
+        0.034
+      ],
+      "records": 500
+    }
+  },
+  "synth_test_500": {
+    "zkpriv_std": {
+      "per_group": {
+        "Name": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 475,
+          "ci95": [
+            -0.0,
+            0.008
+          ]
+        },
+        "Phone": {
+          "recall": 1.0,
+          "hits": 350,
+          "n": 350,
+          "ci95": [
+            0.989,
+            1.0
+          ]
+        },
+        "E-mail": {
+          "recall": 1.0,
+          "hits": 425,
+          "n": 425,
+          "ci95": [
+            0.991,
+            1.0
+          ]
+        },
+        "Other ID": {
+          "recall": 1.0,
+          "hits": 400,
+          "n": 400,
+          "ci95": [
+            0.99,
+            1.0
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 1.0,
+          "hits": 325,
+          "n": 325,
+          "ci95": [
+            0.988,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.898,
+          "hits": 202,
+          "n": 225,
+          "ci95": [
+            0.851,
+            0.931
+          ]
+        },
+        "IP address": {
+          "recall": 1.0,
+          "hits": 125,
+          "n": 125,
+          "ci95": [
+            0.97,
+            1.0
+          ]
+        },
+        "Card": {
+          "recall": 1.0,
+          "hits": 50,
+          "n": 50,
+          "ci95": [
+            0.929,
+            1.0
+          ]
+        }
+      },
+      "structured_recall": 0.985,
+      "structured_ci95": [
+        0.977,
+        0.99
+      ],
+      "structured_n": 1500,
+      "all_recall": 0.79,
+      "all_ci95": [
+        0.773,
+        0.806
+      ],
+      "all_n": 2375,
+      "refusal_with_structured_pii": 1.0,
+      "over_blocking": 0.0,
+      "over_blocking_ci95": [
+        0.0,
+        0.008
+      ],
+      "records": 500
+    },
+    "zkpriv_strict": {
+      "per_group": {
+        "Name": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 475,
+          "ci95": [
+            -0.0,
+            0.008
+          ]
+        },
+        "Phone": {
+          "recall": 1.0,
+          "hits": 350,
+          "n": 350,
+          "ci95": [
+            0.989,
+            1.0
+          ]
+        },
+        "E-mail": {
+          "recall": 1.0,
+          "hits": 425,
+          "n": 425,
+          "ci95": [
+            0.991,
+            1.0
+          ]
+        },
+        "Other ID": {
+          "recall": 1.0,
+          "hits": 400,
+          "n": 400,
+          "ci95": [
+            0.99,
+            1.0
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 1.0,
+          "hits": 325,
+          "n": 325,
+          "ci95": [
+            0.988,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 1.0,
+          "hits": 225,
+          "n": 225,
+          "ci95": [
+            0.983,
+            1.0
+          ]
+        },
+        "IP address": {
+          "recall": 1.0,
+          "hits": 125,
+          "n": 125,
+          "ci95": [
+            0.97,
+            1.0
+          ]
+        },
+        "Card": {
+          "recall": 1.0,
+          "hits": 50,
+          "n": 50,
+          "ci95": [
+            0.929,
+            1.0
+          ]
+        }
+      },
+      "structured_recall": 1.0,
+      "structured_ci95": [
+        0.997,
+        1.0
+      ],
+      "structured_n": 1500,
+      "all_recall": 0.8,
+      "all_ci95": [
+        0.783,
+        0.816
+      ],
+      "all_n": 2375,
+      "refusal_with_structured_pii": 1.0,
+      "over_blocking": 0.15,
+      "over_blocking_ci95": [
+        0.121,
+        0.184
+      ],
+      "records": 500
+    },
+    "zkpriv_std_t2": {
+      "per_group": {
+        "Name": {
+          "recall": 0.931,
+          "hits": 442,
+          "n": 475,
+          "ci95": [
+            0.904,
+            0.95
+          ]
+        },
+        "Phone": {
+          "recall": 1.0,
+          "hits": 350,
+          "n": 350,
+          "ci95": [
+            0.989,
+            1.0
+          ]
+        },
+        "E-mail": {
+          "recall": 1.0,
+          "hits": 425,
+          "n": 425,
+          "ci95": [
+            0.991,
+            1.0
+          ]
+        },
+        "Other ID": {
+          "recall": 1.0,
+          "hits": 400,
+          "n": 400,
+          "ci95": [
+            0.99,
+            1.0
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 1.0,
+          "hits": 325,
+          "n": 325,
+          "ci95": [
+            0.988,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.898,
+          "hits": 202,
+          "n": 225,
+          "ci95": [
+            0.851,
+            0.931
+          ]
+        },
+        "IP address": {
+          "recall": 1.0,
+          "hits": 125,
+          "n": 125,
+          "ci95": [
+            0.97,
+            1.0
+          ]
+        },
+        "Card": {
+          "recall": 1.0,
+          "hits": 50,
+          "n": 50,
+          "ci95": [
+            0.929,
+            1.0
+          ]
+        }
+      },
+      "structured_recall": 0.985,
+      "structured_ci95": [
+        0.977,
+        0.99
+      ],
+      "structured_n": 1500,
+      "all_recall": 0.976,
+      "all_ci95": [
+        0.97,
+        0.982
+      ],
+      "all_n": 2375,
+      "refusal_with_structured_pii": 1.0,
+      "over_blocking": 0.4,
+      "over_blocking_ci95": [
+        0.358,
+        0.444
+      ],
+      "records": 500
+    },
+    "zkpriv_strict_t2": {
+      "per_group": {
+        "Name": {
+          "recall": 0.931,
+          "hits": 442,
+          "n": 475,
+          "ci95": [
+            0.904,
+            0.95
+          ]
+        },
+        "Phone": {
+          "recall": 1.0,
+          "hits": 350,
+          "n": 350,
+          "ci95": [
+            0.989,
+            1.0
+          ]
+        },
+        "E-mail": {
+          "recall": 1.0,
+          "hits": 425,
+          "n": 425,
+          "ci95": [
+            0.991,
+            1.0
+          ]
+        },
+        "Other ID": {
+          "recall": 1.0,
+          "hits": 400,
+          "n": 400,
+          "ci95": [
+            0.99,
+            1.0
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 1.0,
+          "hits": 325,
+          "n": 325,
+          "ci95": [
+            0.988,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 1.0,
+          "hits": 225,
+          "n": 225,
+          "ci95": [
+            0.983,
+            1.0
+          ]
+        },
+        "IP address": {
+          "recall": 1.0,
+          "hits": 125,
+          "n": 125,
+          "ci95": [
+            0.97,
+            1.0
+          ]
+        },
+        "Card": {
+          "recall": 1.0,
+          "hits": 50,
+          "n": 50,
+          "ci95": [
+            0.929,
+            1.0
+          ]
+        }
+      },
+      "structured_recall": 1.0,
+      "structured_ci95": [
+        0.997,
+        1.0
+      ],
+      "structured_n": 1500,
+      "all_recall": 0.986,
+      "all_ci95": [
+        0.981,
+        0.99
+      ],
+      "all_n": 2375,
+      "refusal_with_structured_pii": 1.0,
+      "over_blocking": 0.55,
+      "over_blocking_ci95": [
+        0.506,
+        0.593
+      ],
+      "records": 500
+    },
+    "presidio": {
+      "per_group": {
+        "Name": {
+          "recall": 0.992,
+          "hits": 471,
+          "n": 475,
+          "ci95": [
+            0.979,
+            0.997
+          ]
+        },
+        "Phone": {
+          "recall": 0.917,
+          "hits": 321,
+          "n": 350,
+          "ci95": [
+            0.884,
+            0.942
+          ]
+        },
+        "E-mail": {
+          "recall": 0.991,
+          "hits": 421,
+          "n": 425,
+          "ci95": [
+            0.976,
+            0.996
+          ]
+        },
+        "Other ID": {
+          "recall": 0.935,
+          "hits": 374,
+          "n": 400,
+          "ci95": [
+            0.906,
+            0.955
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 1.0,
+          "hits": 325,
+          "n": 325,
+          "ci95": [
+            0.988,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 1.0,
+          "hits": 225,
+          "n": 225,
+          "ci95": [
+            0.983,
+            1.0
+          ]
+        },
+        "IP address": {
+          "recall": 1.0,
+          "hits": 125,
+          "n": 125,
+          "ci95": [
+            0.97,
+            1.0
+          ]
+        },
+        "Card": {
+          "recall": 0.9,
+          "hits": 45,
+          "n": 50,
+          "ci95": [
+            0.786,
+            0.957
+          ]
+        }
+      },
+      "structured_recall": 0.975,
+      "structured_ci95": [
+        0.965,
+        0.981
+      ],
+      "structured_n": 1500,
+      "all_recall": 0.971,
+      "all_ci95": [
+        0.964,
+        0.977
+      ],
+      "all_n": 2375,
+      "refusal_with_structured_pii": 1.0,
+      "over_blocking": 0.926,
+      "over_blocking_ci95": [
+        0.9,
+        0.946
+      ],
+      "records": 500
+    },
+    "presidio_rx": {
+      "per_group": {
+        "Name": {
+          "recall": 0.0,
+          "hits": 0,
+          "n": 475,
+          "ci95": [
+            -0.0,
+            0.008
+          ]
+        },
+        "Phone": {
+          "recall": 0.909,
+          "hits": 318,
+          "n": 350,
+          "ci95": [
+            0.874,
+            0.934
+          ]
+        },
+        "E-mail": {
+          "recall": 0.812,
+          "hits": 345,
+          "n": 425,
+          "ci95": [
+            0.772,
+            0.846
+          ]
+        },
+        "Other ID": {
+          "recall": 0.882,
+          "hits": 353,
+          "n": 400,
+          "ci95": [
+            0.847,
+            0.91
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 1.0,
+          "hits": 325,
+          "n": 325,
+          "ci95": [
+            0.988,
+            1.0
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.658,
+          "hits": 148,
+          "n": 225,
+          "ci95": [
+            0.594,
+            0.717
+          ]
+        },
+        "IP address": {
+          "recall": 1.0,
+          "hits": 125,
+          "n": 125,
+          "ci95": [
+            0.97,
+            1.0
+          ]
+        },
+        "Card": {
+          "recall": 0.9,
+          "hits": 45,
+          "n": 50,
+          "ci95": [
+            0.786,
+            0.957
+          ]
+        }
+      },
+      "structured_recall": 0.871,
+      "structured_ci95": [
+        0.853,
+        0.887
+      ],
+      "structured_n": 1500,
+      "all_recall": 0.699,
+      "all_ci95": [
+        0.68,
+        0.717
+      ],
+      "all_n": 2375,
+      "refusal_with_structured_pii": 1.0,
+      "over_blocking": 0.0,
+      "over_blocking_ci95": [
+        0.0,
+        0.008
+      ],
+      "records": 500
+    },
+    "spacy_ner": {
+      "per_group": {
+        "Name": {
+          "recall": 0.992,
+          "hits": 471,
+          "n": 475,
+          "ci95": [
+            0.979,
+            0.997
+          ]
+        },
+        "Phone": {
+          "recall": 0.206,
+          "hits": 72,
+          "n": 350,
+          "ci95": [
+            0.167,
+            0.251
+          ]
+        },
+        "E-mail": {
+          "recall": 0.219,
+          "hits": 93,
+          "n": 425,
+          "ci95": [
+            0.182,
+            0.261
+          ]
+        },
+        "Other ID": {
+          "recall": 0.21,
+          "hits": 84,
+          "n": 400,
+          "ci95": [
+            0.173,
+            0.253
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.209,
+          "hits": 68,
+          "n": 325,
+          "ci95": [
+            0.169,
+            0.257
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.747,
+          "hits": 168,
+          "n": 225,
+          "ci95": [
+            0.686,
+            0.799
+          ]
+        },
+        "IP address": {
+          "recall": 0.288,
+          "hits": 36,
+          "n": 125,
+          "ci95": [
+            0.216,
+            0.373
+          ]
+        },
+        "Card": {
+          "recall": 0.28,
+          "hits": 14,
+          "n": 50,
+          "ci95": [
+            0.175,
+            0.417
+          ]
+        }
+      },
+      "structured_recall": 0.301,
+      "structured_ci95": [
+        0.278,
+        0.324
+      ],
+      "structured_n": 1500,
+      "all_recall": 0.424,
+      "all_ci95": [
+        0.404,
+        0.444
+      ],
+      "all_n": 2375,
+      "refusal_with_structured_pii": 0.994,
+      "over_blocking": 0.9,
+      "over_blocking_ci95": [
+        0.871,
+        0.923
+      ],
+      "records": 500
+    },
+    "llm": {
+      "per_group": {
+        "Name": {
+          "recall": 0.703,
+          "hits": 334,
+          "n": 475,
+          "ci95": [
+            0.661,
+            0.742
+          ]
+        },
+        "Phone": {
+          "recall": 0.643,
+          "hits": 225,
+          "n": 350,
+          "ci95": [
+            0.591,
+            0.691
+          ]
+        },
+        "E-mail": {
+          "recall": 0.741,
+          "hits": 315,
+          "n": 425,
+          "ci95": [
+            0.698,
+            0.781
+          ]
+        },
+        "Other ID": {
+          "recall": 0.415,
+          "hits": 166,
+          "n": 400,
+          "ci95": [
+            0.368,
+            0.464
+          ]
+        },
+        "SSN / tax ID": {
+          "recall": 0.778,
+          "hits": 253,
+          "n": 325,
+          "ci95": [
+            0.73,
+            0.82
+          ]
+        },
+        "Date of birth": {
+          "recall": 0.573,
+          "hits": 129,
+          "n": 225,
+          "ci95": [
+            0.508,
+            0.636
+          ]
+        },
+        "IP address": {
+          "recall": 0.6,
+          "hits": 75,
+          "n": 125,
+          "ci95": [
+            0.512,
+            0.682
+          ]
+        },
+        "Card": {
+          "recall": 0.44,
+          "hits": 22,
+          "n": 50,
+          "ci95": [
+            0.312,
+            0.577
+          ]
+        }
+      },
+      "structured_recall": 0.679,
+      "structured_ci95": [
+        0.655,
+        0.702
+      ],
+      "structured_n": 1500,
+      "all_recall": 0.64,
+      "all_ci95": [
+        0.62,
+        0.659
+      ],
+      "all_n": 2375,
+      "refusal_with_structured_pii": 0.688,
+      "over_blocking": 0.1,
+      "over_blocking_ci95": [
+        0.077,
+        0.129
+      ],
+      "records": 500
+    }
+  }
+}

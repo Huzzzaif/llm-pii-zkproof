@@ -109,5 +109,52 @@ if ts.exists():
     mac("teeAttacks", sum(1 for c in t["cases"] if c["case"] != "honest labels, names forbidden"))
     mac("teeAttacksRefused", sum(1 for c in t["cases"] if c["case"] != "honest labels, names forbidden" and c["outcome"] == "refused"))
 
+# ---- held-out comparison (eval/compare.py test)
+ct = R / "compare_test.json"
+if ct.exists():
+    c = json.loads(ct.read_text())
+    SYS = {"zkpriv_std": "Std", "zkpriv_strict": "Strict", "zkpriv_std_t2": "StdT", "zkpriv_strict_t2": "StrictT",
+           "presidio": "Pres", "presidio_rx": "PresRx", "spacy_ner": "Spacy", "llm": "Llm"}
+    for ds, tag in [("ai4privacy_test_500", "Ai"), ("synth_test_500", "Syn")]:
+        for k, short in SYS.items():
+            if k not in c.get(ds, {}):
+                continue
+            d = c[ds][k]
+            mac(f"t{tag}{short}Struct", f"{d['structured_recall']:.3f}")
+            mac(f"t{tag}{short}All", f"{d['all_recall']:.3f}")
+            mac(f"t{tag}{short}Over", pct(d["over_blocking"]))
+            lo, hi = d["structured_ci95"]
+            mac(f"t{tag}{short}StructCI", f"[{lo:.2f}, {hi:.2f}]")
+            for g, v in d["per_group"].items():
+                gk = "".join(w.capitalize() for w in g.replace("/", " ").replace("-", " ").split())
+                mac(f"t{tag}{short}G{gk}", f"{v['recall']:.2f}")
+
+# ---- multi-model real-LLM study
+models = [("llm_outputs_llama31_8b.json", "LlamaEight"), ("llm_outputs_qwen25_7b.json", "Qwen"),
+          ("llm_outputs_llama32_3b.json", "LlamaThree")]
+tot = {"resp": 0, "pii": 0, "ref": 0, "ben": 0, "benref": 0, "vals": 0, "caught": 0}
+for fn, tag in models:
+    f = R / fn
+    if not f.exists():
+        continue
+    sm = json.loads(f.read_text())["summary"]
+    mac(f"m{tag}Pii", sm["responses_with_pii"])
+    mac(f"m{tag}Ref", sm["refused_of_pii_responses"])
+    mac(f"m{tag}Ben", sm["benign_responses"])
+    mac(f"m{tag}BenRef", sm["benign_refused"])
+    mac(f"m{tag}GenS", f"{sm['median_gen_s']:.1f}")
+    tot["resp"] += sm["responses"]; tot["pii"] += sm["responses_with_pii"]; tot["ref"] += sm["refused_of_pii_responses"]
+    tot["ben"] += sm["benign_responses"]; tot["benref"] += sm["benign_refused"]
+    for v in sm["per_type_value_caught"].values():
+        tot["vals"] += v["n"]; tot["caught"] += v["caught"]
+if tot["resp"]:
+    for k, v in tot.items():
+        mac("mTot" + k.capitalize(), v)
+
+# ---- throughput
+if bench and "throughput_n256" in bench:
+    for k, v in bench["throughput_n256"].items():
+        mac("tput" + {"1": "One", "2": "Two", "4": "Four", "8": "Eight"}[k], f"{v['proofs_per_s']:.2f}")
+
 (ROOT / "paper" / "numbers.tex").write_text("\n".join(out) + "\n")
 print(f"wrote paper/numbers.tex ({len(out) - 1} macros)")
