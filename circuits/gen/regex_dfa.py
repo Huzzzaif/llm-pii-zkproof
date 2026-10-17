@@ -39,6 +39,9 @@ def _cls_escape(c: str) -> frozenset:
         return frozenset(ord(x) for x in string.ascii_letters + string.digits + "_")
     if c == "s":
         return frozenset(ord(x) for x in " \t\r\n\f\v")
+    control = {"n": 10, "t": 9, "r": 13, "f": 12, "v": 11}
+    if c in control:
+        return frozenset({control[c]})
     return frozenset({ord(c)})
 
 
