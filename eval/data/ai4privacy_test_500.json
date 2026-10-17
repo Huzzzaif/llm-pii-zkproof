@@ -1,0 +1,6696 @@
+[
+ {
+  "id": 141523,
+  "domain": "ai4privacy",
+  "text": "The final project should include references from Villa 92. Share with olcay19@tutanota.com for proofreading.",
+  "pii_present": true,
+  "pii_values": [
+   "olcay19@tutanota.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 447263,
+  "domain": "ai4privacy",
+  "text": "Hey, are we still on for the discussion about psychotic disorder treatments at 20:27:57? I've sent you my latest notes via BNO@gmail.com.",
+  "pii_present": true,
+  "pii_values": [
+   "BNO@gmail.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 144308,
+  "domain": "ai4privacy",
+  "text": "28JSH, residing in Schulenburg, aged 71, exhibits strong cognitive skills such as understanding instructions and performing tasks like drawing and lego build. Tracker: MXVZWLW68E9LZ7VXZ.",
+  "pii_present": true,
+  "pii_values": [
+   "28JSH",
+   "Schulenburg"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 122883,
+  "domain": "ai4privacy",
+  "text": "Referencing NUM-201210-4750, POLICYNUM M.ADZ.88524 adheres to ZIPCODE CT15 norms. Historical data shows TAXNUM 77739.08202, specific VEHICLEVIN 7B0NWEUF56WVA9CFG markedly affect premiums. AGE_CONSTANT 40 requires careful review.",
+  "pii_present": true,
+  "pii_values": [
+   "CT15",
+   "77739.08202"
+  ],
+  "pii_types": [
+   "ZIPCODE",
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 255953,
+  "domain": "ai4privacy",
+  "text": "Good morning Jascha, I\u2019ve forwarded the client feedback received via Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 5.0; Trident/5.1). Please ensure it\u2019s documented accurately.",
+  "pii_present": true,
+  "pii_values": [
+   "Jascha"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 215998,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>2 Family Involvement Agreement</p><p>Dear family of Kadem, please confirm your participation on 14/07/2026. Reference 9296267442. Your involvement is essential. Coordinates: [53.4, -1.35].</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "Kadem"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 425883,
+  "domain": "ai4privacy",
+  "text": "Watched morya's talk on resilience. Lots of great points. Sharing the key images and videos with you. Call me at 0077 75851.8641 when you\u2019re free. And update your driver\u2019s license number: C31KG5886414, please.",
+  "pii_present": true,
+  "pii_values": [
+   "morya",
+   "0077 75851.8641",
+   "C31KG5886414"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "TELEPHONENUM",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 400698,
+  "domain": "ai4privacy",
+  "text": "<html><body>Policyholder keskin (Male, 32) must provide 731-58-6022, 632939377, and pay using card ending in [CREDITCARDEXPIRYCREDITCARDCVV_1]. For questions, call [TELEPHONENUM_1] or visit our [ORDINALDIRECTION_1] office.</body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "keskin",
+   "731-58-6022"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 302078,
+  "domain": "ai4privacy",
+  "text": "Hi Kym, heard about the South storytelling app? Could revolutionize our teaching.",
+  "pii_present": true,
+  "pii_values": [
+   "Kym"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 286303,
+  "domain": "ai4privacy",
+  "text": "<p>Management must verify employees in Fort Campbell with Bitcoin addresses like 3pKSNLlIKp84h4ZeVcMPeApFUZKwc5C8WJ. Documentation should include driver licenses such as 617764938 and given names like Leonhardt. Secure portal: LDEH. BIC verification code EOTHUS8F. Money Market Account oversees this. US98 48042092 KA7 1118</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Fort Campbell",
+   "617764938",
+   "Leonhardt",
+   "LDEH"
+  ],
+  "pii_types": [
+   "CITY",
+   "DRIVERLICENSENUM",
+   "GIVENNAME",
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 334418,
+  "domain": "ai4privacy",
+  "text": "Lucan, should I trust them with my +67.17462.3969, NUM-202207-6168, and [53.2, -1.03] just to sign a lease in Newark Perlethorpe?",
+  "pii_present": true,
+  "pii_values": [
+   "Lucan",
+   "+67.17462.3969",
+   "Newark Perlethorpe"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TELEPHONENUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 402478,
+  "domain": "ai4privacy",
+  "text": "Hi 36lyubmishev, make sure your MAC (a4:24:fa:6e:ea:8b) is logged for device tests.",
+  "pii_present": true,
+  "pii_values": [
+   "36lyubmishev"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 272613,
+  "domain": "ai4privacy",
+  "text": "All researchers must adhere to ethical guidelines, ensuring confidentiality of participants' JOBTYPE_1 and SURNAME_1 data. Sensitive information, including Warren Lane, +0 95-025 4569, and 1171976284351358998545 must be anonymised.",
+  "pii_present": true,
+  "pii_values": [
+   "Warren Lane",
+   "+0 95-025 4569",
+   "1171976284351358998545"
+  ],
+  "pii_types": [
+   "STREET",
+   "TELEPHONENUM",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 395088,
+  "domain": "ai4privacy",
+  "text": "Hey Sherihan, insights from Other employees in Engineering needed for diversity initiative.",
+  "pii_present": true,
+  "pii_values": [
+   "Sherihan"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 213708,
+  "domain": "ai4privacy",
+  "text": "<p>Funding request for 285, AK, ID: 273457649.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "285",
+   "273457649"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 200663,
+  "domain": "ai4privacy",
+  "text": "Dear Miss, your public health document ORDER-201509-9935 is flagged for review. Verify it with 478-81-1894 and address 570 W. St as soon as possible.",
+  "pii_present": true,
+  "pii_values": [
+   "478-81-1894",
+   "570"
+  ],
+  "pii_types": [
+   "SOCIALNUM",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 354173,
+  "domain": "ai4privacy",
+  "text": "Validation confirmed across roles like Temporary. The checks included database entries like YB7HZNPE1W8J8F1PK and balance reporting at 0.1299m. For clarifications, contact S@aol.com.",
+  "pii_present": true,
+  "pii_values": [
+   "S@aol.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 219543,
+  "domain": "ai4privacy",
+  "text": "The next payment installment for Kentaro Bolok is due on ORDER-201802-2438. Please ensure 0.99m is deposited. Further questions? Call 02.64.76 81 15.",
+  "pii_present": true,
+  "pii_values": [
+   "Kentaro",
+   "Bolok",
+   "02.64.76 81 15"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 271228,
+  "domain": "ai4privacy",
+  "text": "<html><body>Incident Report: Employee with Gray eyes experienced a fall at 375 around 2 PM. The cost of medical treatment totaled USD47.0b. Driver's license number: D8067577, Social Security Number: 788556234.</body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "375",
+   "D8067577",
+   "788556234"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "DRIVERLICENSENUM",
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 459373,
+  "domain": "ai4privacy",
+  "text": "Directive Number: TRANS-201310-2251. Inventory stock at East locations. Verify by R4<lB(E-4. Confirm orders with Fixed Rate Bond. Manager Geophysicist/field seismologist to log changes. Validate transactions: 0xbcbe655b4f9e3f25ea9ac58663da3bbe1bf6858a.",
+  "pii_present": true,
+  "pii_values": [
+   "R4<lB(E-4"
+  ],
+  "pii_types": [
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 281163,
+  "domain": "ai4privacy",
+  "text": "<html><body>Enhancing student attendance targets set for Mayoress needs performing. Regular updates will be tracked via ehabokbpvogmw517255. Escalate unforeseen issues to Artamonova@ehabokbpvogmw517255@tutanota.com.</body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "ehabokbpvogmw517255",
+   "Artamonova",
+   "ehabokbpvogmw517255@tutanota.com"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "SURNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 203078,
+  "domain": "ai4privacy",
+  "text": "<p><strong>Annual Audits</strong></p><p>Annual audits confirm compliance with NV and US standards. Auditor Mihretab oversees secure financial reviews. Ensure all documentation uses encrypted channels and IPV4/6 protection.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Mihretab"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 368698,
+  "domain": "ai4privacy",
+  "text": "Dear ISA (Individual Savings Account), the Biomedical engineer details have discrepancies. Login to https://mitchell.com/ using c`q\"sneZR6 and update further.",
+  "pii_present": true,
+  "pii_values": [
+   "c`q\"sneZR6"
+  ],
+  "pii_types": [
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 121493,
+  "domain": "ai4privacy",
+  "text": "<p>The undersigned, Madame Camelia-Ioana, United States, and identified by 91965156023, agrees to handle all patented concept details confidentially. Information, including but not limited to any Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_5 rv:2.0; quz-PE) AppleWebKit/534.5.3 (KHTML, like Gecko) Version/5.0.5 Safari/534.5.3 details, shall not be disclosed without 370's consent.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Camelia-Ioana",
+   "91965156023"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 205273,
+  "domain": "ai4privacy",
+  "text": "<p>3. Proposal: Event Budget Proposal - outlining the estimated costs and budget allocation for the event:</p><p>- Place: Fort 267</p><p>- Meals: 43</p><p>- Security: 1353</p><p>- Transport: UEBLGSXA0DUG0TUAH</p><p>- Sundry: LEzjmrOQcIQkgGR6Aq1Lg4axXyA5qzElnD</p>",
+  "pii_present": true,
+  "pii_values": [
+   "1353"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 322873,
+  "domain": "ai4privacy",
+  "text": "Intervention Plan: Sessions by your therapist (Broadcast journalist) scheduled at 20 focusing on relapse prevention. Support via fatou.llagostera. Travel for appointments arranged via vehicle VIN MXH8JJGA4KLJ3S919.",
+  "pii_present": true,
+  "pii_values": [
+   "fatou.llagostera"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 226723,
+  "domain": "ai4privacy",
+  "text": "Hey C, the diversity workshop in Macon requires attendees to confirm via Mozilla/5.0 (Linux; Android 1.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/25.0.825.0 Safari/535.1. Make sure to use 63277 for access.",
+  "pii_present": true,
+  "pii_values": [
+   "C",
+   "Macon"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 482403,
+  "domain": "ai4privacy",
+  "text": "Elaborated before: criminal scrutiny within [51.687, -0.768] databases holds incredibly. Got stats on altering 33172.43473 frauds tied to 2203941362754009?",
+  "pii_present": true,
+  "pii_values": [
+   "33172.43473",
+   "2203941362754009"
+  ],
+  "pii_types": [
+   "TAXNUM",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 340723,
+  "domain": "ai4privacy",
+  "text": "Hi Student Account 41, checked out Market Harborough Sibbertoft\u2019s facility. Don't forget to change your passwords (Ysb@rb*GnN)6) regularly.",
+  "pii_present": true,
+  "pii_values": [
+   "Market Harborough Sibbertoft",
+   "Ysb@rb*GnN)6"
+  ],
+  "pii_types": [
+   "CITY",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 356448,
+  "domain": "ai4privacy",
+  "text": "2. Antitrust Compliance Manual\nChecks on ]4413  are mandatory. Our main compliance office is located at Box 726, ZIP: LE17.\n<!DOCTYPE html><html><body></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "LE17"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 219983,
+  "domain": "ai4privacy",
+  "text": "Departmental settings should prioritize user profiles by job type: Part-time and given name: Altino for precise indexing and easy record retrieval.",
+  "pii_present": true,
+  "pii_values": [
+   "Altino"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 166983,
+  "domain": "ai4privacy",
+  "text": "<p>Strategic management document for United States contains key growth initiatives. Access at https://fitzgerald-harris.info/ with OTP: 43105 and PASSWORD: sR$l{tb9Pm.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "sR$l{tb9Pm"
+  ],
+  "pii_types": [
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 307378,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Claim Submission Acknowledged</p><table><tr><td>Policy Number:</td><td>GB.EN.8131.F839</td></tr><tr><td>Event Date:</td><td>2019-02-27T00:00:00</td></tr><tr><td>Vehicle VRM:</td><td>FL77 RLZ</td></tr></table><p>Contact: +44.88 299-2125</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "+44.88 299-2125"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 505293,
+  "domain": "ai4privacy",
+  "text": "Hi Benmbarek, we noticed the West Bromwich Building Society details were missing. Send the BIC number and IV45087AW to 2007sainacacio@yahoo.com.",
+  "pii_present": true,
+  "pii_values": [
+   "Benmbarek",
+   "IV45087AW",
+   "2007sainacacio@yahoo.com"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "IDCARDNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 318563,
+  "domain": "ai4privacy",
+  "text": "Confirm if 28kauder is the registered username for the insurance profile.",
+  "pii_present": true,
+  "pii_values": [
+   "28kauder"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 498058,
+  "domain": "ai4privacy",
+  "text": "2    Student Data Privacy Waiver    Document allowing the school to collect and use student data for educational technology purposes while ensuring privacy compliance. Mozilla/5.0 (compatible; MSIE 8.0; Windows 98; Trident/5.0), Darlington, [IPV6_3], use for recording.",
+  "pii_present": true,
+  "pii_values": [
+   "Darlington"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 281173,
+  "domain": "ai4privacy",
+  "text": "<html><body>Using Miss, attendance improvement linked via 07kugaseelan@outlook.com. Main database managed by Wilson, Smith and Wright; access through [IPV4_1].</body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "07kugaseelan@outlook.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 171268,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Lisa's learning needs identified. Further guidance: http://www.rose.com/.</p><p>Pin: 0461163. Contact: 0019 896 187.5791.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "0019 896 187.5791"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 490313,
+  "domain": "ai4privacy",
+  "text": "docSales Forecast|Sales forecast for this quarter anticipates increase to 824.868k, notably in 78022 area. Data aligns with prior performance.|HTML",
+  "pii_present": true,
+  "pii_values": [
+   "78022"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 232258,
+  "domain": "ai4privacy",
+  "text": "Hey Viseth, just forwarding you the research on biodiversity. Need to update our summary for the case. Use Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.01; Trident/5.0) for references.",
+  "pii_present": true,
+  "pii_values": [
+   "Viseth"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 306688,
+  "domain": "ai4privacy",
+  "text": "Hey Tluste, the claim of Euro 0.786m needs your IBAN and PASSPORTNUM for processing.",
+  "pii_present": true,
+  "pii_values": [
+   "Tluste"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 402593,
+  "domain": "ai4privacy",
+  "text": "Keep track of Bristol transport law changes at http://www.robinson.com/, integrating your geo-coordinates [51.3295, -2.73] into feedback forms is required now.",
+  "pii_present": true,
+  "pii_values": [
+   "Bristol"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 408518,
+  "domain": "ai4privacy",
+  "text": "Need an emergency appointment. Account #014824616684536, ZIP: 92028-9388. It's urgent. Thanks!",
+  "pii_present": true,
+  "pii_values": [
+   "014824616684536",
+   "92028-9388"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 122833,
+  "domain": "ai4privacy",
+  "text": "Can you check if Forest Road is the right address for my teaching certification form?",
+  "pii_present": true,
+  "pii_values": [
+   "Forest Road"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 421233,
+  "domain": "ai4privacy",
+  "text": "Is the policy regulation file M GE 770180 for Chapel Lane ready? Send the updates to Cvijovic.",
+  "pii_present": true,
+  "pii_values": [
+   "Chapel Lane",
+   "Cvijovic"
+  ],
+  "pii_types": [
+   "STREET",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 290223,
+  "domain": "ai4privacy",
+  "text": "<p>Transfer confirmation: From Uriel, Dept 328, Yorktown, 78164 to oct\u00e1vio.kyramarios@aol.com. Date: July 5th, 2015. Payments to: 449374116497288035879323.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Uriel",
+   "Yorktown",
+   "78164",
+   "oct\u00e1vio.kyramarios@aol.com",
+   "449374116497288035879323"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY",
+   "ZIPCODE",
+   "EMAIL",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 491738,
+  "domain": "ai4privacy",
+  "text": "Dr. Mibus, can we initiate the new therapy protocol for Male patients with disorders? System flagged Fixed Rate Bond with 41, check.",
+  "pii_present": true,
+  "pii_values": [
+   "Mibus"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 159238,
+  "domain": "ai4privacy",
+  "text": "Hi Mr Fortiguerra, Can you verify the recent health reports for Male students in WV? I'll send the details to your email.",
+  "pii_present": true,
+  "pii_values": [
+   "Fortiguerra"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 497133,
+  "domain": "ai4privacy",
+  "text": "Darjana, please forward 521746035414854 for student health budgets before our meeting.",
+  "pii_present": true,
+  "pii_values": [
+   "Darjana"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 488323,
+  "domain": "ai4privacy",
+  "text": "The compliance details for 44, finalized by Richards, Gallegos and Castillo, meet national LEED standards. The necessary documents are updated. Connect via YH18@protonmail.com.",
+  "pii_present": true,
+  "pii_values": [
+   "44",
+   "YH18@protonmail.com"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 382158,
+  "domain": "ai4privacy",
+  "text": "Hi Guettari, verify the balance discrepancy reported by Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_1; rv:1.9.6.20) Gecko/2126-12-31 07:22:36.664042 Firefox/3.8 on 11/12/2004 call logs.",
+  "pii_present": true,
+  "pii_values": [
+   "Guettari"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 113133,
+  "domain": "ai4privacy",
+  "text": "<p>Proposal:</p><p>Loan Amount: 0.79m</p><p>Rate: 5.25%</p><p>Term: 30 years</p><p>Borrower: Orias</p><p>MAC Address: 22:02:7a:c8:b7:43</p><p>Driver's License: 283165733</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Orias",
+   "283165733"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 322513,
+  "domain": "ai4privacy",
+  "text": "Hi M\u00f6rsdorf, please check my health policy M.M\u00d6R.61096. Felt off about the details shared online. URLhttps://evans.com/ for quick ref.",
+  "pii_present": true,
+  "pii_values": [
+   "M\u00f6rsdorf"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 309573,
+  "domain": "ai4privacy",
+  "text": "Verify 853327861022007 and Feminine details in the Knight-Roberts insolvency case. Contact me on +44.84 303-4907 immediately.",
+  "pii_present": true,
+  "pii_values": [
+   "+44.84 303-4907"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 474483,
+  "domain": "ai4privacy",
+  "text": "<p>Please fill out this Legal EHR form: <br> - Age: 11 <br> - SEX: Male <br> - ID Card Number: 642782358 <br> - Ethereum Address: 0x40b7fb5da06f5bbde39731f9f9a972ac5dbf880d <br> </p>",
+  "pii_present": true,
+  "pii_values": [
+   "642782358"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 114598,
+  "domain": "ai4privacy",
+  "text": "Morning goitom, we need the employment details for both parties. Could you confirm the job types, Full-time and Full-time, and ensure the children\u2019s heights, 180 cm and 180 cm, are recorded?",
+  "pii_present": true,
+  "pii_values": [
+   "goitom"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 269403,
+  "domain": "ai4privacy",
+  "text": "Hi! Thanks for joining Walker, Scott and Holden. Ensure accurate QE68871GL and 623643164037057. Your Basement 554 will be needed.",
+  "pii_present": true,
+  "pii_values": [
+   "QE68871GL"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 457643,
+  "domain": "ai4privacy",
+  "text": "Dear Wong, the upcoming career fair with Carpenter PLC will discuss various paths. Be sure to secure your spot with RP0MW8G76B5BYGHWF for free parking.",
+  "pii_present": true,
+  "pii_values": [
+   "Wong"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 111848,
+  "domain": "ai4privacy",
+  "text": "AML compliance: flagged transaction report for US. Accounts: High-Yield Account, 82474574. Total amount: 38.5300b. Reviewed on January 17th, 1992 by amneris.vottero.",
+  "pii_present": true,
+  "pii_values": [
+   "amneris.vottero"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 127178,
+  "domain": "ai4privacy",
+  "text": "Financial Aid:<br>ID Card Number: 639353627568<br>Organisation: Li Ltd<br>Litecoin Address: L2n4IrpP1GkU1Vwvtzq7pLF4lW77cphyU2<br>Balance: 0.7m<br>Phone IMEI: 811873740701874<br>Job Title: Ship broker<br>Building Number: 5165<br>",
+  "pii_present": true,
+  "pii_values": [
+   "639353627568",
+   "5165"
+  ],
+  "pii_types": [
+   "IDCARDNUM",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 485333,
+  "domain": "ai4privacy",
+  "text": "Can you get more info on Lecchino? Their previous malpractice charges are linked to the Progressive Building Society with an account number of 901068156612952385498 and residences in Ripon.",
+  "pii_present": true,
+  "pii_values": [
+   "Lecchino",
+   "901068156612952385498",
+   "Ripon"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "ACCOUNTNUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 377543,
+  "domain": "ai4privacy",
+  "text": "Completed evaluation on 16:31 for Clinton office, ensuring /}%7hZHo and [36.67334, -89.09] data are securely managed.",
+  "pii_present": true,
+  "pii_values": [
+   "Clinton",
+   "/}%7hZHo"
+  ],
+  "pii_types": [
+   "CITY",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 251043,
+  "domain": "ai4privacy",
+  "text": "Hey! Insurance premium info: $0.4m due. Verify using ZIP code 74872. Access docs at http://patrick.com/.",
+  "pii_present": true,
+  "pii_values": [
+   "74872"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 334443,
+  "domain": "ai4privacy",
+  "text": "Hey Abd! Is Begum Inc requesting your DOC-202112-3871 and 0144.30.920-0212 too?",
+  "pii_present": true,
+  "pii_values": [
+   "Abd",
+   "0144.30.920-0212"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 219578,
+  "domain": "ai4privacy",
+  "text": "Debt payment plan for Se\u00e7me starting TRANS-201807-1832. Balance: 555802. Contact 01109.51.769 9571 for further info.",
+  "pii_present": true,
+  "pii_values": [
+   "Se\u00e7me",
+   "01109.51.769 9571"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 109453,
+  "domain": "ai4privacy",
+  "text": "Could you confirm your Office 290 and 20148-1704 for the latest deal? Also, could you resend your 833-12-6740 and current 131.3199k?",
+  "pii_present": true,
+  "pii_values": [
+   "20148-1704",
+   "833-12-6740"
+  ],
+  "pii_types": [
+   "ZIPCODE",
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 274423,
+  "domain": "ai4privacy",
+  "text": "Alert: Standard Chartered Bank flagged 99151794074290670092476. Mennane, verify IZ33RPK matches with legal gaming standards documented in Healthcare.",
+  "pii_present": true,
+  "pii_values": [
+   "99151794074290670092476",
+   "Mennane"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 483333,
+  "domain": "ai4privacy",
+  "text": "<html><p>Judge: Identify the credit card issuer in these transactions.</p><p>Lawyer: The issuer is MIR with transactions totalling 941126.33.</p><p>Judge: Any details?</p><p>Lawyer: ZIP code linked is ST13.</p></html>",
+  "pii_present": true,
+  "pii_values": [
+   "ST13"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 374018,
+  "domain": "ai4privacy",
+  "text": "Hi Dahbia, please ensure the legal document ORDER-201702-8878 is submitted on 12/16/2005. Make sure all the images comply with United States's patent laws.",
+  "pii_present": true,
+  "pii_values": [
+   "Dahbia"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 248423,
+  "domain": "ai4privacy",
+  "text": "Transaction ID: BILL-202302-2373<br>Transaction Date: March 29th, 1978<br>Amount: GBP74.20<br>Card Issuer: Mastercard<br>OTP: 116877",
+  "pii_present": true,
+  "pii_values": [
+   "March 29th, 1978"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 493398,
+  "domain": "ai4privacy",
+  "text": "Hey Noora, what's the LP5G500E50TZHAVKH for ref in our financial literacy class for Newland residents? Subbing Martinez, Johnson and Stokes.",
+  "pii_present": true,
+  "pii_values": [
+   "Noora",
+   "Newland"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 321863,
+  "domain": "ai4privacy",
+  "text": "<p>Internship tasks must be documented under Policy # USEN7365S100. Verify data using Account # 17570434700158523851 and secure it via MAC Address: 84:51:ec:e1:7f:ee. IPV4 Address: [IPV4_14] must be used for accessing patient records in US. Contact Former for assistance.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "17570434700158523851",
+   "Former"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 332668,
+  "domain": "ai4privacy",
+  "text": "Loan of 759253.52 approved from Chime. Ensure US05 40340367 N2X 3598 and V4928964 are correct.",
+  "pii_present": true,
+  "pii_values": [
+   "V4928964"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 206433,
+  "domain": "ai4privacy",
+  "text": "<p>Implement dynamic treatment protocols based on patient data, verified through 6430UFVK6BYJHF89R. Supervised by 55rabah from Engineering, inquire at 55rabah@protonmail.com.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "55rabah",
+   "55rabah@protonmail.com"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 415988,
+  "domain": "ai4privacy",
+  "text": "Noticed unusual health patterns in Henderson. Suggest reviewing the report by 10/05/2029.",
+  "pii_present": true,
+  "pii_values": [
+   "Henderson"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 392838,
+  "domain": "ai4privacy",
+  "text": "<p>Enhance e-learning platforms. Register at https://www.chandler-parry.biz/ using tax number 66797-86593. Verify identity with driver licence number SUMME.811189.9.018. Submit plan to Clark-Archer.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "66797-86593",
+   "SUMME.811189.9.018"
+  ],
+  "pii_types": [
+   "TAXNUM",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 180488,
+  "domain": "ai4privacy",
+  "text": "Facing login issues. Cannot validate BY58586MA for patient records. Any workaround?",
+  "pii_present": true,
+  "pii_values": [
+   "BY58586MA"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 330518,
+  "domain": "ai4privacy",
+  "text": "Smith and Sons adopts [IPV4_9] security guidelines for communications with care teams. Regular compliance reviewed under USEN.SIW.5653 framework by Mcknight.",
+  "pii_present": true,
+  "pii_values": [
+   "Mcknight"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 249718,
+  "domain": "ai4privacy",
+  "text": "Insured Name: Alicajic. Account Number: Checking Account. Incident Location: Building 200, Bristol. Incident Date: North. Amount Claimed: \u00a3663,726.49.",
+  "pii_present": true,
+  "pii_values": [
+   "Alicajic",
+   "Bristol"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 344263,
+  "domain": "ai4privacy",
+  "text": "Hello Silin, data assessment needed on TRANS-201201-1208. Let's sync up to discuss findings.",
+  "pii_present": true,
+  "pii_values": [
+   "Silin"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 271828,
+  "domain": "ai4privacy",
+  "text": "Risk Assessment Report| <p>Individual identified as 52307690116 shows a high-risk profile due to low Poor and multiple claims within the last year. Recommend further monitoring and additional coverage restrictions. The vehicle associated with this individual has VIN CCG6C4ZB3ATGE1PYR.</p> HTML|",
+  "pii_present": true,
+  "pii_values": [
+   "52307690116"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 237118,
+  "domain": "ai4privacy",
+  "text": "Scrutiny over AI's handling legal databases linked to 4a:d6:62:03:fe:97 and [62.7, -150.106]. Emphasized compliance with 053170066 regulations. Enhancements in 064753627354365 encryption recommended. Consult 083 9901479 , Brown, Friedman and Garcia.",
+  "pii_present": true,
+  "pii_values": [
+   "053170066",
+   "083 9901479 "
+  ],
+  "pii_types": [
+   "TAXNUM",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 281438,
+  "domain": "ai4privacy",
+  "text": "Debt Management:\nVerify your details, Del Toro:\nSex: Female, Date of Birth: 2021-02-14T00:00:00\nOrganisation: Price Inc. Salary: \u00a358k\nContact bank Chelsea Building Society for query by 21st September 2006.",
+  "pii_present": true,
+  "pii_values": [
+   "Del Toro",
+   "2021-02-14T00:00:00"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 313878,
+  "domain": "ai4privacy",
+  "text": "Hi Rapha\u00eblla, Kindly review Administration for compliance adherence and get back to me by 25/07/2012.",
+  "pii_present": true,
+  "pii_values": [
+   "Rapha\u00eblla"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 129583,
+  "domain": "ai4privacy",
+  "text": "<p>Trainer: High-Yield Account<br>Job Specialty: Project Management<br>Completion Date: 10/02/1968<br>Session URL: https://williams.net/<br>Organization: Martinez Group</p>",
+  "pii_present": true,
+  "pii_values": [
+   "10/02/1968"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 462748,
+  "domain": "ai4privacy",
+  "text": "Hi Kalinaki, ensure NAKA.2067.8122 aligns with our new regulations for corporate clients.",
+  "pii_present": true,
+  "pii_values": [
+   "Kalinaki"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 175483,
+  "domain": "ai4privacy",
+  "text": "Hello Pedriale, would you be able to send the property valuation by 2028-11-23T00:00:00? Meeting the bank rep at 2 PM on 2028-11-23T00:00:00.",
+  "pii_present": true,
+  "pii_values": [
+   "Pedriale"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 457948,
+  "domain": "ai4privacy",
+  "text": "Respected Advocate Tirdad, the strategy outlined in DOC number INV-201012-9161 will help reduce your debt in Wellsburg significantly.",
+  "pii_present": true,
+  "pii_values": [
+   "Tirdad",
+   "Wellsburg"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 168913,
+  "domain": "ai4privacy",
+  "text": "Very insightful! As someone in a high-stress job area, Operations, does the impact linger longer in therapeutic recovery? Thanks for the guidance Leakey!",
+  "pii_present": true,
+  "pii_values": [
+   "Leakey"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 272863,
+  "domain": "ai4privacy",
+  "text": "Good morning Resitoglu, can you print the new support group membership forms? We\u2019ll need your 687241060 for keeping track of expenses.",
+  "pii_present": true,
+  "pii_values": [
+   "Resitoglu",
+   "687241060"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 505933,
+  "domain": "ai4privacy",
+  "text": "Mate, we\u2019ve got a client claiming data breach on October/17. Their Co-operative Bank account had 645376 withdrawn. Investigate this now. BTW, their GB32 ML6D IKNP 80WB 0TP4 G1 is flagged.",
+  "pii_present": true,
+  "pii_values": [
+   "October/17"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 370943,
+  "domain": "ai4privacy",
+  "text": "2\\tFinancial Literacy Survey\\tPlease input your 69736546589, GB59 XMIA 0XEF RCW2 0HNE 3M, and 322. This data helps us analyze financial literacy in ENG.",
+  "pii_present": true,
+  "pii_values": [
+   "69736546589"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 251018,
+  "domain": "ai4privacy",
+  "text": "Reminder: Your insurance premium, United States Dollar19.93b, is due soon. Please check http://www.robinson.com/ for information. Ensure your email ahnafbedr@yahoo.com is up to date.",
+  "pii_present": true,
+  "pii_values": [
+   "ahnafbedr@yahoo.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 252223,
+  "domain": "ai4privacy",
+  "text": "Can someone call 038-000-8952? They need details from [IPV4_6] ASAP.",
+  "pii_present": true,
+  "pii_values": [
+   "038-000-8952"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 497508,
+  "domain": "ai4privacy",
+  "text": "Hi Aumer, the legal report requires your input. Use the OTP 81115 for tracking.",
+  "pii_present": true,
+  "pii_values": [
+   "Aumer"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 192713,
+  "domain": "ai4privacy",
+  "text": "Patient Information: Name: Zweilin, Last Medical Visit Date: 05/04/2083, Job Area: Administration, Contact Number: +20 51 193.9167, Email Address: SZ@gmail.com, Social Security Number: 033 54 1541, Tax Number: 033 54 1541",
+  "pii_present": true,
+  "pii_values": [
+   "Zweilin",
+   "+20 51 193.9167",
+   "SZ@gmail.com",
+   "033 54 1541",
+   "033 54 1541"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "TELEPHONENUM",
+   "EMAIL",
+   "SOCIALNUM",
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 129488,
+  "domain": "ai4privacy",
+  "text": "Per document INV-201101-1675, students must enter PIN: 4001412 and TAX ID: 572 84 3232 to participate. The waiver is effective on 29th November 2018. Full info is at http://roberts-baker.com/.",
+  "pii_present": true,
+  "pii_values": [
+   "572 84 3232",
+   "29th November 2018"
+  ],
+  "pii_types": [
+   "TAXNUM",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 189653,
+  "domain": "ai4privacy",
+  "text": "Keylann, check for new guidelines on UAV operations. Policy number needed: 1V-LC-S8-98.",
+  "pii_present": true,
+  "pii_values": [
+   "Keylann"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 226478,
+  "domain": "ai4privacy",
+  "text": "2    Private Placement Memorandum    Prepared by Mayoress Doguoglu, Site engineer. Queries directed to +38 43.825.4533. Balance: 799954. Document date: 18/12/1972.",
+  "pii_present": true,
+  "pii_values": [
+   "Doguoglu",
+   "+38 43.825.4533"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 325378,
+  "domain": "ai4privacy",
+  "text": "Dear Mrs Slipac, identify your Mozilla/5.0 (Windows NT 5.2; ht-HT; rv:1.9.0.20) Gecko/2765-05-24 08:30:04.148373 Firefox/3.8 for security reasons during your stay.",
+  "pii_present": true,
+  "pii_values": [
+   "Slipac"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 167943,
+  "domain": "ai4privacy",
+  "text": "Secure 0xb9719995511bf442ac58fe878fc82a6ba7c6e947 investments through TRANS-202212-6488 submission to Ameris Bancorp. Inquiries directed to Anna\u00ebl, Furniture conservator/restorer, at buskohnkdry962450@outlook.com.",
+  "pii_present": true,
+  "pii_values": [
+   "Anna\u00ebl",
+   "buskohnkdry962450@outlook.com"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 270173,
+  "domain": "ai4privacy",
+  "text": "Analyzing the mental health support in the vicinity of Forest Grove Road, IP traffic from [IPV4_2] to [IPV6_2] has highlighted the need for more digital mental health services. We recommend outreach programs to be coordinated by Operations.",
+  "pii_present": true,
+  "pii_values": [
+   "Forest Grove Road"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 406433,
+  "domain": "ai4privacy",
+  "text": "Therapy session needed for March 22nd, 1948's case. Updated doc on http://www.roberts.com/. - Miss",
+  "pii_present": true,
+  "pii_values": [
+   "March 22nd, 1948"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 432838,
+  "domain": "ai4privacy",
+  "text": "Flagged Individual: Solicitor \u00c7elikkol - financial activities noted in risk logs for Nationwide Building Society. Bitcoin address 3DMmpHMaeaXrhRvaZSHl6r9RSLcUaatDvG and transaction details logged. Coordinate [53.56, -0.99554]. Contact ahfdthbmc592@aol.com.",
+  "pii_present": true,
+  "pii_values": [
+   "\u00c7elikkol",
+   "ahfdthbmc592@aol.com"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 238323,
+  "domain": "ai4privacy",
+  "text": "Hello, just a quick reminder to update the W9^Le in our new health database. Any issues contact 17mu@tutanota.com.",
+  "pii_present": true,
+  "pii_values": [
+   "W9^Le",
+   "17mu@tutanota.com"
+  ],
+  "pii_types": [
+   "PASSWORD",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 325373,
+  "domain": "ai4privacy",
+  "text": "Dear Miss Thambaiah, confirm your stay by updating your US information in records.",
+  "pii_present": true,
+  "pii_values": [
+   "Thambaiah"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 188618,
+  "domain": "ai4privacy",
+  "text": "Hi Mrs Oara, we need your PB 181 for the CSR mailing list.",
+  "pii_present": true,
+  "pii_values": [
+   "Oara"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 294603,
+  "domain": "ai4privacy",
+  "text": "Quick security check: Transaction flagged from [IPV6_4]. Validate it's yours, else change 49959249432.",
+  "pii_present": true,
+  "pii_values": [
+   "49959249432"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 357608,
+  "domain": "ai4privacy",
+  "text": "For green finance, link your investments at SoFi through IBAN US30 15341063 TQ6 3510. Ensure Volunteer submissions by 05/03/1979, verifying with 585-77-1688 and imperative documents such as 1913985150181.",
+  "pii_present": true,
+  "pii_values": [
+   "585-77-1688",
+   "1913985150181"
+  ],
+  "pii_types": [
+   "SOCIALNUM",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 124453,
+  "domain": "ai4privacy",
+  "text": "Check the participant from 30240 for their 619. Their BILL-201701-7281 doesn\u2019t match our records.",
+  "pii_present": true,
+  "pii_values": [
+   "30240"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 497633,
+  "domain": "ai4privacy",
+  "text": "<p>Our strategy emphasises +44.66227-8694 for direct negotiations, reflecting JCB insights. Anticipate regulatory changes in Barton-upon-Humber impacting Therapist, nutritional's area. Compile all feedback by 03/07/2031.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "+44.66227-8694",
+   "Barton-upon-Humber"
+  ],
+  "pii_types": [
+   "TELEPHONENUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 483143,
+  "domain": "ai4privacy",
+  "text": "Early exposure to a variety of tastes is pivotal. Saw great tips shared by 03josee.maroshi.",
+  "pii_present": true,
+  "pii_values": [
+   "03josee.maroshi"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 492008,
+  "domain": "ai4privacy",
+  "text": "Hi Adib, we need will details for Sen Adib, city is Homosassa.",
+  "pii_present": true,
+  "pii_values": [
+   "Adib",
+   "Adib",
+   "Homosassa"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "GIVENNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 230568,
+  "domain": "ai4privacy",
+  "text": "Hello Hasific, make sure all data transfers via the new digital platform (http://www.anderson-cooper.com/) are compliant with United States regulations.",
+  "pii_present": true,
+  "pii_values": [
+   "Hasific"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 273103,
+  "domain": "ai4privacy",
+  "text": "Greetings Sureskumar, we're thrilled you've joined. Your Volunteer background is inspiring. Please update your profile with your ID card number AD96276YG and vehicle VIN W7AUUXF04S930ER37 for exclusive benefits.",
+  "pii_present": true,
+  "pii_values": [
+   "Sureskumar",
+   "AD96276YG"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 275398,
+  "domain": "ai4privacy",
+  "text": "Mstr Markous demonstrated solid teamwork this evaluation period. Enhancing skills in conflict resolution is advisable. Performance data from NDRIC.304218.9.573 indicates a successful mentoring initiative.",
+  "pii_present": true,
+  "pii_values": [
+   "Markous",
+   "NDRIC.304218.9.573"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 201483,
+  "domain": "ai4privacy",
+  "text": "M&A Valuation Assessment: Reviewed Rocket Mortgage merger outcome by A. Procedures detailed in ISA (Individual Savings Account) confidential document, secured under ov!9Hy. Significant projections were authenticated using Mstr's proprietary metrics. All entries validated against 11 checks.",
+  "pii_present": true,
+  "pii_values": [
+   "A",
+   "ov!9Hy"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 302358,
+  "domain": "ai4privacy",
+  "text": "Received docs from United States on new zoning laws. Review for compliance. Details sent to D@aol.com.",
+  "pii_present": true,
+  "pii_values": [
+   "D@aol.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 354708,
+  "domain": "ai4privacy",
+  "text": "Hey, make sure all the client's direct contact info including DRIVERLICENSENUM C5634098 is accurate.",
+  "pii_present": true,
+  "pii_values": [
+   "C5634098"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 209658,
+  "domain": "ai4privacy",
+  "text": "Based at Rockwall Farm Drive, 27356, our mission is youth sports programs. Call 0119 351.046.7212. Director: Rysler.",
+  "pii_present": true,
+  "pii_values": [
+   "Rockwall Farm Drive",
+   "27356",
+   "0119 351.046.7212",
+   "Rysler"
+  ],
+  "pii_types": [
+   "STREET",
+   "ZIPCODE",
+   "TELEPHONENUM",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 340873,
+  "domain": "ai4privacy",
+  "text": "Update on the Psychologist, sport and exercise seminar. [IPV6_3] issues raised by the Newton Abbot Chagford team. Discuss new 518 policy at 5 o'clock.",
+  "pii_present": true,
+  "pii_values": [
+   "Newton Abbot Chagford"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 437388,
+  "domain": "ai4privacy",
+  "text": "3\tStudent Engagement Plan\tStrategic plan outlining initiatives to enhance student engagement and success. Regular feedback can be collected through surveys. For example:\n- Username: rprwopzfcomue72009\n- Passport Number: 506515616\n- City: Fontana\n- OTP: 81-393.\n- Driver License: 85769625",
+  "pii_present": true,
+  "pii_values": [
+   "rprwopzfcomue72009",
+   "Fontana",
+   "85769625"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "CITY",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 324148,
+  "domain": "ai4privacy",
+  "text": "Adherence to ethical guidelines: Secure P1987@hotmail.com, +1 51 747 7076 with robust +0G\\r protection, as per Jackson Inc standards.",
+  "pii_present": true,
+  "pii_values": [
+   "P1987@hotmail.com",
+   "+1 51 747 7076",
+   "+0G\\r"
+  ],
+  "pii_types": [
+   "EMAIL",
+   "TELEPHONENUM",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 420958,
+  "domain": "ai4privacy",
+  "text": "<p><strong>Therapy Approach:</strong> Regular sessions will be conducted at South Lane, led by Master Denisz. Reach out via demascher2010@protonmail.com or +44.54735.0042. Progress tracked with 0x214033447026286c4edc183cb3e8fadc36747a4f.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "South Lane",
+   "Denisz",
+   "demascher2010@protonmail.com",
+   "+44.54735.0042"
+  ],
+  "pii_types": [
+   "STREET",
+   "GIVENNAME",
+   "EMAIL",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 365483,
+  "domain": "ai4privacy",
+  "text": "<p>Treatment Regimen for Masculine</p><p>Patient Height: 160 cm / 5' 2\"</p><p>Building Number: 5453, Flat 432</p><p>Email Contact: RSFS@protonmail.com</p><p>IBAN Code for Billing: US1285841612S1F7837</p><p>Refer to guidelines in US</p>",
+  "pii_present": true,
+  "pii_values": [
+   "5453",
+   "RSFS@protonmail.com"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 174618,
+  "domain": "ai4privacy",
+  "text": "Can someone from US clarify the IDScan policies? Receievd email for needing the student 252781839286 and social 329 26 5837 for the application.",
+  "pii_present": true,
+  "pii_values": [
+   "252781839286",
+   "329 26 5837"
+  ],
+  "pii_types": [
+   "IDCARDNUM",
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 376718,
+  "domain": "ai4privacy",
+  "text": "Entry strategy for GB. Contact: Knechtli, ID JM05750RE. Use encrypted data with 0x24a81a6389a1ad59bd9f4d640fbfdd7cbe06952a. Secure location monitoring at [51.6947, -2.2]. Internal verification through 315177631510407.",
+  "pii_present": true,
+  "pii_values": [
+   "Knechtli",
+   "JM05750RE"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 497198,
+  "domain": "ai4privacy",
+  "text": "Teachers' evals using Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/5.0) seem legit. Verify and add to 425 system. Call me at 0115 53 807-8457.",
+  "pii_present": true,
+  "pii_values": [
+   "425",
+   "0115 53 807-8457"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 152153,
+  "domain": "ai4privacy",
+  "text": "Anomaly detected in 8749 transactions. Recent passport checks at 800161189 essential. Ensure all data aligns with trades off DL11 records. Risk extends over 449,487.19 Euro.",
+  "pii_present": true,
+  "pii_values": [
+   "DL11"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 495138,
+  "domain": "ai4privacy",
+  "text": "html><body><p>Document REF-202201-8877: Electronic glitch reported near Southwest. Logs from 823585356363254 analysed. Significant error in hardware. Enfield Bulls Cross-based financial records 0.632m checked. Awaiting further investigation.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "Enfield Bulls Cross"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 191558,
+  "domain": "ai4privacy",
+  "text": "Insight: Development assessment tracked by ID 393752820, Contact: +137.358.526 8164. Fund summary at region 85736, amount checked 413648.86.",
+  "pii_present": true,
+  "pii_values": [
+   "+137.358.526 8164",
+   "85736"
+  ],
+  "pii_types": [
+   "TELEPHONENUM",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 467298,
+  "domain": "ai4privacy",
+  "text": "Hello Auguste, can you verify your [CREDITCARDEXPIRYCREDITCARDCVV_1] and [PASSPORTNUM_1]? It's necessary for processing.",
+  "pii_present": true,
+  "pii_values": [
+   "Auguste"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 135443,
+  "domain": "ai4privacy",
+  "text": "Account High-Yield Account showed weak 1V9jVT\\m\" practices under USENIVJ3281. Ensure all usntxtobawpuqlt54 data is compliant, modify routines for secure 4400.",
+  "pii_present": true,
+  "pii_values": [
+   "1V9jVT\\m\"",
+   "usntxtobawpuqlt54"
+  ],
+  "pii_types": [
+   "PASSWORD",
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 130808,
+  "domain": "ai4privacy",
+  "text": "Quick poll: financing medical expenses, what methods do you use? My 5342026200875069 got declined, balance is zero. How do we manage this effectively?",
+  "pii_present": true,
+  "pii_values": [
+   "5342026200875069"
+  ],
+  "pii_types": [
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 146393,
+  "domain": "ai4privacy",
+  "text": "Investigation highlights user's financial disputes attributed to USERAGENT (Opera/9.93.(X11; Linux i686; de-LU) Presto/2.9.176 Version/12.00). Recommended approach includes securing all associated IP ([IPV6_4]) and TELEPHONE ((174) 2721130) mediation.",
+  "pii_present": true,
+  "pii_values": [
+   "(174) 2721130"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 271173,
+  "domain": "ai4privacy",
+  "text": "Hi pydhvtqcbixqjn62183, direct Paola to check 613640.09 at [IPV4_10]. Sync data with REF-201110-4276 after.",
+  "pii_present": true,
+  "pii_values": [
+   "pydhvtqcbixqjn62183",
+   "Paola"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 280013,
+  "domain": "ai4privacy",
+  "text": "jjocqoor412122, what's the juice like on newborn screening funds? Not sure if United States Dollar has been approved yet for the program.",
+  "pii_present": true,
+  "pii_values": [
+   "jjocqoor412122"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 475803,
+  "domain": "ai4privacy",
+  "text": "Financial aid form for Sheffield schools. User Mozilla/5.0 (iPad; CPU iPad OS 10_3_3 like Mac OS X) AppleWebKit/536.1 (KHTML, like Gecko) FxiOS/16.5r9322.0 Mobile/75H773 Safari/536.1. Needed sum: 8.495b. Address at: Hordron Road, Northwest, S36. Payment: Card 2201203701083527 or Bitcoin 3vQKEZNhEcDjpQaUbpk3ZfryxAKjzJjQU8. VIN: TWD45D2CXYXSNSET4, contact: 306661066883371.",
+  "pii_present": true,
+  "pii_values": [
+   "Sheffield",
+   "Hordron Road",
+   "S36",
+   "2201203701083527"
+  ],
+  "pii_types": [
+   "CITY",
+   "STREET",
+   "ZIPCODE",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 177823,
+  "domain": "ai4privacy",
+  "text": "<p>Daniels-Smith demonstrated exceptional market penetration, especially in regions identified by coordinates [38.3, -84.4] and [38.3, -84.4].</p><p>For further details access emails from tiantian.gruda1942@tutanota.com using the provided secure A}e!9`.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "tiantian.gruda1942@tutanota.com",
+   "A}e!9`"
+  ],
+  "pii_types": [
+   "EMAIL",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 463188,
+  "domain": "ai4privacy",
+  "text": "Can you update the project budget for Stout? Ensure you include all recent payments made in USD.",
+  "pii_present": true,
+  "pii_values": [
+   "Stout"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 113148,
+  "domain": "ai4privacy",
+  "text": "<p>Agreement:</p><p>Amount: 0.3927m</p><p>Rate: 5.25%</p><p>Borrower: Vijayan</p><p>Term: 10 years</p><p>Credit Card Issuer: Maestro</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Vijayan"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 492828,
+  "domain": "ai4privacy",
+  "text": "Strange patterns found on 74955062 account from Chapel Lane. In use by Darlington Building Society's Exercise physiologist. Track it alongside 1968-12-14T00:00:00.",
+  "pii_present": true,
+  "pii_values": [
+   "Chapel Lane",
+   "1968-12-14T00:00:00"
+  ],
+  "pii_types": [
+   "STREET",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 160648,
+  "domain": "ai4privacy",
+  "text": "High-Yield Account, some performance metrics appear off. Use your ID CJ17341AU and log into https://davies.com/.",
+  "pii_present": true,
+  "pii_values": [
+   "CJ17341AU"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 325508,
+  "domain": "ai4privacy",
+  "text": "<div> I, Albijan, born January 20th, 1945, agree to the surgical procedure by Fischer-Farley. Contact: 03327-050327. IP: [IPV6_13]. Social Security: 546-48-4206. ID: 26345685315365.</div>",
+  "pii_present": true,
+  "pii_values": [
+   "Albijan",
+   "January 20th, 1945",
+   "03327-050327",
+   "546-48-4206",
+   "26345685315365"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "DATEOFBIRTH",
+   "TELEPHONENUM",
+   "SOCIALNUM",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 192718,
+  "domain": "ai4privacy",
+  "text": "Patient's Examination Details: Name: Amzallag, Last Checkup Date: April 3rd, 2063, Job Area: Technical Support, Social Security: 870-52-3498, Contact Email: A@protonmail.com, Contact Phone: +13-360-720 7934, Litecoin Address: LYSSdJCCCYWd3HAf8wzTGQ0nMDkBp7UT9F",
+  "pii_present": true,
+  "pii_values": [
+   "Amzallag",
+   "870-52-3498",
+   "A@protonmail.com",
+   "+13-360-720 7934"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "SOCIALNUM",
+   "EMAIL",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 248378,
+  "domain": "ai4privacy",
+  "text": "Evaluation Report\nPatient: Nejiba\nGender: Non-binary\nStreet Address: Whaddon Lane, No: 1788\nDate: September 29th, 2061 \nEye colour: Gray\nIBAN: GB12 5LW3 CAW7 NC14 3KL4 LJ",
+  "pii_present": true,
+  "pii_values": [
+   "Nejiba",
+   "Whaddon Lane",
+   "1788"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "STREET",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 498113,
+  "domain": "ai4privacy",
+  "text": "Confirmation FILE-202106-9161: Academic accounts 6609821408182681923 accredited to Savings Account should be activated for fund disbursement.",
+  "pii_present": true,
+  "pii_values": [
+   "6609821408182681923"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 122348,
+  "domain": "ai4privacy",
+  "text": "Hey aljima.d'ambrogio05, a quick reminder to report the therapy progress. Required for Burford Swinbrook office. Attach the RBFCUSU111Q before February 11th, 2015.",
+  "pii_present": true,
+  "pii_values": [
+   "aljima.d'ambrogio05",
+   "Burford Swinbrook"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 329718,
+  "domain": "ai4privacy",
+  "text": "Make sure you have the students' 835193615586 copies before we leave on the field trip.",
+  "pii_present": true,
+  "pii_values": [
+   "835193615586"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 427263,
+  "domain": "ai4privacy",
+  "text": "We'll need to include the County Road C West office for our next Internship strategic review.",
+  "pii_present": true,
+  "pii_values": [
+   "County Road C West"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 342318,
+  "domain": "ai4privacy",
+  "text": "<p>Role division for the Environmental Education Project</p><ul><li>Main Coordinator: [USER_NAME_3]</li><li>Contact Number: 01490-59908 </li><li>Coordination Address: Howley Mill Lane</li><li>Height of Plants: 185 cm</li><li>Tutor's Qualification: Internship</li><li>URL: https://summers-price.com/</li></ul>",
+  "pii_present": true,
+  "pii_values": [
+   "01490-59908 ",
+   "Howley Mill Lane"
+  ],
+  "pii_types": [
+   "TELEPHONENUM",
+   "STREET"
+  ]
+ },
+ {
+  "id": 277278,
+  "domain": "ai4privacy",
+  "text": "Just added new findings from our session in York City Centre. We'll go over the report on August 15th, 2018.",
+  "pii_present": true,
+  "pii_values": [
+   "York City Centre"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 500063,
+  "domain": "ai4privacy",
+  "text": "Constitutional measures under Article 24 enforce stringent monitoring of taxpayer identification 76626.20081. Employment roles within Lichfield such as Ergonomist are subject to audits. Digital transparency requires verification through addresses LKFLX3oxqm8IbjrpEfo64Qrt4UYcR5KUt9 and document number FILE-201404-9161 for compliance.",
+  "pii_present": true,
+  "pii_values": [
+   "76626.20081",
+   "Lichfield"
+  ],
+  "pii_types": [
+   "TAXNUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 273808,
+  "domain": "ai4privacy",
+  "text": "Summary report for Schiffelbein. Higher rates of class participation noted. Email through USERAGENT: Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 4.0; Trident/4.0).",
+  "pii_present": true,
+  "pii_values": [
+   "Schiffelbein"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 401133,
+  "domain": "ai4privacy",
+  "text": "Hey Evdokia, need your admin approval in library system. Required is Female id and 378-37-1902.",
+  "pii_present": true,
+  "pii_values": [
+   "Evdokia",
+   "378-37-1902"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 419248,
+  "domain": "ai4privacy",
+  "text": "Can you check if the BIC code LATVUSFG and the address How Road are accurate? We need to transfer 427.7k today.",
+  "pii_present": true,
+  "pii_values": [
+   "How Road"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 137073,
+  "domain": "ai4privacy",
+  "text": "<p>To meet public health requirements in CO, ensure 94939440726860 is up-to-date. Access via ISA (Individual Savings Account) and clear any discrepancies by 10 o'clock.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "94939440726860"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 296563,
+  "domain": "ai4privacy",
+  "text": "FINANCIAL AID: British Pound Sterling165.2k<br>STREET: Caemansel Road<br>OTP: 2-037.32<br>IPV4: [IPV4_4]",
+  "pii_present": true,
+  "pii_values": [
+   "Caemansel Road"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 230348,
+  "domain": "ai4privacy",
+  "text": "2    Student Assessment Report <br>Student Name: Mack-Even<br>Evaluation Date: October 14th, 2033<br>Mailbox: eckmzx97@gmail.com.<br>Review Section: Human Resources, ID Card: 45438147945367, Vehicle ID: 212OF, Zip: 37138-1982",
+  "pii_present": true,
+  "pii_values": [
+   "Mack-Even",
+   "eckmzx97@gmail.com",
+   "45438147945367",
+   "37138-1982"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "EMAIL",
+   "IDCARDNUM",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 314588,
+  "domain": "ai4privacy",
+  "text": "Esme, can you scan the 51276 11154 for accuracy in our student workers' records?",
+  "pii_present": true,
+  "pii_values": [
+   "51276 11154"
+  ],
+  "pii_types": [
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 402483,
+  "domain": "ai4privacy",
+  "text": "Hey b\u00e8la.sellitti, verify your ETH address (0xfc832bfff22f609347fc907f15118c44d416ea55) for transfer.",
+  "pii_present": true,
+  "pii_values": [
+   "b\u00e8la.sellitti"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 382028,
+  "domain": "ai4privacy",
+  "text": "Hey Sedat, can you access the patient records using the MAC address 14:85:ff:2f:25:0a? Also, note the DOC number REF-201708-8886 for our reference during today's meeting.",
+  "pii_present": true,
+  "pii_values": [
+   "Sedat"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 333208,
+  "domain": "ai4privacy",
+  "text": "Transfer of Copyright: 25, Non-binary from Trailer 640, transfers rights of copyrighted material to 18C1999@aol.com. Effective under Doc No REF-201312-5708.",
+  "pii_present": true,
+  "pii_values": [
+   "18C1999@aol.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 109133,
+  "domain": "ai4privacy",
+  "text": "<div>\n  <p>Client: marilyne</p>\n  <p>Reports documented under ID 35020210867380. Contact IP: [IPV4_1]. Payment processed via 376696269003268.</p>\n</div>",
+  "pii_present": true,
+  "pii_values": [
+   "marilyne",
+   "35020210867380",
+   "376696269003268"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "IDCARDNUM",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 350533,
+  "domain": "ai4privacy",
+  "text": "1   Psychological Evaluation   - The review for Marie-No\u00ebl highlights mental health emergencies tied to MARIE3101469952 and IP records [IPV6_6].",
+  "pii_present": true,
+  "pii_values": [
+   "Marie-No\u00ebl",
+   "MARIE3101469952"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 110838,
+  "domain": "ai4privacy",
+  "text": "Hey ebtesam.kurudere01, don't forget the meeting on February 11th, 2027 in Telford. Please bring the contracts and make sure Female is aware if they need to bring any extras.",
+  "pii_present": true,
+  "pii_values": [
+   "ebtesam.kurudere01",
+   "Telford"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 278088,
+  "domain": "ai4privacy",
+  "text": "Important: Your child's glucose readings show fluctuations. Ensure they adhere to their meal plan and monitor regularly. Bring their logbook for review at Willacoochee Health Center. - Customer Service Team",
+  "pii_present": true,
+  "pii_values": [
+   "Willacoochee"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 307758,
+  "domain": "ai4privacy",
+  "text": "<p>Contract amendment as of October 10th, 2050 updates the iteration protocol. Section 7 highlights secure transactions via 21794415 and 3jJiQGKjx1E1OJtM4wYnNKPbuff2AeoKSC for all interactions. Validation is the responsibility of Contract Madian, authorized to operate within ENG.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Madian"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 221548,
+  "domain": "ai4privacy",
+  "text": "Bar Admission Agreement Agree to terms: Alexa, Capt. Submit 7488814527, ensure compliance with CA regulations, use alexa.breitr\u00fcck38 for portal. | Verify: 0801.4. | HTML",
+  "pii_present": true,
+  "pii_values": [
+   "Alexa",
+   "7488814527",
+   "alexa.breitr\u00fcck38"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "IDCARDNUM",
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 389403,
+  "domain": "ai4privacy",
+  "text": "gcotdsxg542, please double-check the financial data, especially focusing on expenditures in the Project Management area.",
+  "pii_present": true,
+  "pii_values": [
+   "gcotdsxg542"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 163328,
+  "domain": "ai4privacy",
+  "text": "Hi 48margr\u00e9t, confirming our time slot for legal discussions at 20:53:31. Make sure IPV4 records match with Certificate of Deposit Account.",
+  "pii_present": true,
+  "pii_values": [
+   "48margr\u00e9t"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 449453,
+  "domain": "ai4privacy",
+  "text": "<p>Proposal by Maril\u00e8ne for enhancing emotional regulation in Norwalk. Please review suggestions below, including use of online tools. Contact me at 71655655450 for further details. The data cited has been verified as per report #ORDER-201209-8386.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Maril\u00e8ne",
+   "Norwalk",
+   "71655655450"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 366103,
+  "domain": "ai4privacy",
+  "text": "Mstr, do Masculine employees report higher workplace satisfaction than others? Need this for our Los Angeles study.",
+  "pii_present": true,
+  "pii_values": [
+   "Los Angeles"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 167403,
+  "domain": "ai4privacy",
+  "text": "Hey Majid, can you help me understand the new oil and gas regulations in NV? I need the specifics for our legal case. Thanks!",
+  "pii_present": true,
+  "pii_values": [
+   "Majid"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 194218,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Benefits assessment of 13t\u00e2nia, at 395, SE., ZIP PR3, SSN: 236 789 4700. Time: 8 AM, Date: September/55. Confirm with BIC: XBBSUSJPT5N.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "13t\u00e2nia",
+   "395",
+   "PR3",
+   "236 789 4700"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "BUILDINGNUM",
+   "ZIPCODE",
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 451458,
+  "domain": "ai4privacy",
+  "text": "Update on student 27 from San Diego Sorrento Valley. They will need special dietary considerations. You can reach out via +274 48.062-8811.",
+  "pii_present": true,
+  "pii_values": [
+   "San Diego Sorrento Valley",
+   "+274 48.062-8811"
+  ],
+  "pii_types": [
+   "CITY",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 277753,
+  "domain": "ai4privacy",
+  "text": "Hey Thalita, consulting firm in Wantage Farnborough flagged account 1976285. Need Money Market Account's confirmation. DOCNUM NUM-202111-3523 needs revisions, check please.",
+  "pii_present": true,
+  "pii_values": [
+   "Thalita",
+   "Wantage Farnborough",
+   "1976285"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 266993,
+  "domain": "ai4privacy",
+  "text": "<p>Surveyor, insurance at Hill Inc requires OR ethical clearance. Secure 78 participants\u2019 data using [IPV6_3] and R-z6<sc. Submit 97219-6667 and financial statement showing 672130 balance from US22 26551968 04I 7678.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "R-z6<sc",
+   "97219-6667"
+  ],
+  "pii_types": [
+   "PASSWORD",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 229813,
+  "domain": "ai4privacy",
+  "text": "Comprehensive legal compliance achieved by Lupinacci, 32 years in, facilitated under IP [IPV4_8]. Full balance details accrue to 380,121.38, checked at https://www.cannon-crawford.biz/.",
+  "pii_present": true,
+  "pii_values": [
+   "Lupinacci"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 319398,
+  "domain": "ai4privacy",
+  "text": "Implement digital badge systems for improving attendance. Funds from account 81511425. Engage Female students in 37064. Collaborate with Roberts-Johnson. Share data with Mudlogger. xanpizo to handle app support. Monitor records using 780-52-6328.",
+  "pii_present": true,
+  "pii_values": [
+   "81511425",
+   "37064",
+   "xanpizo",
+   "780-52-6328"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "ZIPCODE",
+   "USERNAME",
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 290193,
+  "domain": "ai4privacy",
+  "text": "Hello, I need help with chemistry lab reports. Are you available? My number: 00315-501.950-9519.",
+  "pii_present": true,
+  "pii_values": [
+   "00315-501.950-9519"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 307948,
+  "domain": "ai4privacy",
+  "text": "<p>Insider Trading Form</p><p>Secondary Address: Co-op 344</p><p>Sex: F</p><p>Given Name: Hailie</p><p>Organisation: Richardson-Price</p><p>Date of Birth: 25/09/1939</p><p>Height: 153 cm</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Hailie",
+   "25/09/1939"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 503723,
+  "domain": "ai4privacy",
+  "text": "Dear pratiksha.teissier, your insights on insurance risk are needed. Please use the OTP 78.6850. Best, P@tutanota.com",
+  "pii_present": true,
+  "pii_values": [
+   "pratiksha.teissier",
+   "P@tutanota.com"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 251013,
+  "domain": "ai4privacy",
+  "text": "Just received your insurance policy! Use this 29283.5 to complete the registration. Your ZIP code 95242-9544 and DOB March 6th, 1990 were used for verification.",
+  "pii_present": true,
+  "pii_values": [
+   "95242-9544",
+   "March 6th, 1990"
+  ],
+  "pii_types": [
+   "ZIPCODE",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 495178,
+  "domain": "ai4privacy",
+  "text": "<p>Legal headed the research. Telephone 0107.00-234.0475 for queries. Financial break: MYR64.57k. Report stored at https://pritchard-griffin.com/.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "0107.00-234.0475"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 132758,
+  "domain": "ai4privacy",
+  "text": "Hey Mancari, have you sorted out the Northeast bus pass? They need ZI32007DQ now.",
+  "pii_present": true,
+  "pii_values": [
+   "Mancari",
+   "ZI32007DQ"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 421238,
+  "domain": "ai4privacy",
+  "text": "Are the guidelines including the 12th July 1991 case history updated? Bischofsberger will need them for next week's lecture.",
+  "pii_present": true,
+  "pii_values": [
+   "12th July 1991",
+   "Bischofsberger"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 323413,
+  "domain": "ai4privacy",
+  "text": "Breach Report: Account 46680755 accessed via unknown IP. Holder: Riti, job: Full-time. From Sumterville, height: 172 cm / 5' 7\" cm. Review tied Bitcoin address: 3q6XpwEeovF3fGQ5Cbtv47FoW1ZrqMeSwE, Litecoin: L4mPdQ5UyQA9YGiyi0XTxrmiwKLjP30rb4.",
+  "pii_present": true,
+  "pii_values": [
+   "46680755",
+   "Riti",
+   "Sumterville"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "GIVENNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 451003,
+  "domain": "ai4privacy",
+  "text": "<p>The audit documented on 19th October 2015 reflects surveillance compliance within Howard PLC, focusing on Ethel. Policy details under L-UE-690013 reveal significant checks for BILL-201307-8818 and supplementary Bitcoin address: 3Gx5l7zTJXVmzXtAZeyYAkEVQCeipuFSgO. Identified parties: Masculine.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Ethel"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 380998,
+  "domain": "ai4privacy",
+  "text": "<p>Proficiency Evaluation</p><p>Student: ISA (Individual Savings Account)</p><p>Driver's Licence: CEAN9704112CZ534</p><p>Language 1: Korean</p><p>Language 2: French</p><p>Score: 79%</p><p>Height: 183 cm</p>",
+  "pii_present": true,
+  "pii_values": [
+   "CEAN9704112CZ534"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 464533,
+  "domain": "ai4privacy",
+  "text": "<p>2   Audit Report   Detailed report documenting the findings of audits conducted to assess compliance with healthcare regulations. The audit revealed an anomaly linked to 95761045. Additional scrutiny is required. For the full report, contact RW@tutanota.com.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "RW@tutanota.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 374668,
+  "domain": "ai4privacy",
+  "text": "2 Pediatric Emergency Care Report Report detailing the emergency medical care provided to pediatric patients. Luleta experiencing high fever, intake details recorded under BI80692VA. Contact info: L@hotmail.com; backup: 311388032561329.",
+  "pii_present": true,
+  "pii_values": [
+   "Luleta",
+   "BI80692VA",
+   "L@hotmail.com"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "IDCARDNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 175468,
+  "domain": "ai4privacy",
+  "text": "Hey Crescent, our appointment is rescheduled to 02:31 on 07/09/2041. Please bring the latest bank statements from West Bromwich Building Society for the estate review.",
+  "pii_present": true,
+  "pii_values": [
+   "Crescent"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 213818,
+  "domain": "ai4privacy",
+  "text": "Hi jofre.pfenig, ensure that the video clips from the Pitchens Close area are anonymised. Look out for any visible 6762346510828616722 or 83782729 details.",
+  "pii_present": true,
+  "pii_values": [
+   "jofre.pfenig",
+   "Pitchens Close",
+   "6762346510828616722",
+   "83782729"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "STREET",
+   "CREDITCARDNUMBER",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 275353,
+  "domain": "ai4privacy",
+  "text": "Infection control plan for 17 includes regular temperature checks and using email oupika8441@outlook.com for reporting symptomatic individuals. Implement sanitation stations at Unit 707 and Unit 707. Ensure everyone's ID is checked regularly.",
+  "pii_present": true,
+  "pii_values": [
+   "17",
+   "oupika8441@outlook.com"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 212603,
+  "domain": "ai4privacy",
+  "text": "Applicant: Checking Account<br>Policy Number: L.UE.377498<br>Height: 165 cm / 5' 4\"<br>Tax Number: 046 69 6884<br>",
+  "pii_present": true,
+  "pii_values": [
+   "046 69 6884"
+  ],
+  "pii_types": [
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 167193,
+  "domain": "ai4privacy",
+  "text": "2 Psychoeducational Report Detailed analysis of the individual's cognitive and emotional functioning. Includes their ID: 5526364892272, 84307 details. Emotional functionality evaluated. Report accessible at https://bell.com/. Observations on Sales, verified by MAC: b6:1a:d6:4b:95:e9.",
+  "pii_present": true,
+  "pii_values": [
+   "5526364892272"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 322258,
+  "domain": "ai4privacy",
+  "text": "Discussing EQ in our weekly meetings. Any reference material? 33617-4545",
+  "pii_present": true,
+  "pii_values": [
+   "33617-4545"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 297638,
+  "domain": "ai4privacy",
+  "text": "Any follow-up studies recommended from Clarke PLC? I've seen them in Preston Knowle Green. Storing my key details like 474458070476327.",
+  "pii_present": true,
+  "pii_values": [
+   "Preston Knowle Green"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 499998,
+  "domain": "ai4privacy",
+  "text": "Efficient project transitions within United Kingdom require monitoring through 840990729106129114390499 and securing compliance via EC78798JF. Financial reviews should focus on account 470. Key responsibilities fall on Professor Emeritus, ensuring all milestones align with the strategic path outlined.",
+  "pii_present": true,
+  "pii_values": [
+   "840990729106129114390499",
+   "EC78798JF"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 254003,
+  "domain": "ai4privacy",
+  "text": "Alert: Your HSA account 42840302332153008641805 has been credited with 179k. For details, contact 011.052.926 6548.",
+  "pii_present": true,
+  "pii_values": [
+   "42840302332153008641805",
+   "011.052.926 6548"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 141498,
+  "domain": "ai4privacy",
+  "text": "[54.08751, -1.108] readings need extra validation. Consult with rncafidkjmpunuok44 and review the study framework.",
+  "pii_present": true,
+  "pii_values": [
+   "rncafidkjmpunuok44"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 419243,
+  "domain": "ai4privacy",
+  "text": "Could you please update your BIC (IFGZUSK3) and street address (Pinoak Road) in the system?",
+  "pii_present": true,
+  "pii_values": [
+   "Pinoak Road"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 144303,
+  "domain": "ai4privacy",
+  "text": "Child Name: rizana.kuppelwieser\nAge: 0\nGender: Female\nCity: Kendalia\nCountry: US\nMilestones: Communicates effectively, solves basic puzzles, rides a bicycle. Tracker: LTFP4EJS2LUYNN3BD.",
+  "pii_present": true,
+  "pii_values": [
+   "rizana.kuppelwieser",
+   "Kendalia"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 160563,
+  "domain": "ai4privacy",
+  "text": "2. Export Compliance Report\nAssessment of the company's adherence to export regulations and trade control laws. ntumba.hotra28, Ntumba at Johnson-Bell. Ensure compliance with Card 6209948055890419 and PIN 4372818.",
+  "pii_present": true,
+  "pii_values": [
+   "ntumba.hotra28",
+   "Ntumba",
+   "6209948055890419"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "GIVENNAME",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 398483,
+  "domain": "ai4privacy",
+  "text": "Peer support: Group meets at 11639 Great Falls. Contact via 181472554173445.",
+  "pii_present": true,
+  "pii_values": [
+   "11639",
+   "Great Falls"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 487373,
+  "domain": "ai4privacy",
+  "text": "Don't forget to review the document with REF-202204-6864 and ensure everything is in place for the meeting at Montague Road.",
+  "pii_present": true,
+  "pii_values": [
+   "Montague Road"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 197238,
+  "domain": "ai4privacy",
+  "text": "<p>Review pending approvals. Validate user PTB1950, Apsara, PIN 008071. Update 509 and vehicle details 0EFEAM2M43AC8CTW9. Compliance should be ensured by 19/04/2075. Document all activities at Common Lane, YO19.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "PTB1950",
+   "Apsara",
+   "Common Lane",
+   "YO19"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "GIVENNAME",
+   "STREET",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 420043,
+  "domain": "ai4privacy",
+  "text": "Meeting rescheduled to 2pm. Need E\u00f6tv\u00f6s from Legal to attend. Also, configure the main server using the MAC address a6:a1:a9:b7:ce:87.",
+  "pii_present": true,
+  "pii_values": [
+   "E\u00f6tv\u00f6s"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 273128,
+  "domain": "ai4privacy",
+  "text": "Hi Mirza, it's great to have you here. Ensure your balance 574k and document number REF-202205-8555 are updated. Visit support team at [IPV4_1] for guidance.",
+  "pii_present": true,
+  "pii_values": [
+   "Mirza"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 306933,
+  "domain": "ai4privacy",
+  "text": "Heads up team, 18th October 2055 is the deadline for all current projects feedback. Include changes in 0.2m adjustments. Forward updates to 1351 coordination team.",
+  "pii_present": true,
+  "pii_values": [
+   "1351"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 508678,
+  "domain": "ai4privacy",
+  "text": "Hi Mats, ensure that the passport details (961368715) and credit card info (3181864534222203803, 13/14, 327) are updated.",
+  "pii_present": true,
+  "pii_values": [
+   "Mats",
+   "3181864534222203803"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 226733,
+  "domain": "ai4privacy",
+  "text": "Quick update: our Dallas office's diversity initiative needs your feedback, dagnsisc34773. Access via Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_12_2; rv:1.9.6.20) Gecko/7999-08-30 20:07:22.377289 Firefox/9.0 and use 532049.",
+  "pii_present": true,
+  "pii_values": [
+   "Dallas",
+   "dagnsisc34773"
+  ],
+  "pii_types": [
+   "CITY",
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 504293,
+  "domain": "ai4privacy",
+  "text": "<div><h1>Confidential Counseling Report</h1><p>Client (M) shared concerns over CRIST 912141 9 481 renewal and its impact on daily routines. Considered alternative transport options and maintained focus on core training objectives.</p></div>",
+  "pii_present": true,
+  "pii_values": [
+   "CRIST 912141 9 481"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 175748,
+  "domain": "ai4privacy",
+  "text": "583445286039970556 work hours causing anxiety for Asefaw. Addressed 07984 and 768-71-0191 records compromise.",
+  "pii_present": true,
+  "pii_values": [
+   "Asefaw",
+   "768-71-0191"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 402743,
+  "domain": "ai4privacy",
+  "text": "Documents certify vehicle PS4YP2FH1B016ABFF compliance with safety standards. For complete certification proof, consult Engineering. Review archives at CB25 9NN.",
+  "pii_present": true,
+  "pii_values": [
+   "CB25 9NN"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 163008,
+  "domain": "ai4privacy",
+  "text": "Hey Gombau, absolutely loved your insights. Any adult-pediatric combined therapy options in Charlotte?",
+  "pii_present": true,
+  "pii_values": [
+   "Gombau",
+   "Charlotte"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 262908,
+  "domain": "ai4privacy",
+  "text": "Hey, can you update me on the recent findings related to reproductive health? Look into issues in WF5 and check if there are any anomalies from [IPV4_1].",
+  "pii_present": true,
+  "pii_values": [
+   "WF5"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 243648,
+  "domain": "ai4privacy",
+  "text": "Hi Kilyan, use 5a:8c:63:5f:ef:48 to access secure files. Send updates to 2003irmanbutt@hotmail.com.",
+  "pii_present": true,
+  "pii_values": [
+   "Kilyan",
+   "2003irmanbutt@hotmail.com"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 408623,
+  "domain": "ai4privacy",
+  "text": "Hello Chiropractor, updates on Edinburgh Bellevue school assessments. Check whether policies meet standards in SCT.",
+  "pii_present": true,
+  "pii_values": [
+   "Edinburgh Bellevue"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 115193,
+  "domain": "ai4privacy",
+  "text": "Kaleb, can you check our balances for USD? Urgent need.",
+  "pii_present": true,
+  "pii_values": [
+   "Kaleb"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 335313,
+  "domain": "ai4privacy",
+  "text": "Sales report for Townhouse 251: 07desio drove GBP924047 revenue. Strong engagement with Other clients.",
+  "pii_present": true,
+  "pii_values": [
+   "07desio"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 309578,
+  "domain": "ai4privacy",
+  "text": "Can you confirm Penthouse 181 and Business Account adjustments in the Bailey, Kirby and Hooper liquidation? Reach me at 00.7799 4800.",
+  "pii_present": true,
+  "pii_values": [
+   "00.7799 4800"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 406688,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Reconciliation for Avelin. Verify account balances with Monzo Bank Limited. Discrepancies in 3712 payments noted. Login ageorgevic@outlook.com for rectifications.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "Avelin",
+   "ageorgevic@outlook.com"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 215083,
+  "domain": "ai4privacy",
+  "text": "<p>Service member Male experienced traumatic event on 3rd February 2012 in GB, location [51.766, 0.419]. Event at 18:05 logged. Follow-up with encrypted files via Bitcoin address 3gIAhoYihYv1oPDHj6d1kIHClRUpzGSNk8.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "3rd February 2012"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 356288,
+  "domain": "ai4privacy",
+  "text": "Patient Babiak shows progress, aged 11. Managed by Healthcare. Verification request: Social Security 446 84 6157, Email: glorbabiak@yahoo.com. Financial review: Signature Bank Balance 46,607.25.",
+  "pii_present": true,
+  "pii_values": [
+   "Babiak",
+   "446 84 6157",
+   "glorbabiak@yahoo.com"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "SOCIALNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 307748,
+  "domain": "ai4privacy",
+  "text": "<p>Contract updated as of 9th October 2020, key changes include the implementation of 0x97b11e2c5c8ed278d42341edb6bd693d871bb2f9 for auditing transactions. This amendment also recognizes Madame Merlinde's authority over secure communications, validated against 08:45:f0:9a:31:7c.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Merlinde"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 446668,
+  "domain": "ai4privacy",
+  "text": "Sherifa, my current balance is 222765. Can you check what this reflects in the policy?",
+  "pii_present": true,
+  "pii_values": [
+   "Sherifa"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 118573,
+  "domain": "ai4privacy",
+  "text": "<p>Student lwfxowfu01, evaluated by Healthcare on 08/02/2030. Achieved: [GRADE_1]. Record reference: [POLICYNUM_1]. Device used [MACADDRESS_1], logged under [USERAGENT_1]. Sent to [ORGANISATION_1].</p>",
+  "pii_present": true,
+  "pii_values": [
+   "lwfxowfu01"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 227798,
+  "domain": "ai4privacy",
+  "text": "Accident Summary:\nDate: 19th September 2018\nWorker: Marie-Agn\u00e8s\nPosition: Patent attorney\nLocation: 2185.\nCompany: Francis Inc.\nSummary: Fell from ladder.\nContact: 1988raehse@hotmail.com.",
+  "pii_present": true,
+  "pii_values": [
+   "Marie-Agn\u00e8s",
+   "2185",
+   "1988raehse@hotmail.com"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "BUILDINGNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 173118,
+  "domain": "ai4privacy",
+  "text": "For comprehensive risk management, regularly update *uOg1V&N0s. Ensure secure 29185002725800235464270 transactions. Validate April/13 information and report discrepancies in [IPV6_20] usage to 0044.131-323 1632.",
+  "pii_present": true,
+  "pii_values": [
+   "*uOg1V&N0",
+   "29185002725800235464270",
+   "April/13",
+   "0044.131-323 1632"
+  ],
+  "pii_types": [
+   "PASSWORD",
+   "ACCOUNTNUM",
+   "DATEOFBIRTH",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 165908,
+  "domain": "ai4privacy",
+  "text": "Timeline for BILL-201102-8141 review is tomorrow. Verify patient ID 5237336196782 and send to Pod 473 office.",
+  "pii_present": true,
+  "pii_values": [
+   "5237336196782"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 140753,
+  "domain": "ai4privacy",
+  "text": "Property inspected: 793 at Crownpoint, by Di N\u00e4gele. Found electrical issues and mold in bathrooms. Immediate action needed. Call: +11.05.004 1769.",
+  "pii_present": true,
+  "pii_values": [
+   "793",
+   "Crownpoint",
+   "Di",
+   "N\u00e4gele",
+   "+11.05.004 1769"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "CITY",
+   "GIVENNAME",
+   "SURNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 199658,
+  "domain": "ai4privacy",
+  "text": "Hey Elisaveta, update on Smith's Dock Road network redundancy? Checking [IPV4_3] addresses this afternoon.",
+  "pii_present": true,
+  "pii_values": [
+   "Elisaveta",
+   "Smith's Dock Road"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "STREET"
+  ]
+ },
+ {
+  "id": 378718,
+  "domain": "ai4privacy",
+  "text": "2    Loss Prevention Report    Comprehensive report on loss prevention strategies, incidents, and recommendations for improvement.\n Theft reported at Laundry Lane. Mrs Wood proposes additional training for staff. Detailed plan at https://www.read.com/, contact at saveta.ligotino19@yahoo.com.",
+  "pii_present": true,
+  "pii_values": [
+   "Laundry Lane",
+   "saveta.ligotino19@yahoo.com"
+  ],
+  "pii_types": [
+   "STREET",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 309813,
+  "domain": "ai4privacy",
+  "text": "Hey Pinkert, send the updated assessment criteria to Rufadije at SA1.",
+  "pii_present": true,
+  "pii_values": [
+   "Pinkert",
+   "Rufadije",
+   "SA1"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "GIVENNAME",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 292408,
+  "domain": "ai4privacy",
+  "text": "<html><p>Dean Reinhold's progress report indicates the need for extra classes in communication. You can book a session at Student Account. Password: G@ZH\"#PyP3w</p></html>",
+  "pii_present": true,
+  "pii_values": [
+   "Reinhold",
+   "G@ZH\"#PyP3w"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 128453,
+  "domain": "ai4privacy",
+  "text": "Student: Anatoliy Zobeiri\nDOB: 13th September 1960\nEmergency Contact: Master Anatoliy Zobeiri\nEmail: A@tutanota.com\nAddress: 1457 Loft 792, United States\nCoordinates: [40.06815, -105.05996]",
+  "pii_present": true,
+  "pii_values": [
+   "Anatoliy",
+   "Zobeiri",
+   "13th September 1960",
+   "Anatoliy",
+   "Zobeiri",
+   "A@tutanota.com",
+   "1457"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME",
+   "DATEOFBIRTH",
+   "GIVENNAME",
+   "SURNAME",
+   "EMAIL",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 434978,
+  "domain": "ai4privacy",
+  "text": "Hello Checking Account, excited for today\u2019s discussion on psychopathology trends. Ensure to dial +10 54-231.9378 at 3 PM sharp!",
+  "pii_present": true,
+  "pii_values": [
+   "+10 54-231.9378"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 324563,
+  "domain": "ai4privacy",
+  "text": "<p>Neuropsychologist: [DOCTORNAME]</p><p>Patient: Aurelya Dudula</p><p>Age: 87</p><p>Date of Assessment: March/34</p><p>Job Area: Project Management</p><p>Contact Number: 324808561151254</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Aurelya",
+   "Dudula"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 288998,
+  "domain": "ai4privacy",
+  "text": "<p>I, Money Market Account, give my consent for Suncica to participate in the school field trip. Emergency phone number: 047-405.2196. BIC: BXYGUSGG.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Suncica",
+   "047-405.2196"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 138868,
+  "domain": "ai4privacy",
+  "text": "Dana-Maria, the Internship projections for the next term? Need it presented at 10 next week.",
+  "pii_present": true,
+  "pii_values": [
+   "Dana-Maria",
+   "10"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 322168,
+  "domain": "ai4privacy",
+  "text": "Fill in this form with height 178 cm and address Kingsmark Freeway. Confirm compliance through IP [IPV4_6] and vehicle VIN SC6ZJRLT8F8KBLHHS.",
+  "pii_present": true,
+  "pii_values": [
+   "Kingsmark Freeway"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 421413,
+  "domain": "ai4privacy",
+  "text": "Hey, 2023-10-23T00:00:00 for 0 seems off in the report. Double-check YBLRK0ML63069VDGM, please.",
+  "pii_present": true,
+  "pii_values": [
+   "2023-10-23T00:00:00"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 377563,
+  "domain": "ai4privacy",
+  "text": "Audit completed at 6:36 PM for Harris and Sons, confirming strong protections for Savings Account and emW3Ct+}.",
+  "pii_present": true,
+  "pii_values": [
+   "emW3Ct+}"
+  ],
+  "pii_types": [
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 503193,
+  "domain": "ai4privacy",
+  "text": "Dear Nishanthiny, your inquiry about GERVENI.901228.EN and weight management for kids was noted. Set for September/10.",
+  "pii_present": true,
+  "pii_values": [
+   "Nishanthiny"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 390293,
+  "domain": "ai4privacy",
+  "text": "Settlement Agreement|As detailed, account 841279992167359371689760 owned by Leone meets all requirements.| HTML|Validation includes passport number 007711948 and entry with BIC DXQIUSY9.",
+  "pii_present": true,
+  "pii_values": [
+   "841279992167359371689760",
+   "Leone"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 416018,
+  "domain": "ai4privacy",
+  "text": "Hickory Creek's health metrics need adjustment. Apak sent an update on April/08.",
+  "pii_present": true,
+  "pii_values": [
+   "Hickory Creek",
+   "Apak"
+  ],
+  "pii_types": [
+   "CITY",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 408638,
+  "domain": "ai4privacy",
+  "text": "Hey Exhibitions officer, museum/gallery, evaluate the success of ENG education policies for Sheffield.",
+  "pii_present": true,
+  "pii_values": [
+   "Sheffield"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 259573,
+  "domain": "ai4privacy",
+  "text": "<p>The clinical trial will include Ulfeta, aged 62, with the vehicle VRM JF05 SCJ and tax number 11902-55973. Transactions can be made using 3SXuTx8nqtuuNT3QA43f3AGiNqnO56mfrQ.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Ulfeta",
+   "11902-55973"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 135883,
+  "domain": "ai4privacy",
+  "text": "<p>Patient: Senly</p><p>Incident Coordinates: [34.159, -118.395]</p><p>Country: United States</p><p>Response by: Psychologist, educational</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Senly"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 187658,
+  "domain": "ai4privacy",
+  "text": "2 Economic Development Financing Agreement defining eco-dev fund allocations. Partners: Glass, Smith and Park and Glass, Smith and Park, in Pueblo. Responsible Mstr: Other, contract TRANS-201411-6180, scheduled start: September/61. Monitoring and analysis with [IPV4_1].",
+  "pii_present": true,
+  "pii_values": [
+   "Pueblo"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 474498,
+  "domain": "ai4privacy",
+  "text": "<p> Please sign this form for EHR consent: <br> - BANKNAME: Truist Financial Corporation <br> - BUILDING NUM: 1034 <br> - ID CARD NUM: 04596077680247 </p>",
+  "pii_present": true,
+  "pii_values": [
+   "1034",
+   "04596077680247"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 127273,
+  "domain": "ai4privacy",
+  "text": "Patient: High-Yield Account 7<br>Date of Birth: 13/02/2022<br>Sex: F<br>Height: 159 cm<br>Address: Abbots Close<br>Contact: 9487-487 0135<br>Reported Date: 18/10/2028<br>Summary: Incident related to birth defect<br>URL of Incident: https://davis.com/",
+  "pii_present": true,
+  "pii_values": [
+   "13/02/2022",
+   "Abbots Close",
+   "9487-487 0135"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH",
+   "STREET",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 225648,
+  "domain": "ai4privacy",
+  "text": "Assessing the impact of recent interest rates, Sainte-Marie employed Mozilla/5.0 (X11; Linux x86_64; rv:1.9.7.20) Gecko/8384-02-18 01:45:07.434296 Firefox/3.6.18 for surveying consumer trends in West. Data gathered from 29WK12ZH594NXDMD9 and UY90DKU indicate positive fiscal signs. Further insights at http://kerr.org/.",
+  "pii_present": true,
+  "pii_values": [
+   "Sainte-Marie"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 354178,
+  "domain": "ai4privacy",
+  "text": "Reviewed QA standards confirm roles like Temporary within the audit. Additional checks included VIN patterns like GJL71JSK22XGMB0H2. The net balance amounted to 927k. For clarifications, contact wwvoqpt30231@yahoo.com.",
+  "pii_present": true,
+  "pii_values": [
+   "wwvoqpt30231@yahoo.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 168378,
+  "domain": "ai4privacy",
+  "text": "<p>Reviewed by: Jeronima</p><p>Location of Inspection: Bellevue</p><p>Inspector Building No: 4632</p><p>Date: [null]</p><p>Item Lot No: 027412671732127</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Jeronima",
+   "Bellevue",
+   "4632"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 184283,
+  "domain": "ai4privacy",
+  "text": "<p>2. Crisis Management Plan A structured approach effective October/38 helps Smith, Carter and Clark navigate crises, contacting +4423 785-1492 as needed. For GB, ensure 6784 policies align with 822027956806154248974 transactions. Policy M.SLA.94345 stays updated.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "+4423 785-1492",
+   "822027956806154248974"
+  ],
+  "pii_types": [
+   "TELEPHONENUM",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 181573,
+  "domain": "ai4privacy",
+  "text": "Implement continuous feedback sessions for Full-time concerns using http://www.quinn-king.com/. Authenticate attendee identity by 116215446 checks. Finance new proposals through LQdgPjA6OcYPZ5URHlQxIgK0JUPtuYbGpb.",
+  "pii_present": true,
+  "pii_values": [
+   "116215446"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 202218,
+  "domain": "ai4privacy",
+  "text": "2 Logistic Service Agreement - Agreement between parties regarding logistical services, responsibilities, and liabilities. |<br><br>Effective 1985-07-30T00:00:00, High-Yield Account and High-Yield Account established logistics for La Plata. Remittances in $, via IBAN US56 90341365 5S8 5869, covering liabilities of up to 47149.",
+  "pii_present": true,
+  "pii_values": [
+   "La Plata"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 447188,
+  "domain": "ai4privacy",
+  "text": "Please ensure Jhenny's screening details are sent. Needed ID XW78923HL and 70708.",
+  "pii_present": true,
+  "pii_values": [
+   "Jhenny",
+   "XW78923HL"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 128443,
+  "domain": "ai4privacy",
+  "text": "Child: Achill Forgiano\nDate of Birth: 17/10/1944\nContact Person: Mstr Achill Forgiano\nContact Email: achill.forgiano@outlook.com\nAddress: 1552, Tower 557\nCountry: United States",
+  "pii_present": true,
+  "pii_values": [
+   "Achill",
+   "Forgiano",
+   "17/10/1944",
+   "Achill",
+   "Forgiano",
+   "achill.forgiano@outlook.com",
+   "1552"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME",
+   "DATEOFBIRTH",
+   "GIVENNAME",
+   "SURNAME",
+   "EMAIL",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 382133,
+  "domain": "ai4privacy",
+  "text": "Morning Donato, can you update the payment gateway info? Make sure the 1973429287 is correct as per latest guidelines.",
+  "pii_present": true,
+  "pii_values": [
+   "Donato",
+   "1973429287"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 454848,
+  "domain": "ai4privacy",
+  "text": "<p><strong>2 Literacy Assessment Report:</strong> Detailed analytics in PB 260 show significant progress. Confirm fund availability in 593409 and contact immediately via +4-572-070-9583.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "+4-572-070-9583"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 463358,
+  "domain": "ai4privacy",
+  "text": "Mstr Camfferman to attend Manchester conference.",
+  "pii_present": true,
+  "pii_values": [
+   "Camfferman",
+   "Manchester"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 449463,
+  "domain": "ai4privacy",
+  "text": "<p>Proposal reviewed for emotional regulation seminar at Michigan City. For submissions or questions, contact L\u00e9anne using user: mygqrbv17340. Financial details, see USD report @{DOCNUM_4}.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Michigan City",
+   "L\u00e9anne",
+   "mygqrbv17340"
+  ],
+  "pii_types": [
+   "CITY",
+   "GIVENNAME",
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 335183,
+  "domain": "ai4privacy",
+  "text": "Therapy notes: patient experiences dysphoria. Lives at 2051 Voss Park Lane, address on file: (license number 84422285). Schedules seem structured around upcoming changes.",
+  "pii_present": true,
+  "pii_values": [
+   "2051",
+   "Voss Park Lane",
+   "84422285"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "STREET",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 336093,
+  "domain": "ai4privacy",
+  "text": "2 Care Plan Care includes regular physiotherapy visits for Fiori @ Maud's Yard, Ossett. Coordinated with Price, Smith and Hutchinson. Plz transfer 24.3b to Newbury Building Society, account 87920734, BIC ISQHUSDRBMZ. Info @ http://stokes-jones.info/",
+  "pii_present": true,
+  "pii_values": [
+   "Fiori",
+   "Maud's Yard",
+   "Ossett",
+   "87920734"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "STREET",
+   "CITY",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 222418,
+  "domain": "ai4privacy",
+  "text": "Please document any significant changes in behaviour over the past 12 months. <br>Usb internet activity logs where applicable.<br> Credit Card: 4170688589938<br>",
+  "pii_present": true,
+  "pii_values": [
+   "4170688589938"
+  ],
+  "pii_types": [
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 289683,
+  "domain": "ai4privacy",
+  "text": "2    Debt Restructuring Plan    Comprehensive plan outlining the strategy to restructure the business's debts in order to achieve financial recovery. Key stakeholders include Print production planner, Print production planner. Contact via 08.83-41 68-33. Current issues identified through TRANS-201306-7089.",
+  "pii_present": true,
+  "pii_values": [
+   "08.83-41 68-33"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 479933,
+  "domain": "ai4privacy",
+  "text": "Drone Incident Report<br>Date: 05/06/1980<br>Location: Sandyston<br>Incident Time: 03:08<br>Account Operator: alice1949<br>Summary: Drone crash due to low battery, landed in restricted area at [41.29476, -74.81]. Liability considerations in progress.",
+  "pii_present": true,
+  "pii_values": [
+   "Sandyston",
+   "alice1949"
+  ],
+  "pii_types": [
+   "CITY",
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 452413,
+  "domain": "ai4privacy",
+  "text": "<div>Document for tax deduction application initiated for Syla.</div><div>Age: 50, Email: A1974@tutanota.com</div><div>Driver\u2019s License: SYLA9-701064-9-140, Passport No: 746212936</div><div>Address: 12 Station Road</div><div>Date: 2025-05-09T00:00:00</div><div>User Agent: Mozilla/5.0 (iPad; CPU iPad OS 17_3_1 like Mac OS X) AppleWebKit/532.0 (KHTML, like Gecko) CriOS/30.0.873.0 Mobile/75L619 Safari/532.0</div>",
+  "pii_present": true,
+  "pii_values": [
+   "Syla",
+   "A1974@tutanota.com",
+   "SYLA9-701064-9-140",
+   "12",
+   "Station Road"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "EMAIL",
+   "DRIVERLICENSENUM",
+   "BUILDINGNUM",
+   "STREET"
+  ]
+ },
+ {
+  "id": 349063,
+  "domain": "ai4privacy",
+  "text": "Hey team, update building 1300 records. Last entry didn\u2019t align correctly.",
+  "pii_present": true,
+  "pii_values": [
+   "1300"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 253998,
+  "domain": "ai4privacy",
+  "text": "Account Update: 172k has been deducted from HSA account 594297898614589. Need help? Contact Calhoun, Chavez and Erickson at 099.5561762 .",
+  "pii_present": true,
+  "pii_values": [
+   "594297898614589",
+   "099.5561762 "
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 208023,
+  "domain": "ai4privacy",
+  "text": "Jessica! Can you double-check RY70369BN \u2013 871603308 integration for blockchain? Vital for insurance calcs.__Emma.",
+  "pii_present": true,
+  "pii_values": [
+   "RY70369BN"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 193368,
+  "domain": "ai4privacy",
+  "text": "Hey Boros, confirmation on F availability for the charity gala this Sunday at East?",
+  "pii_present": true,
+  "pii_values": [
+   "Boros"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 456308,
+  "domain": "ai4privacy",
+  "text": "Don\u2019t forget to call +12.353.235.1104 to discuss the new legal amendments.",
+  "pii_present": true,
+  "pii_values": [
+   "+12.353.235.1104"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 511418,
+  "domain": "ai4privacy",
+  "text": "Hello Shehzad, can you please provide your Visa info and [38.01347, -121.1924] for KYC?",
+  "pii_present": true,
+  "pii_values": [
+   "Shehzad"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 193373,
+  "domain": "ai4privacy",
+  "text": "Compile the CSR impact data for last month. Havishe and Dzacovsk\u00e1 need it for the North report.",
+  "pii_present": true,
+  "pii_values": [
+   "Havishe",
+   "Dzacovsk\u00e1"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 113153,
+  "domain": "ai4privacy",
+  "text": "<p>Proposal:</p><p>Loan Amount: 657,757.15</p><p>Rate: 4.55%</p><p>Repayment Term: 20 years</p><p>Borrower: Dub\u00e9</p><p>Credit Card Issuer: China T-Union</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Dub\u00e9"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 252743,
+  "domain": "ai4privacy",
+  "text": "LEED-confirmed certification for sustainable development, led by Other's Support, validated on 8th January 2029 at ZIP WV8. Expenses handled by British Pound Sterling under KFTJUSDJSI4.",
+  "pii_present": true,
+  "pii_values": [
+   "WV8"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 347533,
+  "domain": "ai4privacy",
+  "text": "Discussing eco-education for kids, Selvarasa. Do you think it\u2019s viable in Granbury? Plus, let\u2019s secure some funding from the UBS Bank USA grant using INV-201009-2219.",
+  "pii_present": true,
+  "pii_values": [
+   "Selvarasa",
+   "Granbury"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 171278,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Assessment shows that John needs support in math and literacy. Contact 066.0786 7302 for further action. Coordinates: [53.885, -2.0913]. PIN: 44762 for further info.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "066.0786 7302"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 450903,
+  "domain": "ai4privacy",
+  "text": "Hi all, I got an email from the health centre asking for my 77230.34196, Dahlin and my DOC-201907-9073 before my upcoming appointment on September/26. Is this normal?",
+  "pii_present": true,
+  "pii_values": [
+   "77230.34196",
+   "Dahlin"
+  ],
+  "pii_types": [
+   "TAXNUM",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 483348,
+  "domain": "ai4privacy",
+  "text": "<html><p>Judge: What is the security concern?</p><p>Lawyer: The accounts in question are protected with a password z-G]7h and linked to phone records at 0144.036561497.</p></html>",
+  "pii_present": true,
+  "pii_values": [
+   "z-G]7h",
+   "0144.036561497"
+  ],
+  "pii_types": [
+   "PASSWORD",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 214823,
+  "domain": "ai4privacy",
+  "text": "Mr. Bartussek, here's Schiva's project video from AZ. Great job but forgot to submit! Please remind him.",
+  "pii_present": true,
+  "pii_values": [
+   "Bartussek",
+   "Schiva"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 263563,
+  "domain": "ai4privacy",
+  "text": "We need to update the patient's info, especially the 232-03-2260 and AZ details. Can you handle that?",
+  "pii_present": true,
+  "pii_values": [
+   "232-03-2260"
+  ],
+  "pii_types": [
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 374408,
+  "domain": "ai4privacy",
+  "text": "Disciplinary Case Record <br> Student: 2009artkuru <br> Gender: Masculine <br> Age: 14 <br> Incident: Sharing answers during test. <br> Address: SE. Sturminster Newton, ENG <br> Bitcoin Address: 3STJ9IPCCwuExHI7AEi8vHbW8lF5lVyb3N <br> Sanction: Suspended for a week.",
+  "pii_present": true,
+  "pii_values": [
+   "2009artkuru",
+   "Sturminster Newton"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 503638,
+  "domain": "ai4privacy",
+  "text": "Could you share your valid 8264491984179 and TRANS-201508-2074 for our files?",
+  "pii_present": true,
+  "pii_values": [
+   "8264491984179"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 230888,
+  "domain": "ai4privacy",
+  "text": "Gorostidi, mental resilience training in Reading shows promising results. Email the comprehensive studies to HA@gmail.com. Appreciate it!",
+  "pii_present": true,
+  "pii_values": [
+   "Gorostidi",
+   "Reading",
+   "HA@gmail.com"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "CITY",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 118593,
+  "domain": "ai4privacy",
+  "text": "<p>Student quttcht77854, evaluated by IT on 31/12/1998. Scored: [GRADE_1]. Document reference: [POLICYNUM_1]. Utilised device: [MACADDRESS_1]. Logged by [USERAGENT_1]. Report to [ORGANISATION_1].</p>",
+  "pii_present": true,
+  "pii_values": [
+   "quttcht77854"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 243448,
+  "domain": "ai4privacy",
+  "text": "Hey Eliud, the new curriculum at Hummingbird Lane is showing promise. Each program costs approx. USD395985.63.",
+  "pii_present": true,
+  "pii_values": [
+   "Eliud",
+   "Hummingbird Lane"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "STREET"
+  ]
+ },
+ {
+  "id": 490443,
+  "domain": "ai4privacy",
+  "text": "Hey Rochin, remember to submit your personal details, including your vehicle registration (816-HTMC), to Flores LLC by 16th September 2024. It's required for parking on campus.",
+  "pii_present": true,
+  "pii_values": [
+   "Rochin"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 289028,
+  "domain": "ai4privacy",
+  "text": "<p>Parental Approval for Juan-Jos\u00e9 to join the field trip. Emergency Contact: +31-926475303. Policy Number: GBEN-CZD-2413.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Juan-Jos\u00e9",
+   "+31-926475303"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 366698,
+  "domain": "ai4privacy",
+  "text": "Hi, have you updated your X92GH4487844 credentials for our next field trip?",
+  "pii_present": true,
+  "pii_values": [
+   "X92GH4487844"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 203513,
+  "domain": "ai4privacy",
+  "text": "Motion introduced for scrutiny on fiscal data mishandling by Barclays US LLC, filed by Research scientist (life sciences) Kapedani. Point of error located at [37.98, -121.33]. Queries to 28946754309275360.",
+  "pii_present": true,
+  "pii_values": [
+   "Kapedani"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 198408,
+  "domain": "ai4privacy",
+  "text": "Assessment for [PERSONALTITLE] wraiqga55172, BMI indicates ongoing issues. Address: Staveley Lane. Strategy: daily outdoor activities. Revisit scheduled 24/10/2010.",
+  "pii_present": true,
+  "pii_values": [
+   "wraiqga55172",
+   "Staveley Lane"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "STREET"
+  ]
+ },
+ {
+  "id": 237108,
+  "domain": "ai4privacy",
+  "text": "AI's role in legal compliance scrutinized through analysis on 0900399169744479686 and 66:26:05:9b:d5:3a. Required enhancements for 324705830215714 security advised. Full report available at 0018 96.394.6389, Jordan Group.",
+  "pii_present": true,
+  "pii_values": [
+   "0900399169744479686",
+   "0018 96.394.6389"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 481543,
+  "domain": "ai4privacy",
+  "text": "Hi Engineer, agricultural, what's the best diet plan on policy US EN 1284 X532? Living at 86413.",
+  "pii_present": true,
+  "pii_values": [
+   "86413"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 159268,
+  "domain": "ai4privacy",
+  "text": "Hello Madame Pandeliev, Please review the new URLs (http://www.mccann.com/) for our school nutrition initiatives.",
+  "pii_present": true,
+  "pii_values": [
+   "Pandeliev"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 481878,
+  "domain": "ai4privacy",
+  "text": "Hannah, review the greenhouse gas audit reports. Format to our standards using ATEFA 909199 9 904. Evaluation path: http://www.whittaker.com/.",
+  "pii_present": true,
+  "pii_values": [
+   "ATEFA 909199 9 904"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 345773,
+  "domain": "ai4privacy",
+  "text": "Psycholinguistics Ethics Application for Human Subjects\nPrincipal Investigator: lorita.licina, MLL@tutanota.com\nJob Title: Support\nTax ID: 217-48-6018\nEthereum Address: 0x0b258f4653126490b724669d8788af817e4c45a4\nTime: 18:52\n\nObjective: Exploring cognitive effects of dialects in AK.",
+  "pii_present": true,
+  "pii_values": [
+   "lorita.licina",
+   "MLL@tutanota.com",
+   "217-48-6018"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "EMAIL",
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 498763,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Monitor 643807816 levels for Ghanfili under REF-201906-1660. Updates routed to 11candace.ghanfili@hotmail.com. Confirm adherence to 3lf9aunv5ljSJJh9BiYfujPiOlU38O5pQI policy and communicate any changes in prescribed North.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "Ghanfili",
+   "11candace.ghanfili@hotmail.com"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 243518,
+  "domain": "ai4privacy",
+  "text": "Student: What strategies for Scottsdale? \nTeacher: Check local \u20ac trends and Product Management statistics. \nStudent: Understood, need to secure WR2*id for documents.",
+  "pii_present": true,
+  "pii_values": [
+   "Scottsdale",
+   "WR2*id"
+  ],
+  "pii_types": [
+   "CITY",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 417538,
+  "domain": "ai4privacy",
+  "text": "To whom it may concern,<br>Review the decision dated June/90.<br>Yours respectfully,<br>Yulian<br>Driver License: 65414104<br>Gender: Other</html>",
+  "pii_present": true,
+  "pii_values": [
+   "Yulian",
+   "65414104"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 153933,
+  "domain": "ai4privacy",
+  "text": "Hey agavilano, welcome to the health preventive medicine program! Just need your Female details and 1101 for your profile. Make sure to update your 956800.54 in the Progressive Building Society account. Your unique code is 22145.",
+  "pii_present": true,
+  "pii_values": [
+   "agavilano",
+   "1101"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 305183,
+  "domain": "ai4privacy",
+  "text": "Download attendee list with Te\u00efla Kimber. Include +17 12-110-1683 numbers.",
+  "pii_present": true,
+  "pii_values": [
+   "Te\u00efla",
+   "Kimber",
+   "+17 12-110-1683"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 288043,
+  "domain": "ai4privacy",
+  "text": " <html><body><p>According to United Kingdom law, trustee Rustan Becsei, passport 359757328, will manage the assets. All transactions must be processed through LVJlgwWdURRWDhSsfZ7ZKDZYrCXlMqHdCz and geolocation [52.7348, -1.49] will be monitored.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "Rustan",
+   "Becsei"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 231763,
+  "domain": "ai4privacy",
+  "text": "<p>Behavioral therapy mix and regular sleep study for patient Male involving sessions at Allen, Harrell and Hudson. Emergency: 0290.04204194</p>",
+  "pii_present": true,
+  "pii_values": [
+   "0290.04204194"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 478613,
+  "domain": "ai4privacy",
+  "text": "Yo Rabea, BIC BACEUSB9MUG verification is essential. Visit http://kirk-taylor.biz/ and call +1944374.5183 if questions.",
+  "pii_present": true,
+  "pii_values": [
+   "Rabea",
+   "+1944374.5183"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 257643,
+  "domain": "ai4privacy",
+  "text": "Public health goals for Monroe aligned. Use the balance 469405 for the event. Make sure our Bitcoin address 3YEpyShlwcBHlF9ZvyU2ewhgSmAij2Rb7m is up to date.",
+  "pii_present": true,
+  "pii_values": [
+   "Monroe"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 191478,
+  "domain": "ai4privacy",
+  "text": "<html>Our mission is to provide resources to community leaders. Taylor-Poole was founded by Kolu, a dedicated Volunteer. We operate under tax code 7491177776. Our reach extends to M6 6FL communities with support from our volunteers, including 199 cm tall Other members.</html>",
+  "pii_present": true,
+  "pii_values": [
+   "Kolu",
+   "7491177776",
+   "M6 6FL"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "TAXNUM",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 262938,
+  "domain": "ai4privacy",
+  "text": "Gather the adolescent health initiatives report for ST3 3DS, ST3 3DX. Include the feedback identified by [IPV4_1].",
+  "pii_present": true,
+  "pii_values": [
+   "ST3 3DS, ST3 3DX"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 213003,
+  "domain": "ai4privacy",
+  "text": "2    Cultural Competency Assessments    Evaluation forms to assess an individual's level of cultural competency in a psychology setting. ETHADDRESS: 0x67e4e8317adb46ce76e1faf9437f09e54e64a7cc, HEIGHT: 156 cm / 5' 1\", PASSPORTNUM: 883224214, ID: 1053133246, BUILDINGNUM: 7814",
+  "pii_present": true,
+  "pii_values": [
+   "1053133246",
+   "7814"
+  ],
+  "pii_types": [
+   "IDCARDNUM",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 301478,
+  "domain": "ai4privacy",
+  "text": "New family dynamics post move to 17709. Mister reports increased tension.",
+  "pii_present": true,
+  "pii_values": [
+   "17709"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 224628,
+  "domain": "ai4privacy",
+  "text": "Hi Juana,<br><br>Your investment review:<br>Account: 6705502626463582645683<br>Balance: 0.147m<br>City: Musselburgh Wallyford<br>Investments in Product Management are thriving.<br>Best Regards, Finance Team.",
+  "pii_present": true,
+  "pii_values": [
+   "Juana",
+   "6705502626463582645683",
+   "Musselburgh Wallyford"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "ACCOUNTNUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 331548,
+  "domain": "ai4privacy",
+  "text": "Should United States offer more decentralized funding? My sister's low Poor in Technical Support might be the reason. 3759524852847",
+  "pii_present": true,
+  "pii_values": [
+   "3759524852847"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 122328,
+  "domain": "ai4privacy",
+  "text": "Hello sehade.krishnathasan, can you review the therapy progress for the kid at Blenheim Palace, Woodstock? Make sure CQ27892MK is submitted.",
+  "pii_present": true,
+  "pii_values": [
+   "sehade.krishnathasan",
+   "Blenheim Palace",
+   "Woodstock",
+   "CQ27892MK"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "STREET",
+   "CITY",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 110833,
+  "domain": "ai4privacy",
+  "text": "<p>Email communication report sent to monteverdi16@yahoo.com, handled by Mayoress, passport 681012534.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "monteverdi16@yahoo.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 388748,
+  "domain": "ai4privacy",
+  "text": "This study gathers 13.28b and 93249. Ethical handling of this data is assured.<br/><br/>Signature:<br/><br/>Date: 4th December 2013",
+  "pii_present": true,
+  "pii_values": [
+   "93249"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 431828,
+  "domain": "ai4privacy",
+  "text": "This form confirms that Certificate of Deposit Account, aged 57, residing at Back Lane, Blandford Forum, consents to gender dysphoria therapy. Contact email: zxtjlq575993@outlook.com, Phone IMEI: 202775036487182. Employed as Management consultant.",
+  "pii_present": true,
+  "pii_values": [
+   "Back Lane",
+   "Blandford Forum",
+   "zxtjlq575993@outlook.com"
+  ],
+  "pii_types": [
+   "STREET",
+   "CITY",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 377018,
+  "domain": "ai4privacy",
+  "text": "Your current zip code 62201-1007 is required to continue the processing of your insurance life settlement.",
+  "pii_present": true,
+  "pii_values": [
+   "62201-1007"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 225038,
+  "domain": "ai4privacy",
+  "text": "Ensure compliance with USEN WDL 5179 by logging all contributions with 23/07/2030 tags. Secure access with updated u5W%3)0@:sf, and ensure 74728419953943 is current.",
+  "pii_present": true,
+  "pii_values": [
+   "u5W%3)0@:sf",
+   "74728419953943"
+  ],
+  "pii_types": [
+   "PASSWORD",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 273703,
+  "domain": "ai4privacy",
+  "text": "Hey, please verify the approval of the 526 for teacher applicants? And prepare for a meeting at 3835, High Street tomorrow.",
+  "pii_present": true,
+  "pii_values": [
+   "3835",
+   "High Street"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "STREET"
+  ]
+ },
+ {
+  "id": 420238,
+  "domain": "ai4privacy",
+  "text": "Please verify our client's XP03532AA and Floor 86 with GB's new legal system. Meeting rescheduled to 20.",
+  "pii_present": true,
+  "pii_values": [
+   "XP03532AA"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 185613,
+  "domain": "ai4privacy",
+  "text": "Hello! Engage in active relaxation methods like yoga. Tried it yet? Let us know your experience at SPG@outlook.com. Include details like your 5 for personalized recommendations.",
+  "pii_present": true,
+  "pii_values": [
+   "SPG@outlook.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 335678,
+  "domain": "ai4privacy",
+  "text": "Required: Validate annuity details for Male concerning DOB October/62. Monthly entitlement 169,437.53 processed from 2073-09-13T00:00:00. Verify 0x90cbc370e807331bee4baf981cd5b3147de73309 for claim while ensuring Contract and ID CM00149HG.",
+  "pii_present": true,
+  "pii_values": [
+   "October/62",
+   "CM00149HG"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 237748,
+  "domain": "ai4privacy",
+  "text": "<p>2. Patient Confidentiality Agreement <br> Patient\u2019s confidentiality is protected by this agreement. Name: Anparasi, SSN: 990038043, Address: Pod 321, Building: 3939, Date: April 21st, 2043.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Anparasi",
+   "990038043",
+   "3939"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SOCIALNUM",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 307743,
+  "domain": "ai4privacy",
+  "text": "<p>Amendment dated 13th June 2057, revises the responsibility: Authorized transactions now need verification via 02240002692579. It includes an increased security area to [52.175, 0.1], and the service account will be renewed with a Miss Meenu as the point of contact.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Meenu"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 265648,
+  "domain": "ai4privacy",
+  "text": "<p>Proposal for \u00a3382k to support arts initiatives. Contact bandhu13@yahoo.com for further details and inquiries.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "bandhu13@yahoo.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 134888,
+  "domain": "ai4privacy",
+  "text": "Yo Novo, need your input on Bailey-Hill's new insurance offering. Do we need to update 05917 39801 or is it still the same?",
+  "pii_present": true,
+  "pii_values": [
+   "Novo",
+   "05917 39801"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 426758,
+  "domain": "ai4privacy",
+  "text": "Contact Master von Stauffenberg from ENG. They\u2019re leading the new initiative to provide consultations for public health law changes.",
+  "pii_present": true,
+  "pii_values": [
+   "von Stauffenberg"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 366773,
+  "domain": "ai4privacy",
+  "text": "Dear M@yahoo.com, as part of our KYC update, provide your 289405668, 2201568894199410, and GB96 AXUW ZDLO 8N88 X9P3 VL at your earliest convenience.",
+  "pii_present": true,
+  "pii_values": [
+   "M@yahoo.com",
+   "2201568894199410"
+  ],
+  "pii_types": [
+   "EMAIL",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 505413,
+  "domain": "ai4privacy",
+  "text": "Dear Maj-Britt,<br><br>Your waiver, Policy Number FREUDENBERGER290913EN, permits use of prohibited substances. Verified with Coordinates: [52.6, -1.91], Date: September 14th, 1965, and IP: [IPV4_26].<br><br>Regards,<br>United Kingdom Sports Board",
+  "pii_present": true,
+  "pii_values": [
+   "Maj-Britt"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 509268,
+  "domain": "ai4privacy",
+  "text": "Provide updated 3112047170576315880, do not forget [CREDITCARDEXPIRYCREDITCARDCVV]. Office: N8885, County Road P, Whitewater Town.",
+  "pii_present": true,
+  "pii_values": [
+   "3112047170576315880",
+   "N8885",
+   "County Road P",
+   "Whitewater Town"
+  ],
+  "pii_types": [
+   "CREDITCARDNUMBER",
+   "BUILDINGNUM",
+   "STREET",
+   "CITY"
+  ]
+ },
+ {
+  "id": 511048,
+  "domain": "ai4privacy",
+  "text": "Hey abedom.strambaci15, the national debate team still needs your role confirmed as Engineer, communications. Can you meet us at Morris-Miller on January/89?",
+  "pii_present": true,
+  "pii_values": [
+   "abedom.strambaci15"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 219403,
+  "domain": "ai4privacy",
+  "text": "<p>Client Notice: Ensure correct Ethereum address 0xba1fd49692c624b74520fba293130bc6fa1b24c9, Litecoin address LDOqurMVvcrWmSLD0hwKH0y2uRj79xQKLn. Last logged in from IP: [IPV4_40] at 21. Confirm tax number 340-09-3892.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "340-09-3892"
+  ],
+  "pii_types": [
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 464713,
+  "domain": "ai4privacy",
+  "text": "<p>Designed by: Madame 85283184917939410575. Purpose: Streamlining multi 85283184917939410575-unit operations using blockchain (Bitcoin: 3w6sfKfJw6I6AoF3QNFZhH0S4jkqdHxAqC) and 170 cm / 5' 6\" protocols for added security. Visit http://pugh.com/. Info at (76)-0932-4523</p>",
+  "pii_present": true,
+  "pii_values": [
+   "(76)-0932-4523"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 512973,
+  "domain": "ai4privacy",
+  "text": "Hi all, your ratings on the new Product Management tool are needed. Access it with 26026967804017479642.",
+  "pii_present": true,
+  "pii_values": [
+   "26026967804017479642"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 333248,
+  "domain": "ai4privacy",
+  "text": "Ensure the +44.47.272-1365 is updated with our latest Chelsea Building Society account for fraud prevention.",
+  "pii_present": true,
+  "pii_values": [
+   "+44.47.272-1365"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 438363,
+  "domain": "ai4privacy",
+  "text": "Anyone has a recommendation for a good sports camp in Lincoln? Preferably one that focuses on basketball or football.",
+  "pii_present": true,
+  "pii_values": [
+   "Lincoln"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 323293,
+  "domain": "ai4privacy",
+  "text": "<p>Implementation by Master Trib\u00f2 targets handling simulation-report methodologies, utilizing sanctioned funding 0.50m from Coutts & Co., incorporating data from Oxted. Ensure PASSPORTNUM 808571439 compliance and vehicle details VRM GY45 PCB for operational accuracy.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Trib\u00f2",
+   "Oxted"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 392718,
+  "domain": "ai4privacy",
+  "text": "Just completed a session on April/29. We talked about tackling self-destructive behaviour. Do Phillips-Wilson's strategies mention an approach tailored to Filkins Road patterns?",
+  "pii_present": true,
+  "pii_values": [
+   "Filkins Road"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 393713,
+  "domain": "ai4privacy",
+  "text": "Hi sukri.el-hajmahmoud76, we're implementing your strategies at Robinson-Iqbal in Norwich. Any tips on handling budget constraints while executing improvements?",
+  "pii_present": true,
+  "pii_values": [
+   "sukri.el-hajmahmoud76",
+   "Norwich"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 436758,
+  "domain": "ai4privacy",
+  "text": "Did you fix the legal description mistakes? Check the https://wood.com/ and ensure the map for Barnsley Hoyland is correct.",
+  "pii_present": true,
+  "pii_values": [
+   "Barnsley Hoyland"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 155188,
+  "domain": "ai4privacy",
+  "text": "<p>Confirmation of consent for Product Management. The hearing test is at 85658, S Cochie Canyon Road. Contact policy representative at 1J@yahoo.com. Transactions referenced by masked ID 58970461467007741.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "85658",
+   "S Cochie Canyon Road",
+   "1J@yahoo.com"
+  ],
+  "pii_types": [
+   "ZIPCODE",
+   "STREET",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 425873,
+  "domain": "ai4privacy",
+  "text": "Got some slides and videos about resilience from sena.anon27. Very insightful! Let's find time to review together. Ensure your policy number is updated: ANON 530618 EN.",
+  "pii_present": true,
+  "pii_values": [
+   "sena.anon27"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 439718,
+  "domain": "ai4privacy",
+  "text": "Hello Byron, byron15 compiled the inclusive hiring data for review. Meeting at (163 - 229) to discuss next steps.\nRegards, Biomedical engineer",
+  "pii_present": true,
+  "pii_values": [
+   "Byron",
+   "byron15",
+   "(163 - 229)"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "USERNAME",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 428788,
+  "domain": "ai4privacy",
+  "text": "25ratha.jespierre, urgent review needed. Validate AGE and POLICYNUM for all recent patient health ethics inquiries in SUBSTATE.",
+  "pii_present": true,
+  "pii_values": [
+   "25ratha.jespierre"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 366523,
+  "domain": "ai4privacy",
+  "text": "Parents and teachers ensure coordinated efforts for student benefit in Simla. Payments through OBUWUSX5DYA and contact via B@hotmail.com.",
+  "pii_present": true,
+  "pii_values": [
+   "Simla",
+   "B@hotmail.com"
+  ],
+  "pii_types": [
+   "CITY",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 350968,
+  "domain": "ai4privacy",
+  "text": "Hi Chadija, we need your new health ID. Provide NUM-201504-7169 during your next visit to the clinic.",
+  "pii_present": true,
+  "pii_values": [
+   "Chadija"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 330648,
+  "domain": "ai4privacy",
+  "text": "Check recent health economics reports. Ensure Salem is highlighted. Protect all documents with lX!I3.",
+  "pii_present": true,
+  "pii_values": [
+   "Salem",
+   "lX!I3"
+  ],
+  "pii_types": [
+   "CITY",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 241248,
+  "domain": "ai4privacy",
+  "text": "Please escalate the issue to Mr using +44347.348 6028. We are still waiting for the approval on expenditures amounting to 806,102.02 GBP.",
+  "pii_present": true,
+  "pii_values": [
+   "+44347.348 6028"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 268718,
+  "domain": "ai4privacy",
+  "text": "Hi Djihane, quick review on the financial services we offer? Your LL70190BX is on file.",
+  "pii_present": true,
+  "pii_values": [
+   "Djihane",
+   "LL70190BX"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 491323,
+  "domain": "ai4privacy",
+  "text": "Hey Sahit, could you rate our new banking app? Also, share your experience on customer support. We're planning updates for our customers in Herndon, KY. Respond by 1950-04-04T00:00:00, thanks!",
+  "pii_present": true,
+  "pii_values": [
+   "Sahit",
+   "Herndon",
+   "1950-04-04T00:00:00"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 196918,
+  "domain": "ai4privacy",
+  "text": "Hey, can you bring the book we discussed last week to the virtual meeting? We\u2019ll focus on ADHD treatments. See you online 2081-05-08T00:00:00. Blom.",
+  "pii_present": true,
+  "pii_values": [
+   "Blom"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 132768,
+  "domain": "ai4privacy",
+  "text": "Hey Calan, got your IL68109LQ sorted with the new guidelines?",
+  "pii_present": true,
+  "pii_values": [
+   "Calan",
+   "IL68109LQ"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 431693,
+  "domain": "ai4privacy",
+  "text": "Could you validate 043-364-5399 against our records before the genetic counseling appointment on 1994-12-16T00:00:00?",
+  "pii_present": true,
+  "pii_values": [
+   "043-364-5399"
+  ],
+  "pii_types": [
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 179048,
+  "domain": "ai4privacy",
+  "text": "Newly implemented health strategies have increased economic activities in the NW. region. Assessment collates data including height specs 200 cm and social numbers 760 932 3538 for precise evaluation. The comprehensive report is shared with 29diar@hotmail.com.",
+  "pii_present": true,
+  "pii_values": [
+   "760 932 3538",
+   "29diar@hotmail.com"
+  ],
+  "pii_types": [
+   "SOCIALNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 304553,
+  "domain": "ai4privacy",
+  "text": "Hey Judge Jesco, please review the new disciplinary measures and add your TRANS-201310-1692 details.",
+  "pii_present": true,
+  "pii_values": [
+   "Jesco"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 171298,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Assessment of Zoe shows dyscalculia. Contact: (972)-0120823. Review log at https://www.brown.com/. Pin: 4166.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "(972)-0120823"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 185938,
+  "domain": "ai4privacy",
+  "text": "<p>Other rights under the June 30th, 2014 amendment were put to the test in recent court cases. Attorneys specializing in Sales, including Jetlir\u00eb, emphasized the need to update the statutes.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Jetlir\u00eb"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 507388,
+  "domain": "ai4privacy",
+  "text": "Form ID: INV-201903-3281\nCase Investigation: Rishik Steinfurth\nDetails requested:\n- Initial consultation on March/14\n- Any noted disparities in treatment\n- Specific incidents affecting LGBTQ+ within Fort Lauderdale",
+  "pii_present": true,
+  "pii_values": [
+   "Rishik",
+   "Steinfurth",
+   "Fort Lauderdale"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 231433,
+  "domain": "ai4privacy",
+  "text": "Have you updated the article regarding encrypted communications in alignment with the new regulations? - Madame Xhini",
+  "pii_present": true,
+  "pii_values": [
+   "Xhini"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 174208,
+  "domain": "ai4privacy",
+  "text": "Funding GBP10,800 for shelter homes. Document via MAC address 7e:f7:48:20:61:3e and username wixaqo89. Contact: KO@tutanota.com.",
+  "pii_present": true,
+  "pii_values": [
+   "wixaqo89",
+   "KO@tutanota.com"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 217208,
+  "domain": "ai4privacy",
+  "text": "Good morning! Could you assist me with updating my personal info? Current email is N@hotmail.com and my eye color is Amber.",
+  "pii_present": true,
+  "pii_values": [
+   "N@hotmail.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 284518,
+  "domain": "ai4privacy",
+  "text": "Hey Giny, let's set a reminder to discuss the advances in therapy protocols and funding collected via 3aGM88TKp6Ql7pg0bxeCyPBGrYMoftvK9J.",
+  "pii_present": true,
+  "pii_values": [
+   "Giny"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 118303,
+  "domain": "ai4privacy",
+  "text": "Morning Izeta, please prepare the agenda for the stakeholders' meeting using the data received from Furness Building Society by 2025-12-15T00:00:00.",
+  "pii_present": true,
+  "pii_values": [
+   "Izeta"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 435238,
+  "domain": "ai4privacy",
+  "text": "Blockchain Data Security Agreement|It is essential to store ALEIX-108271-9-449 alongside verified 301-79 in blockchain entries to maintain insurance data. Regular monthly checks on 26/07/2025 will prevent unauthorized access.|HTML|",
+  "pii_present": true,
+  "pii_values": [
+   "ALEIX-108271-9-449"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 328688,
+  "domain": "ai4privacy",
+  "text": "Rose-H\u00e9l\u00e8ne, can you review ORDER-202306-8068 and ORDER-202306-8068 before our meeting with Madame tomorrow? It's important to have all documents ready.",
+  "pii_present": true,
+  "pii_values": [
+   "Rose-H\u00e9l\u00e8ne"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 289003,
+  "domain": "ai4privacy",
+  "text": "<p>Consent Form for Glory: Parent Savings Account. Emergency Contact: +440.08 113.5708, Policy Number: ZR T6 KA 64. Home Address: Ball Hayes Road, Duplex 469.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Glory",
+   "+440.08 113.5708",
+   "Ball Hayes Road"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "TELEPHONENUM",
+   "STREET"
+  ]
+ },
+ {
+  "id": 342508,
+  "domain": "ai4privacy",
+  "text": "<p>Critical incident team led by Opera/9.91.(Windows NT 5.0; mn-MN) Presto/2.9.179 Version/12.00 and 1956A will engage. Report issues to Engineering. Log entry BILL-202303-3714. Monitor updates using [IPV6_1].</p>",
+  "pii_present": true,
+  "pii_values": [
+   "1956A"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 115198,
+  "domain": "ai4privacy",
+  "text": "Th\u00e0nh, we need the exact 949 for verification purposes.",
+  "pii_present": true,
+  "pii_values": [
+   "Th\u00e0nh",
+   "949"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 127918,
+  "domain": "ai4privacy",
+  "text": "Crew salary updates needed. Sarkis, ensure all are updated by 14 o'clock.",
+  "pii_present": true,
+  "pii_values": [
+   "Sarkis"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 437403,
+  "domain": "ai4privacy",
+  "text": "3\tStudent Engagement Plan\tStrategic plan outlining initiatives to enhance student engagement and success. Improve digital literacy:\n- Credit Card Number: 656135257006065671\n- Given Name: Majid\n- OTP: 227.5 0\n- Amount: 180.75k\n- Bitcoin Address: 3dm2EqZLvhI0PNiZpZavmHMdhU0y7Xwblx",
+  "pii_present": true,
+  "pii_values": [
+   "656135257006065671",
+   "Majid"
+  ],
+  "pii_types": [
+   "CREDITCARDNUMBER",
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 410793,
+  "domain": "ai4privacy",
+  "text": "Volunteer Registration Form:\nName: Mister Non-binary DOB: 07/10/1943 Age: 81 Email: 10stellan.vonlaer@protonmail.com Organisation: Williams, Wilkins and Johnson Tax No.: 279-79-5122",
+  "pii_present": true,
+  "pii_values": [
+   "07/10/1943",
+   "10stellan.vonlaer@protonmail.com",
+   "279-79-5122"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH",
+   "EMAIL",
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 205183,
+  "domain": "ai4privacy",
+  "text": "Plan for client at Gulfport, MS, 39503.\nSteps:\n1. Behavioral experiments\n2. Cognitive restructuring\nSession fees: United States Dollar163,155.51",
+  "pii_present": true,
+  "pii_values": [
+   "Gulfport",
+   "39503"
+  ],
+  "pii_types": [
+   "CITY",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 387228,
+  "domain": "ai4privacy",
+  "text": "The new immersive learning experience is fantastic! See the email from obamosa@protonmail.com. They onboarded it today.",
+  "pii_present": true,
+  "pii_values": [
+   "obamosa@protonmail.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 514898,
+  "domain": "ai4privacy",
+  "text": "<p>Ensure your LE7 7HF, LE7 7LD is current.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "LE7 7HF, LE7 7LD"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 455008,
+  "domain": "ai4privacy",
+  "text": "Can we discuss the new patient behavior metrics at 2029? I'd like to understand its implications.",
+  "pii_present": true,
+  "pii_values": [
+   "2029"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 452153,
+  "domain": "ai4privacy",
+  "text": "Hello Sefir, your compliance data is incomplete. Please provide date of birth 19/11/1969 and insurance policy number JT-B0-HS-81.",
+  "pii_present": true,
+  "pii_values": [
+   "Sefir",
+   "19/11/1969"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 452203,
+  "domain": "ai4privacy",
+  "text": "<div><strong>Teleconsultation Report:</strong></div><div>Patient with IMEI 765862106327545 in PR3 had post-operative concerns</div><div>Provided monitoring instructions through GEOCOORD [53.84767, -2.6]</div><div>Next steps communicated using IPV4: [IPV4_1]</div>",
+  "pii_present": true,
+  "pii_values": [
+   "PR3"
+  ],
+  "pii_types": [
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 296038,
+  "domain": "ai4privacy",
+  "text": "Class Roster for Autumn Term\n\nStudent List:\n1. Business Account, 0x41d9bd826f2430cd9a6498c55d64c1129c108d6d, Female\n2. Business Account, 0x41d9bd826f2430cd9a6498c55d64c1129c108d6d, Female\nScheduled Time: 15:36\nRecord ID: 939 758 3704",
+  "pii_present": true,
+  "pii_values": [
+   "939 758 3704"
+  ],
+  "pii_types": [
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 488933,
+  "domain": "ai4privacy",
+  "text": "**Health Advocacy Form**|Form to officially register for health advocacy programs and activities.||HTML||Enter your: July/98, Anchorage, K3G7G5PN0EWBM3ACY, 4415870027604465, LS1YEZv9hrNysOHcy5IbOL5qfuTR86vz8g. Serve the community\u2019s health policy.",
+  "pii_present": true,
+  "pii_values": [
+   "Anchorage",
+   "4415870027604465"
+  ],
+  "pii_types": [
+   "CITY",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 440843,
+  "domain": "ai4privacy",
+  "text": "Please review the documents attached. We'll need the Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; nso-ZA) AppleWebKit/535.46.7 (KHTML, like Gecko) Version/4.0.5 Mobile/8B116 Safari/6535.46.7 details and the claimant's October 21st, 1939.",
+  "pii_present": true,
+  "pii_values": [
+   "October 21st, 1939"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 165973,
+  "domain": "ai4privacy",
+  "text": "Index 3\tRenewal Notice\tPolicyholder Certificate of Deposit Account,\nThis is a reminder to renew your pet insurance policy by 2053-11-23T00:00:00. Ensure your payment details (6011912351741395) and information are up-to-date. For more details, visit https://www.cook.com/. Thank you.",
+  "pii_present": true,
+  "pii_values": [
+   "6011912351741395"
+  ],
+  "pii_types": [
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 496518,
+  "domain": "ai4privacy",
+  "text": "Dear Delfina, your account balance of 468,125.91 is available. Please update your [IPV6_1] and verify your 009206495826472083694 to stay active.",
+  "pii_present": true,
+  "pii_values": [
+   "Delfina",
+   "009206495826472083694"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 463333,
+  "domain": "ai4privacy",
+  "text": "Reviewing our import data. Concerns about security of .a0oH}a. Follow up.",
+  "pii_present": true,
+  "pii_values": [
+   ".a0oH}a"
+  ],
+  "pii_types": [
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 507058,
+  "domain": "ai4privacy",
+  "text": "Good chat with Van Bunnen from Butler LLC. Review the contract on https://www.figueroa.com/ and confirm Marketing.",
+  "pii_present": true,
+  "pii_values": [
+   "Van Bunnen"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 178928,
+  "domain": "ai4privacy",
+  "text": "2. Employee Roles and Responsibilities Role of Certificate of Deposit Account involves project management oversight, identified by IDCARDNUM WK47417FB, with a SALARY of 33.131k. Updates found on https://www.williams-curtis.co.uk/. Questions can be emailed to ameniweink@yahoo.com.",
+  "pii_present": true,
+  "pii_values": [
+   "WK47417FB",
+   "ameniweink@yahoo.com"
+  ],
+  "pii_types": [
+   "IDCARDNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 130063,
+  "domain": "ai4privacy",
+  "text": "<p>The lender (Nationwide Building Society) has granted the borrower with ID (FL89126ZI) a loan. Verification of the borrower\u2019s credit rating (692) has been successfully completed.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "FL89126ZI"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 340953,
+  "domain": "ai4privacy",
+  "text": "Limited Partnership Agreement   This Agreement establishes Roberts-Stephenson, situated in Leeds Quarry Hill, as the General Partner. Contributions from Mastercard and Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.1; Trident/3.1) will be managed according to the agreed terms.",
+  "pii_present": true,
+  "pii_values": [
+   "Leeds Quarry Hill"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 474828,
+  "domain": "ai4privacy",
+  "text": "Yo Mrs, can you jot down the driver\u2019s license number for the new therapy animal handler, 250883051?",
+  "pii_present": true,
+  "pii_values": [
+   "250883051"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 174193,
+  "domain": "ai4privacy",
+  "text": "British Pound Sterling4,500 allocated for water conservation. Document with social number 777.095.6138 and phone IMEI 275785147208221. Contact 1972nkrajcs\u00f3@aol.com.",
+  "pii_present": true,
+  "pii_values": [
+   "777.095.6138",
+   "1972nkrajcs\u00f3@aol.com"
+  ],
+  "pii_types": [
+   "SOCIALNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 249888,
+  "domain": "ai4privacy",
+  "text": "Membership Agreement | Agreement outlining the rights and responsibilities of participants in the P2P insurance network.\nSecure access is provided via 058740343827035483845361. Verify using 309706293370. Contributions processed monthly using http://www.williams.com/. Ensure all GM3ZW4ZP221RU25ZF details are updated.",
+  "pii_present": true,
+  "pii_values": [
+   "309706293370"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 272648,
+  "domain": "ai4privacy",
+  "text": "All personal data, including 00-77.22-53.87, 844890727604940842338, and 490749751408, must remain anonymous. Inform JOBTYPE_1 participants about the protective measures in place according to ethical standards.",
+  "pii_present": true,
+  "pii_values": [
+   "00-77.22-53.87",
+   "490749751408"
+  ],
+  "pii_types": [
+   "TELEPHONENUM",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 225863,
+  "domain": "ai4privacy",
+  "text": "<p>Document ID: REF-201908-3641<br>Holder: High-Yield Account<br>Policy insures livestock. Ref building number: (2 - 24). For further details, contact before 30/05/2062.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "(2 - 24)"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 308883,
+  "domain": "ai4privacy",
+  "text": "<div>Confidentiality in Sex Therapy:</div><div>Name: Mayoress Anca-Nicoleta</div><div>Date: October/91</div><div>Details such as IT and 0xa6d5c76e8e8a0804bdaa5655843f7bd585f37308 are under strict confidentiality and must not be disclosed without explicit consent.</div>",
+  "pii_present": true,
+  "pii_values": [
+   "Anca-Nicoleta"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 314563,
+  "domain": "ai4privacy",
+  "text": "Dean, there's been a security alert on one of the 638 923 8609s. Can you manage the incident?",
+  "pii_present": true,
+  "pii_values": [
+   "638 923 8609"
+  ],
+  "pii_types": [
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 421133,
+  "domain": "ai4privacy",
+  "text": "Participation in this research on stress responses is voluntary. Your privacy will be strictly maintained. \n\nIPV6: [IPV6_6] \nCITY: Brighton \nSEX: Non-binary \nACCOUNT NAME: Money Market Account",
+  "pii_present": true,
+  "pii_values": [
+   "Brighton"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 324138,
+  "domain": "ai4privacy",
+  "text": "Ensure anonymity: Protocols include masking [44.7712, -93.01] and encrypting +92 68.385 1574. ?qF8 policy compliance mandatory.",
+  "pii_present": true,
+  "pii_values": [
+   "+92 68.385 1574",
+   "?qF8"
+  ],
+  "pii_types": [
+   "TELEPHONENUM",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 132398,
+  "domain": "ai4privacy",
+  "text": "Have you updated your K50VR3123410 for the background check? Essential for our Harrison Township project.",
+  "pii_present": true,
+  "pii_values": [
+   "K50VR3123410",
+   "Harrison Township"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 236333,
+  "domain": "ai4privacy",
+  "text": "New health updates on http://fisher-lee.com/. Oversee by Weldu. Verify against 411001241866. All trends are current.",
+  "pii_present": true,
+  "pii_values": [
+   "Weldu",
+   "411001241866"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 283698,
+  "domain": "ai4privacy",
+  "text": "Monitoring Blood Glucose | November 1st, 2015: Morning fasting: 732k mg/dL at Residence 250, Folkston. Post-meal: 732k mg/dL. Evening: 732k mg/dL | By: Georgij, Reference [IPV6_1].",
+  "pii_present": true,
+  "pii_values": [
+   "Folkston",
+   "Georgij"
+  ],
+  "pii_types": [
+   "CITY",
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 178678,
+  "domain": "ai4privacy",
+  "text": "2\\tGrade Improvement Plan\\tSupporting instruction for 96jean-etienne.lhawang, track progress on 97710707999039998613.",
+  "pii_present": true,
+  "pii_values": [
+   "96jean-etienne.lhawang",
+   "97710707999039998613"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 432663,
+  "domain": "ai4privacy",
+  "text": "<p>Monitor 0x3e3e282ccb02bdc51a73959085c8ff2b0c79e700 activity closely. Regularly update security measures involving US25 19252389 7BL 8809. Use CH1CND6U7JE3T for user verification. Monthly reports will summarize transactions with 76475420805071 and 724334283.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "CH1CND6U7JE3T"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 288428,
+  "domain": "ai4privacy",
+  "text": "Hey, 69's vaccine is due 21st June 2040. Update records from clinic at 288. New guidelines at https://rogers-khan.net/.",
+  "pii_present": true,
+  "pii_values": [
+   "288"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 325368,
+  "domain": "ai4privacy",
+  "text": "Dear Dupoux, your Healthcare details are listed incorrectly, verify with your correct INV-201209-3311.",
+  "pii_present": true,
+  "pii_values": [
+   "Dupoux"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 133118,
+  "domain": "ai4privacy",
+  "text": "Include this, 492-89-4604, in our registration for the diversity program.",
+  "pii_present": true,
+  "pii_values": [
+   "492-89-4604"
+  ],
+  "pii_types": [
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 194123,
+  "domain": "ai4privacy",
+  "text": "Need a quick check on street address Chuckle Berry Lane for policy MBLU39180.",
+  "pii_present": true,
+  "pii_values": [
+   "Chuckle Berry Lane"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 271233,
+  "domain": "ai4privacy",
+  "text": "<html><body>Report: Employee ID 5133684995003 slipped in 2800, incurring costs of United States Dollar3.2871b for medical care. Email: CCRD02@yahoo.com, eye color: Blue.</body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "5133684995003",
+   "2800",
+   "CCRD02@yahoo.com"
+  ],
+  "pii_types": [
+   "IDCARDNUM",
+   "BUILDINGNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 308488,
+  "domain": "ai4privacy",
+  "text": "Important updates about Maldon Ulting. Access moderation logs via http://atkinson-chadwick.com/, particularly for incidents near Hatfield Road. Verify matters using PIN: 515947.",
+  "pii_present": true,
+  "pii_values": [
+   "Maldon Ulting",
+   "Hatfield Road"
+  ],
+  "pii_types": [
+   "CITY",
+   "STREET"
+  ]
+ },
+ {
+  "id": 201388,
+  "domain": "ai4privacy",
+  "text": "Document type: Psychological Evaluation Form<br>Conducted at Cabin 383, 47427.<br>Patient involves in Administration sector.<br>Noticeable signs of distress.<br>Financial debt indicated by: 2204420161488823, 551,483.60.",
+  "pii_present": true,
+  "pii_values": [
+   "47427",
+   "2204420161488823"
+  ],
+  "pii_types": [
+   "ZIPCODE",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 457878,
+  "domain": "ai4privacy",
+  "text": "Your age (5) affects your health service options. Please visit 444 Patina Circle, Nashville for a consultation.",
+  "pii_present": true,
+  "pii_values": [
+   "444",
+   "Patina Circle",
+   "Nashville"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "STREET",
+   "CITY"
+  ]
+ },
+ {
+  "id": 415998,
+  "domain": "ai4privacy",
+  "text": "Latest stats from Humble might be flawed. Verify it at [30.0, -95.2956] by 2025-09-28T00:00:00.",
+  "pii_present": true,
+  "pii_values": [
+   "Humble"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 411503,
+  "domain": "ai4privacy",
+  "text": "<p>Green Technologies Program</p><p>Coordinator: Naman</p><p>Contact Email: 71naman.noguera@aol.com</p><p>City: Nottingham</p><p>Date: 4th August 2040</p><p>Goal: Promote green technologies.</p><p>Phone IMEI: 726282856705378</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Naman",
+   "71naman.noguera@aol.com",
+   "Nottingham"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "EMAIL",
+   "CITY"
+  ]
+ },
+ {
+  "id": 322233,
+  "domain": "ai4privacy",
+  "text": "Hey, I'm attending that workshop on Emotional Intelligence on 07/22/2020. Can you guide me on how to enhance it? My address is 27545, if you could mail me the details.",
+  "pii_present": true,
+  "pii_values": [
+   "07/22/2020",
+   "27545"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 296558,
+  "domain": "ai4privacy",
+  "text": "STUDENT SALARY: \u00a3519505<br>IPV4 ADDRESS: [IPV4_2]<br>SECONDARY ADDRESS: Farmhouse 477<br>ACCOUNT NUM: 319517<br>PERSONAL TITLE: Mr",
+  "pii_present": true,
+  "pii_values": [
+   "319517"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 302218,
+  "domain": "ai4privacy",
+  "text": "Reminder: Update your final assessments in Romford by 28/12/2017. Secure access using ~Kd|2,oC.",
+  "pii_present": true,
+  "pii_values": [
+   "Romford",
+   "28/12/2017",
+   "~Kd|2,oC"
+  ],
+  "pii_types": [
+   "CITY",
+   "DATEOFBIRTH",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 326943,
+  "domain": "ai4privacy",
+  "text": "Employees aged 11 and up, must enroll using 241872665151305 and valid credit, 2201437047343363. Applicable for Technical Support field only.",
+  "pii_present": true,
+  "pii_values": [
+   "2201437047343363"
+  ],
+  "pii_types": [
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 353993,
+  "domain": "ai4privacy",
+  "text": "Yo koba, any insights on non-disclosure agreements post-merger? How is 141700703647607 data handled in competitive law?",
+  "pii_present": true,
+  "pii_values": [
+   "koba"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 389218,
+  "domain": "ai4privacy",
+  "text": "Doc ID: BILL-202109-2266<br>Name: Lea-Marie Jeronimo<br>Birth Date: 08/02/1964<br>Country: US<br><br>Coordinates: [38.16, -84.506]<br>Job Type: Part-time<br>LTC Address: Lq3jmb5rUHcUZjF2ClUnDzMSx1HVPw6Cun<br>Balance: 39.757k",
+  "pii_present": true,
+  "pii_values": [
+   "Lea-Marie",
+   "Jeronimo",
+   "08/02/1964"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 242148,
+  "domain": "ai4privacy",
+  "text": "Dear Fagner, check 3SW9CEWCdnwO5G9jTcMI3za0AcqRg9uLEf for currency British Pound Sterling70.5007b notation.",
+  "pii_present": true,
+  "pii_values": [
+   "Fagner"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 281183,
+  "domain": "ai4privacy",
+  "text": "<html><body>Attendance will use distributed ledger codes such as REF-201209-7825. Get support via contacting E2011@tutanota.com and tracking logins on [IPV4_1].</body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "E2011@tutanota.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 402468,
+  "domain": "ai4privacy",
+  "text": "Hi R04, what's your average height (165 cm / 5' 4\") for our records?",
+  "pii_present": true,
+  "pii_values": [
+   "R04"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 302523,
+  "domain": "ai4privacy",
+  "text": "<p>I, uadcpwl994859, approve the treatment for my child, uadcpwl994859, born on 2010-06-30T00:00:00. Doctor in charge: Dr. uadcpwl994859. Payment via 6759836361230. Use WOOLFSON140219EN for the insurance. In an emergency, contact [IPV4_1], or call +41 41-415 8148.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "uadcpwl994859",
+   "uadcpwl994859",
+   "2010-06-30T00:00:00",
+   "uadcpwl994859",
+   "6759836361230",
+   "+41 41-415 8148"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "USERNAME",
+   "DATEOFBIRTH",
+   "USERNAME",
+   "CREDITCARDNUMBER",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 327478,
+  "domain": "ai4privacy",
+  "text": "Hi Pres, just a heads up, REF-201611-3091 needs to be revised. Meeting in High Wycombe at 02:47:48 for details.",
+  "pii_present": true,
+  "pii_values": [
+   "High Wycombe"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 254018,
+  "domain": "ai4privacy",
+  "text": "Heads up! HSA account 797935678740 updated with 0.1810m. Questions? Call +112.80 297 5660.",
+  "pii_present": true,
+  "pii_values": [
+   "797935678740",
+   "+112.80 297 5660"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 139573,
+  "domain": "ai4privacy",
+  "text": "Follow policy evaluation guidelines by verifying Female, 02/05/1990, and Rogic. Utilize 66:75:71:8f:bd:18 for tracking and ensure %0Z94m&0ecY security. Monitor 397279.93 for accuracy and log Mozilla/5.0 (Macintosh; PPC Mac OS X 10_10_7 rv:5.0; nb-NO) AppleWebKit/531.6.1 (KHTML, like Gecko) Version/4.0 Safari/531.6.1.",
+  "pii_present": true,
+  "pii_values": [
+   "02/05/1990",
+   "Rogic",
+   "%0Z94m&0ecY"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH",
+   "SURNAME",
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 376953,
+  "domain": "ai4privacy",
+  "text": "Participant: Wulfran, Bohlmann\nEye Colour: Gray\nPostcode: NE20\nOrganisation: Wheeler PLC\nAddress: Lodge 299\nCoordinates: [55.098, -1.825]\nMAC Address: d4:a2:5c:33:3d:6e\n",
+  "pii_present": true,
+  "pii_values": [
+   "Wulfran",
+   "Bohlmann",
+   "NE20"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 350213,
+  "domain": "ai4privacy",
+  "text": "Hi Allel, can you send us the latest statement from Diners Club International? We need it for your account update.",
+  "pii_present": true,
+  "pii_values": [
+   "Allel"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 350228,
+  "domain": "ai4privacy",
+  "text": "Hello Raimundas, we need to verify a transaction done in United States Dollar recently. Did you authorize it?",
+  "pii_present": true,
+  "pii_values": [
+   "Raimundas"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 114423,
+  "domain": "ai4privacy",
+  "text": "Hey Pov, double-check our agile metrics in ENG before the sprint ends. Regards, Lone.",
+  "pii_present": true,
+  "pii_values": [
+   "Pov",
+   "Lone"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 174613,
+  "domain": "ai4privacy",
+  "text": "Hey Temporary, just confirming the details for this exchange student coming to United States. We're supposed to confirm their ethereum address and 537-95-9084? Haven't done this before.",
+  "pii_present": true,
+  "pii_values": [
+   "537-95-9084"
+  ],
+  "pii_types": [
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 468328,
+  "domain": "ai4privacy",
+  "text": "Emergency! Got a call stating my 6762710720484 was compromised. Has anyone experienced this?",
+  "pii_present": true,
+  "pii_values": [
+   "6762710720484"
+  ],
+  "pii_types": [
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 473793,
+  "domain": "ai4privacy",
+  "text": "Share the latest client video. Confirm LEyGsqcoi5AnTEXJRQ8QL0AMehPSNg1fOj and ensure KI58134WB is correct.",
+  "pii_present": true,
+  "pii_values": [
+   "KI58134WB"
+  ],
+  "pii_types": [
+   "IDCARDNUM"
+  ]
+ },
+ {
+  "id": 362503,
+  "domain": "ai4privacy",
+  "text": "The project targets Braithwaite's specific BIN populace. Capture Litecoin usage LtbYLlSr5bEM1Tzvx9h7jPidPHp17kEhim, ensuing sum details: 463,822.88, correlated IP: [IPV4_9].",
+  "pii_present": true,
+  "pii_values": [
+   "Braithwaite"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 192708,
+  "domain": "ai4privacy",
+  "text": "Caregiver Details: Full Name: Renton, Contact Phone: +18-88059-6886, Caregiver's Email: il\u00e9renton@yahoo.com, Guardian's Social Security: 308235420, Guardian's Street Address: County Road 4361, Policy Number: USEN POO 7089, MAC Address: 24:ba:dd:7c:43:ae",
+  "pii_present": true,
+  "pii_values": [
+   "Renton",
+   "+18-88059-6886",
+   "il\u00e9renton@yahoo.com",
+   "308235420",
+   "County Road 4361"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "TELEPHONENUM",
+   "EMAIL",
+   "SOCIALNUM",
+   "STREET"
+  ]
+ },
+ {
+  "id": 115778,
+  "domain": "ai4privacy",
+  "text": "Can you rate Savings Account 2's new insurance policy? Also, they need your GD17099KM and Belfast for the claims file.",
+  "pii_present": true,
+  "pii_values": [
+   "GD17099KM",
+   "Belfast"
+  ],
+  "pii_types": [
+   "IDCARDNUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 354143,
+  "domain": "ai4privacy",
+  "text": "The Quality Assurance review ensured that employee entries met standards. Checks on VIN tags like SL0BVX7L3AEJ2BKPT were validated. Balances reported, such as 0.1m, were found consistent with NatWest accounts. Address queries to 22britny@tutanota.com.",
+  "pii_present": true,
+  "pii_values": [
+   "22britny@tutanota.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 476733,
+  "domain": "ai4privacy",
+  "text": "1. Identify the incident and confirm the 4 of the affected individuals. \n Record witness statements and document 877 locations.",
+  "pii_present": true,
+  "pii_values": [
+   "877"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 236548,
+  "domain": "ai4privacy",
+  "text": "Can you check if the 078040472575425 configurations comply with Mcmillan, Neal and Burns's new data policy? And make sure the 819.21.7884 is registered correctly.",
+  "pii_present": true,
+  "pii_values": [
+   "819.21.7884"
+  ],
+  "pii_types": [
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 213703,
+  "domain": "ai4privacy",
+  "text": "<p>Dear Male, funding application form for Valenzuela PLC, ID: 4730904325851, License: A71VR9838413.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "4730904325851",
+   "A71VR9838413"
+  ],
+  "pii_types": [
+   "IDCARDNUM",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 161833,
+  "domain": "ai4privacy",
+  "text": "Hi Isabel-Maria, could you forward the health safety guidelines to 17isabel-maria.ortutay@yahoo.com? Also, ensure your IBAN US94686515471MO3751 is updated for billing.",
+  "pii_present": true,
+  "pii_values": [
+   "Isabel-Maria",
+   "17isabel-maria.ortutay@yahoo.com"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 359278,
+  "domain": "ai4privacy",
+  "text": "<div>6979181239403281472889 document on oil agreements compiled by Mohaqeq post 1021 visit. Contact mrgimmohaqeq@hotmail.com</div>",
+  "pii_present": true,
+  "pii_values": [
+   "Mohaqeq",
+   "1021",
+   "mrgimmohaqeq@hotmail.com"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "BUILDINGNUM",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 406458,
+  "domain": "ai4privacy",
+  "text": "Check 555572462266245's logs. Schedule next psychotherapy session. - South 135th Street West",
+  "pii_present": true,
+  "pii_values": [
+   "South 135th Street West"
+  ],
+  "pii_types": [
+   "STREET"
+  ]
+ },
+ {
+  "id": 117803,
+  "domain": "ai4privacy",
+  "text": "Cross-check tilhrxuzg3274@yahoo.com entries with the M46AK3F86PKH4C9TC records. Seems there's an issue.",
+  "pii_present": true,
+  "pii_values": [
+   "tilhrxuzg3274@yahoo.com"
+  ],
+  "pii_types": [
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 462918,
+  "domain": "ai4privacy",
+  "text": "Psychological evaluation: Submit Age: 42, Postcode: E10, Job Role: Internship, City: London Leyton, Annual Salary: 0.1m, Date of Birth: 1982-05-31T00:00:00, and Vehicle Registration: JR05VQB.",
+  "pii_present": true,
+  "pii_values": [
+   "E10",
+   "London Leyton",
+   "1982-05-31T00:00:00"
+  ],
+  "pii_types": [
+   "ZIPCODE",
+   "CITY",
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 167133,
+  "domain": "ai4privacy",
+  "text": "<p>Master Mardel guarantees patient confidentiality in therapy. No information, like [38.18483, -121.76849], will be shared without consent. For concerns, contact Audren at 14audren@tutanota.com. Visit https://hernandez.com/ for more details on our confidentiality policy.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Mardel",
+   "Audren",
+   "14audren@tutanota.com"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "GIVENNAME",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 389433,
+  "domain": "ai4privacy",
+  "text": "Discuss the socio-economic factors affecting Marketing with 68salman.errico.",
+  "pii_present": true,
+  "pii_values": [
+   "68salman.errico"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 387203,
+  "domain": "ai4privacy",
+  "text": "Evening Quadruplex 350 resident Nishani, update your health status via https://www.jackson-marquez.com/.",
+  "pii_present": true,
+  "pii_values": [
+   "Nishani"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 349028,
+  "domain": "ai4privacy",
+  "text": "Received a request for a Male student\u2019s confidential data. Their AGE is 15 and their TAX NUM is 144305973. Confirm access?",
+  "pii_present": true,
+  "pii_values": [
+   "144305973"
+  ],
+  "pii_types": [
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 492743,
+  "domain": "ai4privacy",
+  "text": "Proposal for science camp in Cambridge targeting 36-year-olds. Directed by Nyota, a Full-time. Camp starts at 2. Contact: PW66JOD for details. Bank: GB11FCS6GF0ZKZ6MFH4HGX NABXUS82XRE",
+  "pii_present": true,
+  "pii_values": [
+   "Cambridge",
+   "Nyota"
+  ],
+  "pii_types": [
+   "CITY",
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 433623,
+  "domain": "ai4privacy",
+  "text": "Good day, collate all data related to H86YKLFN9TBHCSECR and THUPT 010265 9 272. Update balance before end of business.",
+  "pii_present": true,
+  "pii_values": [
+   "THUPT 010265 9 272"
+  ],
+  "pii_types": [
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 205158,
+  "domain": "ai4privacy",
+  "text": "Therapy plan for client at East Tygarts Creek Road, Greenup, KY. Goals:\n1. Reduce anxiety by breathing exercises.\n2. Cognitive restructuring.\nSession cost: United States Dollar172332. Store info securely at: http://www.wade.com/",
+  "pii_present": true,
+  "pii_values": [
+   "East Tygarts Creek Road",
+   "Greenup"
+  ],
+  "pii_types": [
+   "STREET",
+   "CITY"
+  ]
+ },
+ {
+  "id": 263593,
+  "domain": "ai4privacy",
+  "text": "Can you ensure the ^#mL8 for the new Support account is strong enough? It's crucial for compliance.",
+  "pii_present": true,
+  "pii_values": [
+   "^#mL8"
+  ],
+  "pii_types": [
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 244163,
+  "domain": "ai4privacy",
+  "text": "Hey 08tausif.yehayes, update the surgery schedule for IT and include the latest guidelines.",
+  "pii_present": true,
+  "pii_values": [
+   "08tausif.yehayes"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 403963,
+  "domain": "ai4privacy",
+  "text": "<p>Ziane reported distress during oncology treatment. Support from Internship and ongoing sessions emphasized.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Ziane"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 395648,
+  "domain": "ai4privacy",
+  "text": "The total amount of 68.4b will be credited to account number 7508388. All transactions will be secured by MAC address 84:7e:6d:86:05:64.",
+  "pii_present": true,
+  "pii_values": [
+   "7508388"
+  ],
+  "pii_types": [
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 507353,
+  "domain": "ai4privacy",
+  "text": "<p>Attached proposal includes a comprehensive strategy for workforce planning, budget considerations, and outcome predictions. Commencement date planned for March 21st, 1939 focusing on NM. Connect with Money Market Account for additional insights. </p>",
+  "pii_present": true,
+  "pii_values": [
+   "March 21st, 1939"
+  ],
+  "pii_types": [
+   "DATEOFBIRTH"
+  ]
+ },
+ {
+  "id": 159023,
+  "domain": "ai4privacy",
+  "text": "Hello Actuary, we need to update our health data. My new card number is 5405461189962024 and it's with Mastercard. Let's discuss this.",
+  "pii_present": true,
+  "pii_values": [
+   "5405461189962024"
+  ],
+  "pii_types": [
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 483913,
+  "domain": "ai4privacy",
+  "text": "Hey, verify if 310 and 30214 are correct for your renters insurance. I need to send you an 54224 to finalize the update.",
+  "pii_present": true,
+  "pii_values": [
+   "310",
+   "30214"
+  ],
+  "pii_types": [
+   "BUILDINGNUM",
+   "ZIPCODE"
+  ]
+ },
+ {
+  "id": 220448,
+  "domain": "ai4privacy",
+  "text": "<p>\u00c7imer's legal immigration status confirmed with this document. Verify IBAN GB53 FWRG KBJ0 2I1G QORQ YT and account number 809930072219681009608783 for financial transactions. Employment details: Theatre manager at Holmesdale Building Society. Vehicle tracking via VIN 93C6ED1FXA7RN035U and VRM PU99 BEJ.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "\u00c7imer",
+   "809930072219681009608783"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 502598,
+  "domain": "ai4privacy",
+  "text": "Hey Kugathas, please check your email for the new assignment link (http://fox.com/). It might have browser compatibility issues Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6 rv:5.0; unm-US) AppleWebKit/534.21.6 (KHTML, like Gecko) Version/5.0 Safari/534.21.6.",
+  "pii_present": true,
+  "pii_values": [
+   "Kugathas"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 390418,
+  "domain": "ai4privacy",
+  "text": "Hello Capt, your insight on our treatment approaches is valuable. Connect with +782 046.360.9729 or visit Jackson-Harris.",
+  "pii_present": true,
+  "pii_values": [
+   "+782 046.360.9729"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 377608,
+  "domain": "ai4privacy",
+  "text": "Follow constraints including 935-40-6360 for funds throught 4680244508678931359. Reviews needed.",
+  "pii_present": true,
+  "pii_values": [
+   "935-40-6360"
+  ],
+  "pii_types": [
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 123763,
+  "domain": "ai4privacy",
+  "text": "Renewable energy project applicants must provide 217030529719 and primary contact number 0164 42-560.2849. Visit Bermuda's office.",
+  "pii_present": true,
+  "pii_values": [
+   "217030529719",
+   "0164 42-560.2849",
+   "Bermuda"
+  ],
+  "pii_types": [
+   "IDCARDNUM",
+   "TELEPHONENUM",
+   "CITY"
+  ]
+ },
+ {
+  "id": 513728,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>2   Audit Report   Detailed report documenting audit findings for compliance with healthcare regulations.</p><p>Chula Vista audits reveal issues with patient records. SOC invalid: 437221870. Age mismatch for 87.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "Chula Vista",
+   "437221870"
+  ],
+  "pii_types": [
+   "CITY",
+   "SOCIALNUM"
+  ]
+ },
+ {
+  "id": 258098,
+  "domain": "ai4privacy",
+  "text": "Insurance terms for Zandon\u00e0, born May/67, require use of 26705028935484028628. Report claims to Ranch 200. Follow underwriting conditions in the policy guidelines.",
+  "pii_present": true,
+  "pii_values": [
+   "Zandon\u00e0",
+   "May/67",
+   "26705028935484028628"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "DATEOFBIRTH",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 194888,
+  "domain": "ai4privacy",
+  "text": "What coordinates reflect stress well in areas like (Potomac). Regular personal jobs (Sales).",
+  "pii_present": true,
+  "pii_values": [
+   "Potomac"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 370908,
+  "domain": "ai4privacy",
+  "text": "Session 25: Tech Addiction\nDate: May 4th, 2045\nRecognizing signs of tech addiction.\nLocation: Hubertus\nPolicy Number: LINSCHOTEN-200124-EN\nBalance: 100k",
+  "pii_present": true,
+  "pii_values": [
+   "Hubertus"
+  ],
+  "pii_types": [
+   "CITY"
+  ]
+ },
+ {
+  "id": 380658,
+  "domain": "ai4privacy",
+  "text": "Summary Report \nPatient: Yankova \nLocation: [55.0, -1.5] Southeast \nHealth: Healthy, minor plaque build-up. \nNext check-up: 04/12/2023. Contact: 092-713-2359.",
+  "pii_present": true,
+  "pii_values": [
+   "Yankova",
+   "092-713-2359"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 391813,
+  "domain": "ai4privacy",
+  "text": "<p>We are delighted to inform Madame Svetla Kord that your financing request has been approved. An amount totaling 0.598m will be transferred by 10th June 2026 as per our agreement.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "Svetla",
+   "Kord"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 306338,
+  "domain": "ai4privacy",
+  "text": "Form: Political Funding Disclosure\nTelephone Number: (060) 0302727\nDeclaration Date: 23rd April 2022\nInsurance Policy ID: GBEN.KLN.5712\nCredit Card Info: 8288368685988201\nDeclared Amount: 694.5871k\nURL Indication: http://www.bennett.biz/\nBitcoin Wallet: 3fQEmUBiCf5aAODfMqyfpTPbgPUtxYTwIJ\n",
+  "pii_present": true,
+  "pii_values": [
+   "(060) 0302727",
+   "8288368685988201"
+  ],
+  "pii_types": [
+   "TELEPHONENUM",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 267868,
+  "domain": "ai4privacy",
+  "text": "Hello Ndjibu, need your confirmation that the QA feedback for counselling in Oxford Beckley meets our quality standards.",
+  "pii_present": true,
+  "pii_values": [
+   "Ndjibu",
+   "Oxford Beckley"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 254213,
+  "domain": "ai4privacy",
+  "text": "Dude 1994savitha, have you experienced the new VR therapy meditation? They needed my 5371342 for a custom package. It's worth every penny!",
+  "pii_present": true,
+  "pii_values": [
+   "1994savitha"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 331993,
+  "domain": "ai4privacy",
+  "text": "Rate your comfort level with the facilities provided at East 1992 Dorm 273.",
+  "pii_present": true,
+  "pii_values": [
+   "1992"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 270498,
+  "domain": "ai4privacy",
+  "text": "This Letter of Intent affirms our plan to negotiate NW.'s acquisition with ISA (Individual Savings Account). Ensure all eamon1940 and 0xb37e8becaaab3735beeddc5152c7392a6491f8c6 records are updated.",
+  "pii_present": true,
+  "pii_values": [
+   "eamon1940"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 501048,
+  "domain": "ai4privacy",
+  "text": "docPatient Confidentiality Agreement|Master Avel Pazaitis, hospital administrator at Sleaford Horbling, agrees to protect patient data and uphold confidentiality standards as part of their duties.|HTML",
+  "pii_present": true,
+  "pii_values": [
+   "Avel",
+   "Pazaitis",
+   "Sleaford Horbling"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "SURNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 425478,
+  "domain": "ai4privacy",
+  "text": "Hi Neta, our 727 review is due next week. Prepare the financials and ensure United States compliance.",
+  "pii_present": true,
+  "pii_values": [
+   "Neta"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 155178,
+  "domain": "ai4privacy",
+  "text": "<p>28my hearing screening: Event at North Baggett Road, CO. Address questions to 28my@tutanota.com. Observe guidelines linked with credit: 763. Your child's consent confirmed.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "28my",
+   "North Baggett Road",
+   "28my@tutanota.com"
+  ],
+  "pii_types": [
+   "USERNAME",
+   "STREET",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 208258,
+  "domain": "ai4privacy",
+  "text": "Patient: Amouri\nClaim Date: 4th February 2059\nHeight: 166 cm\nAddress: Farmhouse 456\nCity: Edinburgh\nPassport No: 935453305\nEmail: almeramouri86@tutanota.com\nBank: Hampden & Co.\nBIC: KLGYUSDT\nBalance: 159519",
+  "pii_present": true,
+  "pii_values": [
+   "Amouri",
+   "Edinburgh",
+   "almeramouri86@tutanota.com"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "CITY",
+   "EMAIL"
+  ]
+ },
+ {
+  "id": 457658,
+  "domain": "ai4privacy",
+  "text": "Good morning Messanh, our session on career choices has been confirmed for September/61.",
+  "pii_present": true,
+  "pii_values": [
+   "Messanh"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 503308,
+  "domain": "ai4privacy",
+  "text": "Hello csab\u00e1choukran1979, verify VRM XK20 REC. Payment British Pound Sterling 8000 to L1iSMFTR97FUlUBBbuhzrP4t7cuSjKDtNB by June 9th, 2021.",
+  "pii_present": true,
+  "pii_values": [
+   "csab\u00e1choukran1979"
+  ],
+  "pii_types": [
+   "USERNAME"
+  ]
+ },
+ {
+  "id": 169243,
+  "domain": "ai4privacy",
+  "text": "Client's meeting at 1496 postponed. IM by 9:14 PM instead.",
+  "pii_present": true,
+  "pii_values": [
+   "1496"
+  ],
+  "pii_types": [
+   "BUILDINGNUM"
+  ]
+ },
+ {
+  "id": 491288,
+  "domain": "ai4privacy",
+  "text": "This new proposal focuses on math problem-solving. Developed by Gjastin for users who are diverse within 94065, monitored via 8581429172267017, and validated by Chapman and Sons. Geographic support from [37.5209, -122.2312] and security by a8:22:40:20:24:ed and 02-5-62.",
+  "pii_present": true,
+  "pii_values": [
+   "Gjastin",
+   "94065",
+   "8581429172267017"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "ZIPCODE",
+   "ACCOUNTNUM"
+  ]
+ },
+ {
+  "id": 351408,
+  "domain": "ai4privacy",
+  "text": "Francesk, the therapy profile link is http://www.bailey-elliott.org/. Can you access it using your phone?",
+  "pii_present": true,
+  "pii_values": [
+   "Francesk"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 170463,
+  "domain": "ai4privacy",
+  "text": "Just a heads up: Do bring your last tax return with the tax number (567-50-1528) by 21st September 2022.",
+  "pii_present": true,
+  "pii_values": [
+   "567-50-1528"
+  ],
+  "pii_types": [
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 151308,
+  "domain": "ai4privacy",
+  "text": "Incredible insights on how to approach leadership! For more info on seminars at Lodge 380, dm me. \u2013 Claudio",
+  "pii_present": true,
+  "pii_values": [
+   "Claudio"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 497123,
+  "domain": "ai4privacy",
+  "text": "Hey Elnara, any new updates on the school nutrition grant? We just need the 897108.22 info.",
+  "pii_present": true,
+  "pii_values": [
+   "Elnara"
+  ],
+  "pii_types": [
+   "GIVENNAME"
+  ]
+ },
+ {
+  "id": 307358,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Confirmation of Claim Submission</p><ul><li>Policy: GBEN.BLH.9275</li><li>Date: 17/02/2050</li><li>Vehicle: 6J2L36F74AFXN429S</li></ul><p>Tel: +64-64 835 7534</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "+64-64 835 7534"
+  ],
+  "pii_types": [
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 193083,
+  "domain": "ai4privacy",
+  "text": "Hiya! Did you see the proposal on restrained breeds in Gillingham Rainham Rural Rainham? Begega, whose CREDRATING is Good, put forth strong points. We need to discuss this further. I'll ping you on +05 05 657 2129.",
+  "pii_present": true,
+  "pii_values": [
+   "Gillingham Rainham Rural Rainham",
+   "Begega",
+   "+05 05 657 2129"
+  ],
+  "pii_types": [
+   "CITY",
+   "SURNAME",
+   "TELEPHONENUM"
+  ]
+ },
+ {
+  "id": 228533,
+  "domain": "ai4privacy",
+  "text": "Check out these new strategies at https://www.garza.com/. Use g~IE`96!2.",
+  "pii_present": true,
+  "pii_values": [
+   "g~IE`96!2"
+  ],
+  "pii_types": [
+   "PASSWORD"
+  ]
+ },
+ {
+  "id": 320013,
+  "domain": "ai4privacy",
+  "text": "Good morning Leseigneur, I need the compliance report for Money Market Account by 11 o'clock. We're discussing it tonight.",
+  "pii_present": true,
+  "pii_values": [
+   "Leseigneur"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 377713,
+  "domain": "ai4privacy",
+  "text": "Hi Dzon, for our Beecher update, please track comments by 6th October 2065. Also, I'll need US93 81969361 6OX 7725 details for our records.",
+  "pii_present": true,
+  "pii_values": [
+   "Dzon",
+   "Beecher"
+  ],
+  "pii_types": [
+   "GIVENNAME",
+   "CITY"
+  ]
+ },
+ {
+  "id": 450193,
+  "domain": "ai4privacy",
+  "text": "<html><body><p>Requesting comprehensive view of Khouiti's mental health records relevant to educational strategies. Use Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0) for verification.</p></body></html>",
+  "pii_present": true,
+  "pii_values": [
+   "Khouiti"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ },
+ {
+  "id": 131253,
+  "domain": "ai4privacy",
+  "text": "At 6:44 AM, we need to discuss cross-compliance data from Faringdon. Make sure recent da:61:59:da:8f:2c transactions are registered and review NEMAT 508088 9 106.",
+  "pii_present": true,
+  "pii_values": [
+   "Faringdon",
+   "NEMAT 508088 9 106"
+  ],
+  "pii_types": [
+   "CITY",
+   "DRIVERLICENSENUM"
+  ]
+ },
+ {
+  "id": 357088,
+  "domain": "ai4privacy",
+  "text": "3\tStudent Engagement Plan\tStrategic plan outlining initiatives to enhance student engagement and success.\n<p>Track academic milestones via 1311335943803547, integrating 7097495309 indicators for comprehensive support analytics. Use 774352076 for cross-reference.</p>",
+  "pii_present": true,
+  "pii_values": [
+   "7097495309"
+  ],
+  "pii_types": [
+   "TAXNUM"
+  ]
+ },
+ {
+  "id": 408118,
+  "domain": "ai4privacy",
+  "text": "Fill out financial aid request form: Include Labricciosa, Education officer, museum, and your sector, Technical Support. Don't forget to mention your [IPV4_1] and your house 361. For assistance confirmation, submit 6224991990126730 issued by CUP.",
+  "pii_present": true,
+  "pii_values": [
+   "Labricciosa",
+   "361",
+   "6224991990126730"
+  ],
+  "pii_types": [
+   "SURNAME",
+   "BUILDINGNUM",
+   "CREDITCARDNUMBER"
+  ]
+ },
+ {
+  "id": 335408,
+  "domain": "ai4privacy",
+  "text": "2 Evaluation Report Report evaluating the effectiveness of global education programs. Gonzalez Group evidenced higher critical thinking skills in KY. Directed by Mutter, the team encompassed Sales. Technical assistance provided by Internship.",
+  "pii_present": true,
+  "pii_values": [
+   "Mutter"
+  ],
+  "pii_types": [
+   "SURNAME"
+  ]
+ }
+]
