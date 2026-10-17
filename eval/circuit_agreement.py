@@ -14,9 +14,11 @@ sys.path.insert(0, str(ROOT / "prover"))
 from reference import ref_card, ref_regex  # noqa: E402
 import run as prover  # noqa: E402
 
-NAMES = ["ssn", "email", "phone_us", "ipv4", "date"]
+from detectors import PATTERNS  # noqa: E402
+NAMES = list(PATTERNS)
 ALPHA = "0123456789-  .@/()+abcXZ.:_"
-SEEDS = ["123-45-6789", "a@b.co", "(555) 123-4567", "10.0.0.1", "03/14/1985", "4111 1111 1111 1111",
+SEEDS = ["born on May 3, 1990", "G34800996", "ACCT-8175175160", "GB13BARC2218419329536326", "kjones AT corp DOT com",
+         "+44 7894 302408", "March 14, 1985", "123456789012", "123-45-6789", "a@b.co", "(555) 123-4567", "10.0.0.1", "03/14/1985", "4111 1111 1111 1111",
          "378282246310005", "123 45 678", "4111 1111 1111 1112", "999.1.1.1", "x@y", "1985-13-45"]
 
 

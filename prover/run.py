@@ -17,7 +17,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ALL_ON = 0b1111111  # six detectors + ascii_only
+ALL_ON = (1 << 14) - 1  # thirteen detectors (bits 0-12) + ascii_only (bit 13): strict policy
+STANDARD = ALL_ON & ~(1 << 4) & ~(1 << 6)  # standard policy: no generic date detectors (dob stays)
 TARGET = ["-t", "noir-recursive"]  # Poseidon2 transcript, zero-knowledge UltraHonk
 
 

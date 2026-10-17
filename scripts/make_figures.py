@@ -79,56 +79,49 @@ b.tick_params(axis="y", length=0)
 fig.savefig(OUT / "cost.pdf")
 plt.close(fig)
 
-# ---------------------------------------------------------------- Fig: detection vs Presidio
-det, pres = load("detector_eval.json"), load("presidio_eval.json")
-types = [("ssn", "SSN"), ("email", "E-mail"), ("phone_us", "US phone"), ("ipv4", "IPv4"), ("date", "Date"),
-         ("card", "Card")]
-fig, axes = plt.subplots(1, 3, figsize=(PAGE_W, 1.85),
-                         gridspec_kw={"width_ratios": [1, 1, 0.8], "wspace": 0.38})
+# ---------------------------------------------------------------- Fig: detection vs baselines (held-out test)
+cmp = load("compare_test.json")
+AQUA, YELLOW, MAGENTA = "#1baf7a", "#eda100", "#e87ba4"
+SYS = [  # key, label, colour, marker, filled
+    ("zkpriv_std", "ZKPriv std", BLUE, "o", True),
+    ("zkpriv_strict", "ZKPriv strict", BLUE, "s", True),
+    ("zkpriv_std_t2", "ZKPriv std+T2", BLUE, "o", False),
+    ("zkpriv_strict_t2", "ZKPriv strict+T2", BLUE, "s", False),
+    ("presidio", "Presidio", ORANGE, "^", True),
+    ("presidio_rx", "Presidio patterns", AQUA, "D", True),
+    ("spacy_ner", "spaCy NER", YELLOW, "v", True),
+    ("llm", "LLM (Llama 3.2)", MAGENTA, "*", True),
+]
+NUDGE = {"zkpriv_std": (4, -9), "zkpriv_strict": (4, 3), "zkpriv_std_t2": (4, -9), "zkpriv_strict_t2": (4, 3),
+         "presidio": (-4, 4), "presidio_rx": (4, -9), "spacy_ner": (-4, 4), "llm": (4, 3)}
 
 
-def recall_panel(ax, ds, title):
-    present = [(k, n) for k, n in types if k in det[ds]["per_type"]]
-    y = list(range(len(present)))[::-1]
-    h = 0.38
-    z = [det[ds]["per_type"][k]["recall"] for k, _ in present]
-    p = [pres[ds]["per_type"][k]["recall"] for k, _ in present]
-    ax.barh([v + h / 2 for v in y], z, height=h, color=BLUE, label="ZKPriv (in circuit)")
-    ax.barh([v - h / 2 for v in y], p, height=h, color=ORANGE, label="Presidio")
-    for v, a_, b_ in zip(y, z, p):
-        ax.text(a_ + 0.015, v + h / 2, f"{a_:.2f}", va="center", fontsize=6, color=MUTED)
-        ax.text(b_ + 0.015, v - h / 2, f"{b_:.2f}", va="center", fontsize=6, color=MUTED)
-    ax.set_yticks(y, [n for _, n in present])
-    ax.set_xlim(0, 1.12)
-    ax.set_xticks([0, 0.25, 0.5, 0.75, 1.0])
-    ax.set_xlabel("Per-value recall")
+def scatter(ax, ds, metric, title, show_t1=True):
+    d = cmp[ds]
+    for key, lab, col, mk, filled in SYS:
+        if key not in d or (not show_t1 and key in ("zkpriv_std", "zkpriv_strict")):
+            continue
+        x, y = 100 * d[key]["over_blocking"], d[key][metric]
+        ax.plot([x], [y], ls="none", marker=mk, ms=6.5 if mk != "*" else 9, mfc=col if filled else "white",
+                mec=col, mew=1.3, zorder=3)
+        dx, dy = NUDGE[key]
+        ax.annotate(lab, (x, y), xytext=(dx, dy), textcoords="offset points", fontsize=6, color=INK,
+                    ha="left" if dx > 0 else "right")
+    ax.set_xlim(-4, 104)
+    ax.set_xlabel("Over-blocking: records refused after PII removed (%)")
     ax.set_title(title, loc="left")
-    ax.tick_params(axis="y", length=0)
-    grid(ax, "x")
+    ax.annotate("better", xy=(4, 0.97), xytext=(26, 0.80), fontsize=6.5, color=MUTED,
+                arrowprops=dict(arrowstyle="->", color=MUTED, lw=0.8))
+    grid(ax, "both")
 
 
-recall_panel(axes[0], "synth_500", "(a) Synthetic US records (500)")
-recall_panel(axes[1], "ai4privacy_500", "(b) ai4privacy records (500)")
-h, l = axes[0].get_legend_handles_labels()
-fig.legend(h, l, frameon=False, loc="upper center", ncol=2, bbox_to_anchor=(0.5, 1.08), handlelength=1.2)
-
-c = axes[2]
-ds_names = [("synth_500", "Synthetic"), ("ai4privacy_500", "ai4privacy")]
-x = range(len(ds_names))
-w = 0.36
-z = [100 * det[d]["false_refusal_rate_scrubbed"] for d, _ in ds_names]
-p = [100 * pres[d]["false_refusal_rate_scrubbed"] for d, _ in ds_names]
-c.bar([i - w / 2 for i in x], z, width=w, color=BLUE)
-c.bar([i + w / 2 for i in x], p, width=w, color=ORANGE)
-for i, (a_, b_) in enumerate(zip(z, p)):
-    c.text(i - w / 2, a_ + 1, f"{a_:.1f}%", ha="center", fontsize=6.5, color=INK)
-    c.text(i + w / 2, b_ + 1, f"{b_:.1f}%", ha="center", fontsize=6.5, color=INK)
-c.set_xticks(list(x), [n for _, n in ds_names])
-c.set_ylim(0, 42)
-c.set_ylabel("Refused (%), lower is better")
-c.set_title("(c) Refused after PII removed", loc="left")
-grid(c)
-c.tick_params(axis="x", length=0)
+fig, axes = plt.subplots(1, 3, figsize=(PAGE_W, 2.3), gridspec_kw={"wspace": 0.28})
+scatter(axes[0], "ai4privacy_test_500", "structured_recall", "(a) Structured PII, ai4privacy")
+scatter(axes[1], "synth_test_500", "structured_recall", "(b) Structured PII, synthetic US")
+scatter(axes[2], "ai4privacy_test_500", "all_recall", "(c) All PII incl. names and places, ai4privacy")
+axes[0].set_ylabel("Recall (held-out test set)")
+for ax in axes:
+    ax.set_ylim(0.2, 1.03)
 fig.savefig(OUT / "detection.pdf")
 plt.close(fig)
 print("wrote", sorted(p.name for p in OUT.glob("*.pdf")))

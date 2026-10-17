@@ -15,9 +15,10 @@ from regex_dfa import BOUNDARY
 
 N_DEFAULT = 256
 CHUNK = 31  # bytes per field element (fits below the BN254 modulus)
-ORDER = ["ssn", "email", "phone_us", "ipv4", "date", "card", "date_text", "phone_intl"]  # policy mask bit = index
-ASCII_BIT = len(ORDER)  # 8
-SEM_SHIFT = 9  # tier-2 semantic categories use policy bits 9..12
+ORDER = ["ssn", "email", "phone_us", "ipv4", "date", "card", "date_text", "phone_intl",
+         "dob", "longnum", "id_prefixed", "iban", "email_obf"]  # policy mask bit = index
+ASCII_BIT = len(ORDER)  # 13
+SEM_SHIFT = ASCII_BIT + 1  # tier-2 semantic categories use policy bits 14..17
 
 
 def compress(d):

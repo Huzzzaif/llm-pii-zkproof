@@ -56,6 +56,8 @@ Privacy-enhancing technologies for LLM inference---MPC, FHE, trusted execution e
 
 The previous version of this work proved compliance with respect to sensitivity labels that the provider computed outside the proof and supplied as a private witness. A dishonest prover can set every label to ``not sensitive'', so such a proof certifies only what the provider claims. This paper removes that gap for structured PII, whose labels are \emph{computed inside the circuit} from the committed response bytes, and narrows it for names and places, whose labels must be signed by an attested enclave over the same commitment.
 
+Zero knowledge matters here not for the user, who sees the response, but for everyone else. A user can forward a receipt to an auditor or regulator, who learns that the response was compliant without seeing it, the prompt or the model; and a provider cannot later deny having certified a response it served. A filter log offers neither property.
+
 \textbf{Contributions.}
 \begin{enumerate}[leftmargin=1.2em,itemsep=1pt]
   \item \textbf{In-circuit absence proofs for structured PII.} Detectors for SSNs, e-mail addresses, US phone numbers, IPv4 addresses, numeric dates and payment cards are compiled to minimized search automata with absorbing accept states, so ``the response contains no match'' reduces to a single check on the final state. A dedicated automaton tracks two Luhn sums left to right, recognizing valid card numbers without look-ahead.
@@ -81,22 +83,26 @@ The previous version of this work proved compliance with respect to sensitivity 
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}[font=\footnotesize, node distance=4mm and 6mm,
-  box/.style={draw, rounded corners=2pt, align=center, inner sep=3pt, minimum height=7mm},
-  arr/.style={-{Stealth[length=2mm]}}]
-\node[box] (u) {User $\mathcal{U}$};
-\node[box, right=14mm of u] (llm) {LLM};
-\node[box, right=of llm] (pr) {\sys{} prover\\{\scriptsize detectors in circuit}};
-\node[draw, dashed, rounded corners, fit=(llm)(pr), inner sep=4pt, label={[font=\scriptsize]above:Provider $\mathcal{S}$}] (s) {};
-\node[box, below=10mm of pr] (reg) {Policy registry $\mathcal{R}$\\{\scriptsize $(v, h_{\mathrm{pol}}^{(v)}, h_{\mathrm{pol}}^{(v-1)})$}};
-\node[box, below=10mm of u] (aud) {Auditor $\mathcal{V}$};
-\draw[arr] (u) -- node[above]{$q$, $\mathit{pid}$} (llm);
-\draw[arr] (llm) -- node[above]{$y$} (pr);
-\draw[arr] (pr.south) |- ++(0,-3mm) -| node[pos=0.25, below, font=\scriptsize]{$(y,\rho,\pi,\mathit{com},v)$} (u.south);
-\draw[arr] (reg.west) -- node[below, font=\scriptsize]{$h_{\mathrm{pol}}^{(v)}$} (aud.east);
-\draw[arr] (u) -- node[left, font=\scriptsize]{$(\pi,\mathit{com},v,\mathit{pid})$} (aud);
+\begin{tikzpicture}[font=\footnotesize, >={Stealth[length=1.8mm]},
+  box/.style={draw, rounded corners=2pt, align=center, inner sep=2.5pt, minimum height=6.5mm},
+  stp/.style={circle, fill=black, text=white, inner sep=0.7pt, font=\scriptsize\bfseries}]
+\node[box] (u)   at (-0.55,-0.75)   {User $\mathcal{U}$};
+\node[box] (llm) at (2.75,0)    {LLM};
+\node[box] (enc) at (5.35,0)    {Enclave NER\\{\scriptsize signs $(\mathit{com},\sigma)$}};
+\node[box] (pr)  at (4.05,-1.5) {\sys{} prover\\{\scriptsize 13 detectors in circuit}};
+\node[draw, dashed, rounded corners, fit=(llm)(enc)(pr), inner sep=4pt,
+      label={[font=\scriptsize]above:Provider $\mathcal{S}$}] {};
+\node[box] (aud) at (-0.55,-2.9)    {Auditor $\mathcal{V}$};
+\node[box] (reg) at (4.05,-2.9) {Policy registry $\mathcal{R}$};
+\draw[->] (u.north east) -- node[above, sloped]{$q,\mathit{pid}$} node[below, sloped]{\tikz\node[stp]{1};} (llm.west);
+\draw[->] (llm.south) -- node[left]{$y$} node[right]{\tikz\node[stp]{2};} (llm.south |- pr.north);
+\draw[->, dashed] (llm.east) -- (enc.west);
+\draw[->, dashed] (enc.south) -- node[right]{\tikz\node[stp]{3};} (enc.south |- pr.north);
+\draw[->] (pr.west) -- node[above, sloped, pos=0.45]{$y,\pi$ + opening} node[below, sloped, pos=0.5]{\tikz\node[stp]{4};} (u.south east);
+\draw[->] (u.south) -- node[left]{\tikz\node[stp]{5};} node[right, font=\scriptsize]{receipt} (aud.north);
+\draw[->] (reg.west) -- node[above, font=\scriptsize]{$h_{\mathrm{pol}}^{(v)}$} (aud.east);
 \end{tikzpicture}
-\caption{\sys{} workflow. The provider proves that the committed response contains no structured PII forbidden by policy version $v$. The user checks the commitment opening and the proof; any auditor can verify a forwarded receipt without seeing the response.}
+\caption{Data flow. \textbf{1}~The user sends a prompt and a fresh request id. \textbf{2}~The provider's LLM answers with $y$ and the prover commits to it. \textbf{3}~(Tier 2, optional) an enclave labels names and places and signs the labels with the commitment. \textbf{4}~The provider returns $y$, the opening $\rho$, the proof $\pi$ and the policy version; if $y$ contains forbidden PII no proof exists. The user checks the opening and verifies $\pi$. \textbf{5}~A receipt without $y$ can be verified by any auditor against the public policy registry.}
 \label{fig:system}
 \end{figure}
 
@@ -110,7 +116,7 @@ The previous version of this work proved compliance with respect to sensitivity 
 \end{aligned}
   \label{eq:com}
 \end{equation}
-where $H$ is a Poseidon2 sponge over BN254 and $m$ is the policy mask. $\mathcal{S}$ proves the statement of Section~\ref{sec:circuit} and returns $(y, \rho, \pi, \mathit{com}, v)$. $\mathcal{U}$ recomputes $\mathit{com}$ from the received $y$ and $\rho$, checks that $h_{\mathrm{pol}}$ equals the registry entry for $v$ and that $v$ is current, and verifies $\pi$. A receipt $(\pi, \mathit{com}, v, \mathit{pid})$ can be forwarded to $\mathcal{V}$, who verifies it without $y$.
+where $H$ is a Poseidon2 sponge over BN254 and $m$ is the policy mask. $\mathcal{S}$ proves the statement of Section~\ref{sec:circuit} and returns $(y, \rho, \pi, \mathit{com}, v)$. $\mathcal{U}$ recomputes $\mathit{com}$ from the received $y$ and $\rho$, checks that $h_{\mathrm{pol}}$ equals the registry entry for $v$ and that $v$ is current, and verifies $\pi$. A receipt $(\pi, \mathit{com}, v, \mathit{pid})$ can be forwarded to $\mathcal{V}$, who verifies it without $y$. \sys{} makes compliance \emph{checkable}, not enforced: a provider can always send a response without a proof, so clients treat an unreceipted response as non-compliant, much as a browser rejects a connection without a valid certificate.
 
 \textbf{Threat model.} $\mathcal{S}$ is malicious: it may run any model, alter or skip filters, and try to certify a response other than the one delivered. The user is honest for its own checks. We consider:
 \begin{itemize}[leftmargin=1.1em,itemsep=1pt]
