@@ -1,13 +1,24 @@
-none 7388
-ssn 12855
-email 12777
-phone_us 13800
-ipv4 13142
-date 13212
-card 151557
-{"N": 64, "gates": 155575, "len": 57, "witness_s": {"median": 0.195, "q1": 0.1938, "q3": 0.198}, "prove_s": {"median": 0.5825, "q1": 0.5747, "q3": 0.597}, "verify_s": {"median": 0.01, "q1": 0.01, "q3": 0.0102}, "proof_bytes": 14656, "prove_peak_mib": 335.0}
-{"N": 128, "gates": 162919, "len": 115, "witness_s": {"median": 0.206, "q1": 0.204, "q3": 0.2095}, "prove_s": {"median": 0.5935, "q1": 0.5837, "q3": 0.6082}, "verify_s": {"median": 0.01, "q1": 0.01, "q3": 0.0102}, "proof_bytes": 14656, "prove_peak_mib": 343.7}
-{"N": 256, "gates": 177533, "len": 230, "witness_s": {"median": 0.224, "q1": 0.223, "q3": 0.2255}, "prove_s": {"median": 0.6675, "q1": 0.6552, "q3": 0.69}, "verify_s": {"median": 0.01, "q1": 0.01, "q3": 0.01}, "proof_bytes": 14656, "prove_peak_mib": 365.9}
-{"N": 512, "gates": 206835, "len": 460, "witness_s": {"median": 0.262, "q1": 0.26, "q3": 0.2642}, "prove_s": {"median": 0.7365, "q1": 0.7245, "q3": 0.7552}, "verify_s": {"median": 0.01, "q1": 0.01, "q3": 0.01}, "proof_bytes": 14656, "prove_peak_mib": 445.2}
-{"N": 1024, "gates": 265439, "len": 921, "witness_s": {"median": 0.34, "q1": 0.337, "q3": 0.3415}, "prove_s": {"median": 0.954, "q1": 0.9417, "q3": 1.0025}, "verify_s": {"median": 0.01, "q1": 0.01, "q3": 0.01}, "proof_bytes": 14656, "prove_peak_mib": 648.4}
+none 8066
+ssn 13533
+email 13455
+phone_us 14478
+ipv4 13820
+date 13890
+card 150855
+date_text 31800
+phone_intl 14595
+dob 397017
+longnum 13487
+id_prefixed 13638
+iban 14025
+email_obf 16681
+{"N": 64, "gates": 518257, "len": 57, "witness_s": {"median": 0.863, "q1": 0.84, "q3": 0.8807}, "prove_s": {"median": 2.4575, "q1": 2.334, "q3": 2.7393}, "verify_s": {"median": 0.019, "q1": 0.019, "q3": 0.0192}, "proof_bytes": 14656, "prove_peak_mib": 940.8}
+{"N": 128, "gates": 532993, "len": 115, "witness_s": {"median": 0.9265, "q1": 0.9108, "q3": 0.9443}, "prove_s": {"median": 2.4525, "q1": 2.404, "q3": 2.7615}, "verify_s": {"median": 0.019, "q1": 0.0187, "q3": 0.0192}, "proof_bytes": 14656, "prove_peak_mib": 1099.2}
+{"N": 256, "gates": 562391, "len": 230, "witness_s": {"median": 1.0395, "q1": 0.9465, "q3": 1.0733}, "prove_s": {"median": 2.6225, "q1": 2.526, "q3": 3.0317}, "verify_s": {"median": 0.019, "q1": 0.019, "q3": 0.0192}, "proof_bytes": 14656, "prove_peak_mib": 1154.9}
+{"N": 512, "gates": 621261, "len": 460, "witness_s": {"median": 1.158, "q1": 1.082, "q3": 1.2077}, "prove_s": {"median": 3.0435, "q1": 2.883, "q3": 3.2132}, "verify_s": {"median": 0.019, "q1": 0.019, "q3": 0.02}, "proof_bytes": 14656, "prove_peak_mib": 1270.2}
+{"N": 1024, "gates": 739001, "len": 921, "witness_s": {"median": 1.4255, "q1": 1.3225, "q3": 1.463}, "prove_s": {"median": 3.8555, "q1": 3.6033, "q3": 4.0767}, "verify_s": {"median": 0.02, "q1": 0.019, "q3": 0.0212}, "proof_bytes": 14656, "prove_peak_mib": 1494.1}
+throughput 1 {'proofs': 24, 'seconds': 95.13, 'proofs_per_s': 0.25}
+throughput 2 {'proofs': 24, 'seconds': 95.09, 'proofs_per_s': 0.25}
+throughput 4 {'proofs': 24, 'seconds': 99.15, 'proofs_per_s': 0.24}
+throughput 8 {'proofs': 24, 'seconds': 101.16, 'proofs_per_s': 0.24}
 wrote eval/results/bench.json

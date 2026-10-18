@@ -151,6 +151,20 @@ if tot["resp"]:
     for k, v in tot.items():
         mac("mTot" + k.capitalize(), v)
 
+# ---- strict-policy circuit (all detectors except dob)
+bs = R / "bench_strict.json"
+if bs.exists():
+    b2 = json.loads(bs.read_text())
+    mac("strictGates", comma(b2["gates"]))
+    mac("strictProve", f"{b2['prove_s']:.2f}")
+    mac("strictVerify", f"{1000 * b2['verify_s']:.0f}")
+    mac("strictMem", f"{b2['peak_mib']:.0f}")
+    mac("strictDets", len(b2["detectors"]))
+if bench:
+    bd = bench["breakdown_n256"]
+    mac("dobGates", comma(bd["dob"] - bd["none"]))
+    mac("dobShare", f"{100 * (bd['dob'] - bd['none']) / bd['all']:.0f}\\%")
+
 # ---- throughput
 if bench and "throughput_n256" in bench:
     for k, v in bench["throughput_n256"].items():

@@ -136,6 +136,7 @@ def sem_spans(t):
 SYSTEMS = {
     "zkpriv_std": lambda t: spans_t1(t, STANDARD),
     "zkpriv_strict": lambda t: spans_t1(t, STRICT),
+    "zkpriv_strict_nodob": lambda t: spans_t1(t, [k for k in STRICT if k != "dob"]),  # compiled strict circuit
     "zkpriv_std_t2": lambda t: spans_t1(t, STANDARD) + sem_spans(t),
     "zkpriv_strict_t2": lambda t: spans_t1(t, STRICT) + sem_spans(t),
     "presidio": lambda t: [(r.start, r.end) for r in presidio_results(t, 0.0)],

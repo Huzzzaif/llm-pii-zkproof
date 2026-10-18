@@ -39,7 +39,7 @@
 \maketitle
 
 \begin{abstract}
-Cloud LLMs can reproduce personal data, and a provider that filters its outputs offers users and auditors no evidence that it did. We present \sys{}, which attaches to every LLM response a zero-knowledge proof that the response contains no personally identifiable information (PII) forbidden by the provider's registered policy, without revealing the prompt, the response or the model. Detection runs \emph{inside} the circuit: 13 detectors, including a left-to-right Luhn automaton for payment cards, are compiled to minimized search automata, and the proof shows that none reaches an accepting state anywhere in the committed response. Names and places are handled by a second tier, in which an enclave signs named-entity labels that the circuit verifies. Implemented in Noir with zero-knowledge UltraHonk, a 256-byte response is proved in \proveTwoFiftySix{}\,s on a laptop CPU and verified in \verifyTwoFiftySix{}\,ms. On held-out data, \sys{} beats Presidio, Presidio's pattern recognizers, spaCy NER and an LLM detector on structured PII (recall \tAiStrictStruct{} vs.\ \tAiPresStruct{} for Presidio) while over-blocking far less (\tAiStrictOver{} vs.\ \tAiPresOver{}), and it refused \mTotRef{} of \mTotPii{} leaking responses from three LLMs.
+Cloud LLMs can reproduce personal data, and a provider that filters its outputs offers users and auditors no evidence that it did. We present \sys{}, which attaches to every LLM response a zero-knowledge proof that the response contains no personally identifiable information (PII) forbidden by the provider's registered policy, without revealing the prompt, the response or the model. Detection runs \emph{inside} the circuit: 13 detectors, including a left-to-right Luhn automaton for payment cards, are compiled to minimized search automata, and the proof shows that none reaches an accepting state anywhere in the committed response. Names and places are handled by a second tier, in which an enclave signs named-entity labels that the circuit verifies. Implemented in Noir with zero-knowledge UltraHonk, a 256-byte response is proved in \strictProve{}\,s on a laptop CPU under the strict policy and verified in \strictVerify{}\,ms. On held-out data, \sys{} beats Presidio, Presidio's pattern recognizers, spaCy NER and an LLM detector on structured PII (recall \tAiStrictStruct{} vs.\ \tAiPresStruct{} for Presidio) while over-blocking far less (\tAiStrictOver{} vs.\ \tAiPresOver{}), and it refused \mTotRef{} of \mTotPii{} leaking responses from three LLMs.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -173,7 +173,7 @@ Because the digest contains $\mathit{com}$, labels signed for one response canno
 \toprule
 \textbf{R1. Correct, unforgeable} & 0 mismatches in 2.7\,M automaton decisions vs.\ an independent reference; circuit agrees on \agreeOk{}/\agreeCases{} inputs; \teeAttacksRefused{}/\teeAttacks{} label forgeries refused. \\
 \midrule
-\textbf{R2. Practical} & Prove \proveTwoFiftySix{}\,s, verify \verifyTwoFiftySix{}\,ms, proof \proofKBTwoFiftySix{}\,KiB; \tputEight{} proofs/s with 8 parallel provers. \\
+\textbf{R2. Practical} & Strict circuit: prove \strictProve{}\,s, verify \strictVerify{}\,ms; standard (13 detectors): \proveTwoFiftySix{}\,s; proofs \proofKBTwoFiftySix{}\,KiB. \\
 \midrule
 \textbf{R3. Beats four baselines} & Structured-PII recall \tAiStrictStruct{} vs.\ \tAiPresStruct{} (Presidio) on ai4privacy and \tSynStrictStruct{} vs.\ \tSynPresStruct{} on synthetic data, with over-blocking \tAiStrictOver{} vs.\ \tAiPresOver{} and \tSynStdOver{} vs.\ \tSynPresOver{}. \\
 \midrule
@@ -191,11 +191,11 @@ Each compiled automaton was checked against an independent implementation with P
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figs/cost.pdf}
-\caption{Cost. (a) Median proving time (shaded: interquartile range) for tier 1 and, at $N=256$, tiers 1+2; verification is about \verifyTwoFiftySix{}\,ms and proofs are \proofKBTwoFiftySix{}\,KiB at every size. (b) Gates each component adds at $N=256$.}
+\caption{Cost. (a) Median proving time over \benchRuns{} runs (shaded: interquartile range) for the standard circuit, and at $N=256$ with tier 2 and for the strict circuit. (b) Gates each component adds at $N=256$; the context-sensitive birth-date detector dominates.}
 \label{fig:cost}
 \end{figure}
 
-At $N=256$ the 13-detector circuit has \gatesTwoFiftySix{} gates and proves in \proveTwoFiftySix{}\,s (Fig.~\ref{fig:cost}); a 1\,KB response takes \proveTenTwentyFour{}\,s and \memTenTwentyFour{}\,MiB. Cost is dominated by the one-time commitment of the large transition tables (birth dates and cards), not by the per-byte scan, so it grows slowly with $N$. Tier 2 adds \teeExtraGates{} gates for ECDSA verification, giving \teeProve{}\,s; NER and signing in the enclave take \teeNerMs{}\,ms and \teeSignMs{}\,ms. Independent provers scale across cores, from \tputOne{} to \tputEight{} proofs/s with 1 and 8 parallel provers. Verification (\verifyTwoFiftySix{}\,ms) and the \proofKBTwoFiftySix{}\,KiB proof are small next to an LLM response that takes seconds to generate.
+Policies compile to circuits, and the two we evaluate differ sharply in cost (Fig.~\ref{fig:cost}). The strict circuit, whose generic date detectors already block every date, needs no birth-date detector: with \strictDets{} detectors it has \strictGates{} gates at $N=256$, proves in \strictProve{}\,s with \strictMem{}\,MiB and verifies in \strictVerify{}\,ms, with detection identical to Fig.~\ref{fig:detect} on both held-out sets. The standard circuit adds the context-sensitive birth-date detector, whose ``cue within 20 characters of a date'' automaton contributes \dobGates{} gates (\dobShare{} of the circuit) and raises proving to \proveTwoFiftySix{}\,s (\gatesTwoFiftySix{} gates; \proveTenTwentyFour{}\,s for 1\,KB). Cost is dominated by committing these transition tables once, not by the per-byte scan, so it grows slowly with $N$. Tier 2 adds \teeExtraGates{} gates for ECDSA verification (\teeProve{}\,s on the standard circuit); NER and signing take \teeNerMs{}\,ms and \teeSignMs{}\,ms. The prover already uses all cores of the machine, so running several provers in parallel does not raise throughput (\tputOne{} vs.\ \tputEight{} proofs/s with 1 and 8 provers); throughput scales across machines. Proofs are \proofKBTwoFiftySix{}\,KiB, and proving is shorter than generating the response: the median Llama~3.1~8B response took \mLlamaEightGenS{}\,s.
 
 \subsection{R3: Detection Against Four Baselines}
 
@@ -210,7 +210,7 @@ On structured PII, \sys{}'s in-circuit detectors beat every baseline on both hel
 
 \subsection{R4: Real LLM Outputs}
 
-We gave Llama~3.1~8B, Qwen~2.5~7B and Llama~3.2~3B (temperature 0) 50 held-out synthetic records each and asked them to list the record's identifiers, to draft a reply confirming the contact details on file, or to repeat the record verbatim, plus one general question without a record. Of \mTotResp{} responses, \mTotPii{} reproduced at least one identifier; \sys{} refused \mTotRef{} of them, catching \mTotCaught{} of the \mTotVals{} reproduced values, and refused \mTotBenref{} of \mTotBen{} general answers. An LLM takes a median \mLlamaEightGenS{}\,s to generate a response with Llama~3.1~8B, longer than \sys{} takes to prove it.
+We gave Llama~3.1~8B, Qwen~2.5~7B and Llama~3.2~3B (temperature 0) 50 held-out synthetic records each and asked them to list the record's identifiers, to draft a reply confirming the contact details on file, or to repeat the record verbatim, plus one general question without a record. Of \mTotResp{} responses, \mTotPii{} reproduced at least one identifier; \sys{} refused \mTotRef{} of them, catching \mTotCaught{} of the \mTotVals{} reproduced values, and refused \mTotBenref{} of \mTotBen{} general answers. 
 
 \subsection{Limitations}
 \label{sec:limits}
@@ -221,7 +221,7 @@ We gave Llama~3.1~8B, Qwen~2.5~7B and Llama~3.2~3B (temperature 0) 50 held-out s
 \section{Conclusion}
 % ════════════════════════════════════════════════════
 
-\sys{} turns an LLM provider's privacy promise into a receipt anyone can check: a zero-knowledge proof, computed in \proveTwoFiftySix{}\,s on a laptop CPU, that a response contains no PII forbidden by the registered policy, with detection inside the circuit rather than asserted by the provider. On held-out data it beats four baselines on structured PII while over-blocking far less than Presidio, and it refused every leaking response from three LLMs. Future work will run tier 2 on attested hardware, use stronger NER models, aggregate receipts across queries, and compose \sys{} with inference-correctness proofs.
+\sys{} turns an LLM provider's privacy promise into a receipt anyone can check: a zero-knowledge proof, computed in \strictProve{}\,s on a laptop CPU, that a response contains no PII forbidden by the registered policy, with detection inside the circuit rather than asserted by the provider. On held-out data it beats four baselines on structured PII while over-blocking far less than Presidio, and it refused every leaking response from three LLMs. Future work will run tier 2 on attested hardware, use stronger NER models, aggregate receipts across queries, and compose \sys{} with inference-correctness proofs.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

@@ -118,6 +118,90 @@ fn detect_card(y: [u8; N], len: u32) -> bool {
     s = tables::CARD_T[s * tables::CARD_NC + tables::CARD_BOUNDARY_CLS];
     s == tables::CARD_ACC
 }
+// date_text: 142 states, 42 byte classes
+fn detect_date_text(y: [u8; N], len: u32) -> bool {
+    let mut s: u32 = tables::DATE_TEXT_S0;
+    for i in 0..N {
+        if i < len {
+            let c = tables::DATE_TEXT_CLS[y[i] as u32];
+            s = tables::DATE_TEXT_T[s * tables::DATE_TEXT_NC + c];
+        }
+    }
+    s = tables::DATE_TEXT_T[s * tables::DATE_TEXT_NC + tables::DATE_TEXT_BOUNDARY_CLS];
+    s == tables::DATE_TEXT_ACC
+}
+// phone_intl: 61 states, 6 byte classes
+fn detect_phone_intl(y: [u8; N], len: u32) -> bool {
+    let mut s: u32 = tables::PHONE_INTL_S0;
+    for i in 0..N {
+        if i < len {
+            let c = tables::PHONE_INTL_CLS[y[i] as u32];
+            s = tables::PHONE_INTL_T[s * tables::PHONE_INTL_NC + c];
+        }
+    }
+    s = tables::PHONE_INTL_T[s * tables::PHONE_INTL_NC + tables::PHONE_INTL_BOUNDARY_CLS];
+    s == tables::PHONE_INTL_ACC
+}
+// dob: 3095 states, 41 byte classes
+fn detect_dob(y: [u8; N], len: u32) -> bool {
+    let mut s: u32 = tables::DOB_S0;
+    for i in 0..N {
+        if i < len {
+            let c = tables::DOB_CLS[y[i] as u32];
+            s = tables::DOB_T[s * tables::DOB_NC + c];
+        }
+    }
+    s = tables::DOB_T[s * tables::DOB_NC + tables::DOB_BOUNDARY_CLS];
+    s == tables::DOB_ACC
+}
+// longnum: 11 states, 3 byte classes
+fn detect_longnum(y: [u8; N], len: u32) -> bool {
+    let mut s: u32 = tables::LONGNUM_S0;
+    for i in 0..N {
+        if i < len {
+            let c = tables::LONGNUM_CLS[y[i] as u32];
+            s = tables::LONGNUM_T[s * tables::LONGNUM_NC + c];
+        }
+    }
+    s = tables::LONGNUM_T[s * tables::LONGNUM_NC + tables::LONGNUM_BOUNDARY_CLS];
+    s == tables::LONGNUM_ACC
+}
+// id_prefixed: 13 states, 5 byte classes
+fn detect_id_prefixed(y: [u8; N], len: u32) -> bool {
+    let mut s: u32 = tables::ID_PREFIXED_S0;
+    for i in 0..N {
+        if i < len {
+            let c = tables::ID_PREFIXED_CLS[y[i] as u32];
+            s = tables::ID_PREFIXED_T[s * tables::ID_PREFIXED_NC + c];
+        }
+    }
+    s = tables::ID_PREFIXED_T[s * tables::ID_PREFIXED_NC + tables::ID_PREFIXED_BOUNDARY_CLS];
+    s == tables::ID_PREFIXED_ACC
+}
+// iban: 37 states, 4 byte classes
+fn detect_iban(y: [u8; N], len: u32) -> bool {
+    let mut s: u32 = tables::IBAN_S0;
+    for i in 0..N {
+        if i < len {
+            let c = tables::IBAN_CLS[y[i] as u32];
+            s = tables::IBAN_T[s * tables::IBAN_NC + c];
+        }
+    }
+    s = tables::IBAN_T[s * tables::IBAN_NC + tables::IBAN_BOUNDARY_CLS];
+    s == tables::IBAN_ACC
+}
+// email_obf: 53 states, 18 byte classes
+fn detect_email_obf(y: [u8; N], len: u32) -> bool {
+    let mut s: u32 = tables::EMAIL_OBF_S0;
+    for i in 0..N {
+        if i < len {
+            let c = tables::EMAIL_OBF_CLS[y[i] as u32];
+            s = tables::EMAIL_OBF_T[s * tables::EMAIL_OBF_NC + c];
+        }
+    }
+    s = tables::EMAIL_OBF_T[s * tables::EMAIL_OBF_NC + tables::EMAIL_OBF_BOUNDARY_CLS];
+    s == tables::EMAIL_OBF_ACC
+}
 
 /// Public: request id `pid`. Public outputs: response commitment and policy hash.
 /// Private: response bytes (zero-padded to N), length, blinding factor, policy.
@@ -143,7 +227,7 @@ fn main(
         }
     }
     // Optional canonicalization guard: ASCII-only responses (blocks Unicode look-alike digits).
-    if bit(policy_mask, 6) {
+    if bit(policy_mask, 13) {
         for i in 0..N {
             assert(y[i] < 128, "non-ASCII byte under ascii_only policy");
         }
@@ -154,12 +238,19 @@ fn main(
     assert(!(bit(policy_mask, 3) & detect_ipv4(y, len)), "policy violation: ipv4");
     assert(!(bit(policy_mask, 4) & detect_date(y, len)), "policy violation: date");
     assert(!(bit(policy_mask, 5) & detect_card(y, len)), "policy violation: card");
+    assert(!(bit(policy_mask, 6) & detect_date_text(y, len)), "policy violation: date_text");
+    assert(!(bit(policy_mask, 7) & detect_phone_intl(y, len)), "policy violation: phone_intl");
+    assert(!(bit(policy_mask, 8) & detect_dob(y, len)), "policy violation: dob");
+    assert(!(bit(policy_mask, 9) & detect_longnum(y, len)), "policy violation: longnum");
+    assert(!(bit(policy_mask, 10) & detect_id_prefixed(y, len)), "policy violation: id_prefixed");
+    assert(!(bit(policy_mask, 11) & detect_iban(y, len)), "policy violation: iban");
+    assert(!(bit(policy_mask, 12) & detect_email_obf(y, len)), "policy violation: email_obf");
 
     let com = commit_y(y, len, rho, pid);
     let h_pol = p2_hash([policy_mask as Field, policy_version]);
     // Tier 2: semantic labels computed and signed by an attested enclave over com.
     let digest: [u8; 32] = p2_hash([com, sem as Field]).to_be_bytes();
     assert(std::ecdsa_secp256k1::verify_signature(pk_x, pk_y, sig, digest), "bad enclave signature");
-    assert((sem & (policy_mask >> 8)) == 0, "policy violation: semantic");
+    assert((sem & (policy_mask >> 14)) == 0, "policy violation: semantic");
     [com, h_pol]
 }

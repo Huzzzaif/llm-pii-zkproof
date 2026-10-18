@@ -51,7 +51,11 @@
   \node[byte] (b\i) at ($(htitle.south west)+(0.15+\i*0.30, -0.34)$) {\c};
 }
 \node[anchor=west, font=\scriptsize] at ($(b9.east)+(0.02,0)$) {\dots};
+\foreach \k in {2,1}{\draw[provLine!25, line width=0.5pt, rounded corners=1.2mm]
+        ($(b0)+(-0.17+0.05*\k,-0.60+0.05*\k)$) rectangle ($(b8)+(0.17+0.05*\k,-0.32+0.05*\k)$);}
 \foreach \i in {0,2,4,6,8}{ \node[st] (s\i) at ($(b\i)+(0,-0.46)$) {}; }
+\draw[-{Stealth[length=2pt]}, line width=0.45pt, color=provLine] ($(s0.west)+(-0.16,0)$) -- (s0.west);
+\node[font=\tiny, text=provLine!80, anchor=north east] at ($(b8)+(0.27,-0.66)$) {$\times 13$};
 \foreach \i/\j in {0/2,2/4,4/6,6/8}{
   \draw[-{Stealth[length=2pt]}, line width=0.45pt, color=provLine] (s\i) -- (s\j);
 }
@@ -102,8 +106,9 @@
 \draw[arrowd] (enc.south) -- node[left]{\tikz\node[stp]{3};}
       node[right, lbl, text=encLine]{$\sigma,\mathit{sig}$} (enc.south |- hero.north);
 % 4: prover -> user through the gutter; label right of the leg, marker left
-\coordinate (g4) at ($(user.east |- hero.west)+(-0.18,0)$);
-\draw[line width=0.8pt, color=black!70] (hero.west) -- (g4);
+\coordinate (h4) at ($(hero.south west)!0.25!(hero.north west)$);
+\coordinate (g4) at ($(user.east |- h4)+(-0.18,0)$);
+\draw[line width=0.8pt, color=black!70] (h4) -- (g4);
 \draw[arrow] (g4) -- (g4 |- user.south);
 \node[lbl, anchor=west] at ($(g4)!0.55!(g4 |- user.south)+(0.05,0)$) {$y,\rho,r$};
 \node[stp, anchor=east] at ($(g4)!0.55!(g4 |- user.south)+(-0.05,0)$) {4};
@@ -111,8 +116,8 @@
 \coordinate (g5a) at ($(user.south)+(-0.30,0)$);
 \coordinate (g5b) at ($(aud.north)+(-0.30,0)$);
 \draw[arrow] (g5a) -- (g5b);
-\node[stp, anchor=east] at ($(g5a)!0.30!(g5b)+(-0.05,0)$) {5};
-\node[lbl, anchor=east, align=right] at ($(g5a)!0.65!(g5b)+(-0.05,0)$) {$r$\\(no $y$)};
+\node[lbl, anchor=east, align=right] (l5) at ($(g5a)!0.55!(g5b)+(-0.05,0)$) {$r$\\(no $y$)};
+\node[stp, anchor=south] at ($(l5.north)+(0,0.04)$) {5};
 % registry -> auditor
 \draw[arrow] (reg.west) -- node[above, lbl]{$h_{\mathrm{pol}}^{(v)}$} (aud.east);
 \end{tikzpicture}

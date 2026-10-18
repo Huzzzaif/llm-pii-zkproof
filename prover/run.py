@@ -52,9 +52,11 @@ def sh(cmd, cwd):
 
 
 def run(text: str, n: int = 256, mask: int = ALL_ON, version: int = 1, prove: bool = True,
-        tee=None) -> dict:
-    """tee: the enclave's attestation dict (tier 2); None proves tier 1 only."""
-    cdir = circuit_dir(n, tee is not None)
+        tee=None, cdir=None) -> dict:
+    """tee: the enclave's attestation dict (tier 2); None proves tier 1 only.
+    cdir: an alternative copy of the circuit directory (used for parallel provers)."""
+    if cdir is None:
+        cdir = circuit_dir(n, tee is not None)
     name = cdir.name if tee is not None else f"zkpriv_n{n}"
     if tee is not None:
         pid, rho = tee["pid"], tee["rho"]

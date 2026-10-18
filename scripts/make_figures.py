@@ -18,6 +18,7 @@ OUT = ROOT / "paper" / "figs"
 OUT.mkdir(parents=True, exist_ok=True)
 
 BLUE, ORANGE = "#2a78d6", "#eb6834"
+AQ = "#1baf7a"
 INK, MUTED, GRID = "#1f1f1e", "#6b6a64", "#e4e3de"
 COL_W, PAGE_W = 3.5, 7.16  # IEEE column / page width, inches
 
@@ -45,23 +46,29 @@ bench, tee = load("bench.json"), load("bench_tee.json")
 rows = bench["scaling"]
 N = [r["N"] for r in rows]
 
-fig, (a, b) = plt.subplots(1, 2, figsize=(COL_W, 1.6), gridspec_kw={"width_ratios": [1, 1.15], "wspace": 0.75})
+fig, (a, b) = plt.subplots(1, 2, figsize=(COL_W, 2.0), gridspec_kw={"width_ratios": [1, 1.15], "wspace": 0.85})
 med = [r["prove_s"]["median"] for r in rows]
 a.fill_between(N, [r["prove_s"]["q1"] for r in rows], [r["prove_s"]["q3"] for r in rows], color=BLUE, alpha=0.18, lw=0)
-a.plot(N, med, color=BLUE, lw=1.6, marker="o", ms=3.5, label="Tier 1")
-a.plot([256], [tee["prove_s"]], ls="none", marker="D", ms=4, mfc="white", mec=INK, mew=1, label="Tier 1+2")
+a.plot(N, med, color=BLUE, lw=1.6, marker="o", ms=3.5, label="Standard, 13 det.")
+a.plot([256], [tee["prove_s"]], ls="none", marker="D", ms=4, mfc="white", mec=INK, mew=1, label="Standard + tier 2")
+strict = load("bench_strict.json")
+a.plot([256], [strict["prove_s"]], ls="none", marker="s", ms=4.5, color=AQ, label="Strict, 12 det.")
 a.set_xscale("log", base=2)
 a.set_xticks(N, [str(n) for n in N])
-a.set_ylim(0, 1.2)
+a.set_ylim(0, 4.5)
 a.set_xlabel("Response capacity $N$ (bytes)")
 a.set_ylabel("Prove time (s)")
 a.set_title("(a) Proving time", loc="left")
-a.legend(frameon=False, loc="upper left", handlelength=1.4, borderaxespad=0.1)
+a.annotate("standard (13 det.)", (64, med[0]), xytext=(-2, -13), textcoords="offset points", fontsize=6, ha="left", color=BLUE)
+a.annotate("+ tier 2", (256, tee["prove_s"]), xytext=(-6, -2), textcoords="offset points", fontsize=6, color=INK, ha="right")
+a.annotate("strict (12 det.)", (256, strict["prove_s"]), xytext=(6, -3), textcoords="offset points", fontsize=6, color=AQ)
 grid(a)
 
 bd = bench["breakdown_n256"]
-names = [("card", "Card (Luhn)"), ("ipv4", "IPv4"), ("phone_us", "US phone"), ("date", "Date"),
-         ("ssn", "SSN"), ("email", "E-mail")]
+names = [("dob", "Birth date"), ("card", "Card (Luhn)"), ("date_text", "Written date"),
+         ("email_obf", "Obfusc. e-mail"), ("phone_intl", "Intl. phone"), ("phone_us", "US phone"),
+         ("iban", "IBAN"), ("date", "Date"), ("ipv4", "IPv4"), ("id_prefixed", "Prefixed ID"),
+         ("ssn", "SSN"), ("longnum", "Account no."), ("email", "E-mail")]
 labels = ["Base"] + [n for _, n in names] + ["Tier 2 sig."]
 vals = [bd["none"]] + [bd[k] - bd["none"] for k, _ in names] + [tee["gates"] - bd["all"]]
 order = sorted(range(len(vals)), key=lambda i: vals[i])
@@ -71,7 +78,7 @@ b.barh(ys, [vals[i] / 1000 for i in order], color=[INK if labels[i].startswith("
 b.set_yticks(list(ys), [labels[i] for i in order])
 for y, i in zip(ys, order):
     b.text(vals[i] / 1000 + 3, y, f"{vals[i] / 1000:.1f}k", va="center", fontsize=6.5, color=MUTED)
-b.set_xlim(0, 175)
+b.set_xlim(0, 500)
 b.set_xlabel("Gates added, $N$=256 (k)")
 b.set_title("(b) Gates per component", loc="left")
 grid(b, "x")

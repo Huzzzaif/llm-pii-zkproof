@@ -11,11 +11,11 @@
         "n": 6
       },
       "date": {
-        "caught": 7,
+        "caught": 10,
         "n": 10
       },
       "email": {
-        "caught": 4,
+        "caught": 7,
         "n": 7
       },
       "ipv4": {
@@ -23,7 +23,7 @@
         "n": 12
       },
       "phone_us": {
-        "caught": 6,
+        "caught": 7,
         "n": 7
       },
       "ssn": {
@@ -72,8 +72,11 @@
         "phone_us"
       ],
       "detectors_fired": [
+        "date_text",
+        "dob",
         "email",
-        "ipv4"
+        "ipv4",
+        "phone_intl"
       ],
       "bytes": 338
     },
@@ -368,6 +371,9 @@
         "phone_us"
       ],
       "detectors_fired": [
+        "date_text",
+        "dob",
+        "email_obf",
         "ipv4",
         "phone_us"
       ],
@@ -399,6 +405,7 @@
       ],
       "detectors_fired": [
         "date",
+        "dob",
         "ipv4"
       ],
       "bytes": 293
@@ -457,7 +464,12 @@
       ],
       "detectors_fired": [
         "card",
+        "date_text",
+        "dob",
+        "email_obf",
         "ipv4",
+        "longnum",
+        "phone_intl",
         "phone_us",
         "ssn"
       ],
@@ -609,6 +621,7 @@
       ],
       "detectors_fired": [
         "date",
+        "dob",
         "ipv4"
       ],
       "bytes": 291
@@ -668,8 +681,11 @@
       "detectors_fired": [
         "card",
         "date",
+        "dob",
         "email",
         "ipv4",
+        "longnum",
+        "phone_intl",
         "phone_us",
         "ssn"
       ],
@@ -825,6 +841,8 @@
         "card",
         "email",
         "ipv4",
+        "longnum",
+        "phone_intl",
         "phone_us"
       ],
       "bytes": 334
@@ -908,8 +926,10 @@
       "detectors_fired": [
         "card",
         "date",
+        "dob",
         "email",
         "ipv4",
+        "longnum",
         "phone_us",
         "ssn"
       ],
@@ -1229,7 +1249,8 @@
       ],
       "detectors_fired": [
         "card",
-        "ipv4"
+        "ipv4",
+        "longnum"
       ],
       "bytes": 276
     },
@@ -1307,6 +1328,7 @@
       ],
       "detectors_fired": [
         "date",
+        "dob",
         "ipv4"
       ],
       "bytes": 291
@@ -1385,6 +1407,7 @@
       ],
       "detectors_fired": [
         "date",
+        "dob",
         "ipv4"
       ],
       "bytes": 287
@@ -1564,7 +1587,10 @@
       "detectors_fired": [
         "card",
         "date",
+        "dob",
+        "email_obf",
         "ipv4",
+        "longnum",
         "phone_us",
         "ssn"
       ],

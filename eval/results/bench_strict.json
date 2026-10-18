@@ -1,0 +1,22 @@
+{
+  "variant": "strict (all detectors except dob)",
+  "detectors": [
+    "ssn",
+    "email",
+    "phone_us",
+    "ipv4",
+    "date",
+    "card",
+    "date_text",
+    "phone_intl",
+    "longnum",
+    "id_prefixed",
+    "iban",
+    "email_obf"
+  ],
+  "gates": 221744,
+  "prove_s": 0.807,
+  "verify_s": 0.0105,
+  "witness_s": 0.267,
+  "peak_mib": 461.7
+}
