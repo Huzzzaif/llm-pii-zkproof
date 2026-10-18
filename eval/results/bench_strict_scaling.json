@@ -1,0 +1,74 @@
+{
+  "detectors": [
+    "ssn",
+    "email",
+    "phone_us",
+    "ipv4",
+    "date",
+    "card",
+    "date_text",
+    "phone_intl",
+    "longnum",
+    "id_prefixed",
+    "iban",
+    "email_obf"
+  ],
+  "runs": 10,
+  "scaling": [
+    {
+      "N": 64,
+      "gates": 180778,
+      "prove_s": {
+        "median": 0.6455,
+        "q1": 0.638,
+        "q3": 0.662
+      },
+      "verify_s": 0.009,
+      "peak_mib": 389.7
+    },
+    {
+      "N": 128,
+      "gates": 194458,
+      "prove_s": {
+        "median": 0.684,
+        "q1": 0.6808,
+        "q3": 0.7167
+      },
+      "verify_s": 0.0095,
+      "peak_mib": 412.8
+    },
+    {
+      "N": 256,
+      "gates": 221744,
+      "prove_s": {
+        "median": 0.8715,
+        "q1": 0.8532,
+        "q3": 0.8805
+      },
+      "verify_s": 0.0115,
+      "peak_mib": 450.0
+    },
+    {
+      "N": 512,
+      "gates": 276390,
+      "prove_s": {
+        "median": 0.948,
+        "q1": 0.9378,
+        "q3": 0.9685
+      },
+      "verify_s": 0.01,
+      "peak_mib": 652.9
+    },
+    {
+      "N": 1024,
+      "gates": 385682,
+      "prove_s": {
+        "median": 1.3055,
+        "q1": 1.2895,
+        "q3": 1.319
+      },
+      "verify_s": 0.01,
+      "peak_mib": 835.4
+    }
+  ]
+}

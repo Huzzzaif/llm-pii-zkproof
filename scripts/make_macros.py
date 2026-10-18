@@ -152,13 +152,16 @@ if tot["resp"]:
         mac("mTot" + k.capitalize(), v)
 
 # ---- strict-policy circuit (all detectors except dob)
-bs = R / "bench_strict.json"
+bs = R / "bench_strict_scaling.json"
 if bs.exists():
     b2 = json.loads(bs.read_text())
-    mac("strictGates", comma(b2["gates"]))
-    mac("strictProve", f"{b2['prove_s']:.2f}")
-    mac("strictVerify", f"{1000 * b2['verify_s']:.0f}")
-    mac("strictMem", f"{b2['peak_mib']:.0f}")
+    r256 = [r for r in b2["scaling"] if r["N"] == 256][0]
+    r1k = [r for r in b2["scaling"] if r["N"] == 1024][0]
+    mac("strictGates", comma(r256["gates"]))
+    mac("strictProve", f"{r256['prove_s']['median']:.2f}")
+    mac("strictVerify", f"{1000 * r256['verify_s']:.0f}")
+    mac("strictMem", f"{r256['peak_mib']:.0f}")
+    mac("strictProveOneK", f"{r1k['prove_s']['median']:.2f}")
     mac("strictDets", len(b2["detectors"]))
 if bench:
     bd = bench["breakdown_n256"]

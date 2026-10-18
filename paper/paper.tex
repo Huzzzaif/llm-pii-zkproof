@@ -162,55 +162,73 @@ Because the digest contains $\mathit{com}$, labels signed for one response canno
 \label{sec:eval}
 % ════════════════════════════════════════════════════
 
-\textbf{Setup.} The detector compiler is written in Python and generates the Noir circuit (Noir \nargoVer{}, Barretenberg \bbVer{}, ZK UltraHonk with a Poseidon2 transcript). All timings use one Apple \hwName{} CPU (24\,GB), median of \benchRuns{} runs, with the verification key computed once per circuit. We developed the detectors on 500 ai4privacy~\cite{ai4privacy} records (train split) and 500 synthetic US-format records, then \emph{froze} them and report results on held-out data committed before any tuning: 500 records from the ai4privacy \emph{validation} split and 500 synthetic records from a new seed. All systems use one protocol: a value is caught if any flagged span overlaps it, and a record is \emph{over-blocked} if anything is still flagged after every annotated value is replaced by ``X''. Baselines are Presidio~\cite{presidio} with all recognizers at its default threshold, Presidio's pattern recognizers alone, spaCy NER, and an LLM detector (\texttt{llama3.2:3b} asked to list every PII substring, as in SenseCLLM~\cite{sensecllm}). Table~\ref{tab:headline} summarizes the results.
+\textbf{Setup.} The detector compiler is written in Python and generates the Noir circuit (Noir \nargoVer{}, Barretenberg \bbVer{}, ZK UltraHonk with a Poseidon2 transcript). All timings use one Apple \hwName{} CPU (24\,GB), median of \benchRuns{} runs, with the verification key computed once per circuit. We developed the detectors on 500 ai4privacy~\cite{ai4privacy} records (train split) and 500 synthetic US-format records, then \emph{froze} them and report results on held-out data committed before any tuning: 500 records from the ai4privacy \emph{validation} split and 500 synthetic records from a new seed. All systems use one protocol: a value is caught if any flagged span overlaps it, and a record is \emph{over-blocked} if anything is still flagged after every annotated value is replaced by ``X''. Baselines are Presidio~\cite{presidio} with all recognizers at its default threshold, Presidio's pattern recognizers alone, spaCy NER, and an LLM detector (\texttt{llama3.2:3b} asked to list every PII substring, as in SenseCLLM~\cite{sensecllm}). We report four results, R1--R4.
+
+
+
+\subsection{R1: Correct and Unforgeable}
 
 \begin{table}[t]
-\caption{Four headline results (held-out data; $N=256$ for cost).}
-\label{tab:headline}
+\caption{R1: correctness and forgery checks.}
+\label{tab:r1}
 \centering\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}p{0.27\columnwidth}p{0.69\columnwidth}@{}}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{0.66\columnwidth}r@{}}
 \toprule
-\textbf{R1. Correct, unforgeable} & 0 mismatches in 2.7\,M automaton decisions vs.\ an independent reference; circuit agrees on \agreeOk{}/\agreeCases{} inputs; \teeAttacksRefused{}/\teeAttacks{} label forgeries refused. \\
+Check & Result \\
 \midrule
-\textbf{R2. Practical} & Strict circuit: prove \strictProve{}\,s, verify \strictVerify{}\,ms; standard (13 detectors): \proveTwoFiftySix{}\,s; proofs \proofKBTwoFiftySix{}\,KiB. \\
-\midrule
-\textbf{R3. Beats four baselines} & Structured-PII recall \tAiStrictStruct{} vs.\ \tAiPresStruct{} (Presidio) on ai4privacy and \tSynStrictStruct{} vs.\ \tSynPresStruct{} on synthetic data, with over-blocking \tAiStrictOver{} vs.\ \tAiPresOver{} and \tSynStdOver{} vs.\ \tSynPresOver{}. \\
-\midrule
-\textbf{R4. Stops real leaks} & \mTotRef{}/\mTotPii{} leaking responses from three LLMs refused; \mTotBenref{}/\mTotBen{} benign answers refused. \\
+13 automata vs.\ independent \texttt{re}/Luhn reference on 300k random strings & 3.9\,M/3.9\,M agree \\
+Generated Noir circuit vs.\ reference (witness generation) & \agreeOk{}/\agreeCases{} agree \\
+Tier-2 label forgeries: zeroed labels, flipped signature bit, other enclave's key, attestation reused for another response & \teeAttacksRefused{}/\teeAttacks{} refused \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{R1: Correct and Unforgeable}
-
-Each compiled automaton was checked against an independent implementation with Python's \texttt{re} (and a direct Luhn check) on 300{,}000 random strings seeded with PII fragments: all 2.7\,M decisions of the 13 detectors agree, and the generated Noir circuit refuses exactly the inputs the reference flags (\agreeOk{}/\agreeCases{}). Differential testing exposed two bugs during development, an e-mail boundary error and a mis-parsed \texttt{\textbackslash n} escape in the regex compiler, both fixed before every reported measurement. For tier 2 we tried \teeAttacks{} forgeries (zeroed labels, a flipped signature bit, another enclave's key, and a valid attestation reused for a different response); the circuit refused all \teeAttacksRefused{}. The enclave is simulated: code and keys are real, hardware attestation is not reproduced.
+Table~\ref{tab:r1} summarizes the checks. Differential testing exposed two bugs during development, an e-mail boundary error and a mis-parsed \texttt{\textbackslash n} escape in the regex compiler, both fixed before every reported measurement. The enclave is simulated: code and keys are real, hardware attestation is not reproduced.
 
 \subsection{R2: Cost}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figs/cost.pdf}
-\caption{Cost. (a) Median proving time over \benchRuns{} runs (shaded: interquartile range) for the standard circuit, and at $N=256$ with tier 2 and for the strict circuit. (b) Gates each component adds at $N=256$; the context-sensitive birth-date detector dominates.}
+\caption{R2: proving time against response size (median of \benchRuns{} runs; shaded: interquartile range). Verification stays near \strictVerify{}\,ms and proofs are \proofKBTwoFiftySix{}\,KiB for every size.}
 \label{fig:cost}
 \end{figure}
 
-Policies compile to circuits, and the two we evaluate differ sharply in cost (Fig.~\ref{fig:cost}). The strict circuit, whose generic date detectors already block every date, needs no birth-date detector: with \strictDets{} detectors it has \strictGates{} gates at $N=256$, proves in \strictProve{}\,s with \strictMem{}\,MiB and verifies in \strictVerify{}\,ms, with detection identical to Fig.~\ref{fig:detect} on both held-out sets. The standard circuit adds the context-sensitive birth-date detector, whose ``cue within 20 characters of a date'' automaton contributes \dobGates{} gates (\dobShare{} of the circuit) and raises proving to \proveTwoFiftySix{}\,s (\gatesTwoFiftySix{} gates; \proveTenTwentyFour{}\,s for 1\,KB). Cost is dominated by committing these transition tables once, not by the per-byte scan, so it grows slowly with $N$. Tier 2 adds \teeExtraGates{} gates for ECDSA verification (\teeProve{}\,s on the standard circuit); NER and signing take \teeNerMs{}\,ms and \teeSignMs{}\,ms. The prover already uses all cores of the machine, so running several provers in parallel does not raise throughput (\tputOne{} vs.\ \tputEight{} proofs/s with 1 and 8 provers); throughput scales across machines. Proofs are \proofKBTwoFiftySix{}\,KiB, and proving is shorter than generating the response: the median Llama~3.1~8B response took \mLlamaEightGenS{}\,s.
+Policies compile to circuits, and the two we evaluate differ sharply in cost (Fig.~\ref{fig:cost}); a 1\,KB response takes \strictProveOneK{}\,s under the strict policy. The strict circuit, whose generic date detectors already block every date, needs no birth-date detector: with \strictDets{} detectors it has \strictGates{} gates at $N=256$, proves in \strictProve{}\,s with \strictMem{}\,MiB and verifies in \strictVerify{}\,ms, with detection identical to Fig.~\ref{fig:detect} on both held-out sets. The standard circuit adds the context-sensitive birth-date detector, whose ``cue within 20 characters of a date'' automaton contributes \dobGates{} gates (\dobShare{} of the circuit) and raises proving to \proveTwoFiftySix{}\,s (\gatesTwoFiftySix{} gates; \proveTenTwentyFour{}\,s for 1\,KB). Cost is dominated by committing these transition tables once, not by the per-byte scan, so it grows slowly with $N$. Tier 2 adds \teeExtraGates{} gates for ECDSA verification (\teeProve{}\,s on the standard circuit); NER and signing take \teeNerMs{}\,ms and \teeSignMs{}\,ms. The prover already uses all cores of the machine, so running several provers in parallel does not raise throughput (\tputOne{} vs.\ \tputEight{} proofs/s with 1 and 8 provers); throughput scales across machines. Proofs are \proofKBTwoFiftySix{}\,KiB, and proving is shorter than generating the response: the median Llama~3.1~8B response took \mLlamaEightGenS{}\,s.
 
 \subsection{R3: Detection Against Four Baselines}
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figs/detection.pdf}
-\caption{Held-out detection. Each point is one system: recall against over-blocking (records still refused after all annotated PII is removed). (a, b) Structured PII (SSN, e-mail, phone, card, date of birth, IP). (c) All annotated PII including names and places. ``Std''/``strict'' are \sys{} policies; ``+T2'' adds enclave-signed NER labels.}
+\includegraphics[width=\columnwidth]{figs/detection.pdf}
+\caption{R3: held-out detection of structured PII (SSN, e-mail, phone, card, date of birth, IP). (a) Recall. (b) Over-blocking: records still refused after every annotated PII value is removed. \sys{} uses the strict policy.}
 \label{fig:detect}
-\end{figure*}
+\end{figure}
 
-On structured PII, \sys{}'s in-circuit detectors beat every baseline on both held-out sets (Fig.~\ref{fig:detect}a, b): strict recall is \tAiStrictStruct{} (95\% CI \tAiStrictStructCI{}) on ai4privacy against \tAiPresStruct{} for Presidio, \tAiPresRxStruct{} for its pattern recognizers, \tAiSpacyStruct{} for spaCy and \tAiLlmStruct{} for the LLM detector, and \tSynStrictStruct{} on synthetic data against \tSynPresStruct{}. It does so while over-blocking far less than Presidio (\tAiStrictOver{} vs.\ \tAiPresOver{}; \tSynStrictOver{} vs.\ \tSynPresOver{}), and the standard policy reaches \tSynStdStruct{} recall with \tSynStdOver{} over-blocking on synthetic data. The largest gains are phone numbers (\tAiStrictGPhone{} vs.\ \tAiPresGPhone{}) and cards (\tAiStrictGCard{} vs.\ \tAiPresGCard{}); Presidio is stronger on ai4privacy's non-US social numbers (\tAiPresGSsnTaxId{} vs.\ \tAiStrictGSsnTaxId{}). Over-blocking on ai4privacy comes mostly from identifiers the dataset leaves unannotated and, under the strict policy, non-birth dates. With all PII including names and places (Fig.~\ref{fig:detect}c), tier 2 reaches \tAiStrictTAll{} recall at \tAiStrictTOver{} over-blocking against Presidio's \tAiPresAll{} at \tAiPresOver{}: tier 2 inherits the recall of the small NER model it runs, so names remain the weakest category.
+On structured PII, \sys{}'s in-circuit detectors beat every baseline on both held-out sets (Fig.~\ref{fig:detect}): strict recall is \tAiStrictStruct{} (95\% CI \tAiStrictStructCI{}) on ai4privacy against \tAiPresStruct{} for Presidio, \tAiPresRxStruct{} for its pattern recognizers, \tAiSpacyStruct{} for spaCy and \tAiLlmStruct{} for the LLM detector, and \tSynStrictStruct{} on synthetic data against \tSynPresStruct{}. It does so while over-blocking far less than Presidio (\tAiStrictOver{} vs.\ \tAiPresOver{}; \tSynStrictOver{} vs.\ \tSynPresOver{}), and the standard policy reaches \tSynStdStruct{} recall with \tSynStdOver{} over-blocking on synthetic data. The largest gains are phone numbers (\tAiStrictGPhone{} vs.\ \tAiPresGPhone{}) and cards (\tAiStrictGCard{} vs.\ \tAiPresGCard{}); Presidio is stronger on ai4privacy's non-US social numbers (\tAiPresGSsnTaxId{} vs.\ \tAiStrictGSsnTaxId{}). Over-blocking on ai4privacy comes mostly from identifiers the dataset leaves unannotated and, under the strict policy, non-birth dates. With all PII including names and places, tier 2 reaches \tAiStrictTAll{} recall at \tAiStrictTOver{} over-blocking against Presidio's \tAiPresAll{} at \tAiPresOver{}: tier 2 inherits the recall of the small NER model it runs, so names remain the weakest category.
 
 \subsection{R4: Real LLM Outputs}
 
-We gave Llama~3.1~8B, Qwen~2.5~7B and Llama~3.2~3B (temperature 0) 50 held-out synthetic records each and asked them to list the record's identifiers, to draft a reply confirming the contact details on file, or to repeat the record verbatim, plus one general question without a record. Of \mTotResp{} responses, \mTotPii{} reproduced at least one identifier; \sys{} refused \mTotRef{} of them, catching \mTotCaught{} of the \mTotVals{} reproduced values, and refused \mTotBenref{} of \mTotBen{} general answers. 
+\begin{table}[t]
+\caption{R4: real LLM responses (50 held-out records per model; 200 responses each).}
+\label{tab:r4}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Model & Leaking & Refused & Benign refused \\
+\midrule
+Qwen 2.5 7B   & \mQwenPii{}       & \mQwenRef{}       & \mQwenBenRef{}/\mQwenBen{} \\
+Llama 3.1 8B  & \mLlamaEightPii{} & \mLlamaEightRef{} & \mLlamaEightBenRef{}/\mLlamaEightBen{} \\
+Llama 3.2 3B  & \mLlamaThreePii{} & \mLlamaThreeRef{} & \mLlamaThreeBenRef{}/\mLlamaThreeBen{} \\
+\midrule
+Total         & \mTotPii{}        & \mTotRef{}        & \mTotBenref{}/\mTotBen{} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each model received 50 held-out synthetic records (temperature 0) and was asked to list the record's identifiers, to draft a reply confirming the contact details on file, or to repeat the record verbatim, plus one general question without a record. A response is \emph{leaking} if it reproduces an identifier from the record. \sys{} refused every leaking response, catching \mTotCaught{} of the \mTotVals{} reproduced values, and no general answer (Table~\ref{tab:r4}). The Llama models mostly declined to list or repeat identifiers, while Qwen complied with almost every request.
 
 \subsection{Limitations}
 \label{sec:limits}

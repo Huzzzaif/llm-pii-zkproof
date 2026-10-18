@@ -41,93 +41,54 @@ def grid(ax, axis="y"):
     ax.set_axisbelow(True)
 
 
-# ---------------------------------------------------------------- Fig: cost
+# ---------------------------------------------------------------- Fig: R2 cost (line graph)
 bench, tee = load("bench.json"), load("bench_tee.json")
-rows = bench["scaling"]
-N = [r["N"] for r in rows]
-
-fig, (a, b) = plt.subplots(1, 2, figsize=(COL_W, 2.0), gridspec_kw={"width_ratios": [1, 1.15], "wspace": 0.85})
-med = [r["prove_s"]["median"] for r in rows]
-a.fill_between(N, [r["prove_s"]["q1"] for r in rows], [r["prove_s"]["q3"] for r in rows], color=BLUE, alpha=0.18, lw=0)
-a.plot(N, med, color=BLUE, lw=1.6, marker="o", ms=3.5, label="Standard, 13 det.")
-a.plot([256], [tee["prove_s"]], ls="none", marker="D", ms=4, mfc="white", mec=INK, mew=1, label="Standard + tier 2")
-strict = load("bench_strict.json")
-a.plot([256], [strict["prove_s"]], ls="none", marker="s", ms=4.5, color=AQ, label="Strict, 12 det.")
-a.set_xscale("log", base=2)
-a.set_xticks(N, [str(n) for n in N])
-a.set_ylim(0, 4.5)
-a.set_xlabel("Response capacity $N$ (bytes)")
-a.set_ylabel("Prove time (s)")
-a.set_title("(a) Proving time", loc="left")
-a.annotate("standard (13 det.)", (64, med[0]), xytext=(-2, -13), textcoords="offset points", fontsize=6, ha="left", color=BLUE)
-a.annotate("+ tier 2", (256, tee["prove_s"]), xytext=(-6, -2), textcoords="offset points", fontsize=6, color=INK, ha="right")
-a.annotate("strict (12 det.)", (256, strict["prove_s"]), xytext=(6, -3), textcoords="offset points", fontsize=6, color=AQ)
-grid(a)
-
-bd = bench["breakdown_n256"]
-names = [("dob", "Birth date"), ("card", "Card (Luhn)"), ("date_text", "Written date"),
-         ("email_obf", "Obfusc. e-mail"), ("phone_intl", "Intl. phone"), ("phone_us", "US phone"),
-         ("iban", "IBAN"), ("date", "Date"), ("ipv4", "IPv4"), ("id_prefixed", "Prefixed ID"),
-         ("ssn", "SSN"), ("longnum", "Account no."), ("email", "E-mail")]
-labels = ["Base"] + [n for _, n in names] + ["Tier 2 sig."]
-vals = [bd["none"]] + [bd[k] - bd["none"] for k, _ in names] + [tee["gates"] - bd["all"]]
-order = sorted(range(len(vals)), key=lambda i: vals[i])
-ys = range(len(order))
-b.barh(ys, [vals[i] / 1000 for i in order], color=[INK if labels[i].startswith("Tier 2") else BLUE for i in order],
-       height=0.62)
-b.set_yticks(list(ys), [labels[i] for i in order])
-for y, i in zip(ys, order):
-    b.text(vals[i] / 1000 + 3, y, f"{vals[i] / 1000:.1f}k", va="center", fontsize=6.5, color=MUTED)
-b.set_xlim(0, 500)
-b.set_xlabel("Gates added, $N$=256 (k)")
-b.set_title("(b) Gates per component", loc="left")
-grid(b, "x")
-b.tick_params(axis="y", length=0)
+ss = load("bench_strict_scaling.json")["scaling"]
+std = bench["scaling"]
+fig, ax = plt.subplots(figsize=(COL_W, 1.55))
+for rows, col, lab in [(std, BLUE, "Standard policy (13 detectors)"), (ss, AQ, "Strict policy (12 detectors)")]:
+    Ns = [r["N"] for r in rows]
+    ax.fill_between(Ns, [r["prove_s"]["q1"] for r in rows], [r["prove_s"]["q3"] for r in rows], color=col, alpha=0.18, lw=0)
+    ax.plot(Ns, [r["prove_s"]["median"] for r in rows], color=col, lw=1.8, marker="o", ms=3.5, label=lab)
+    for r in rows:
+        ax.annotate(f"{r['prove_s']['median']:.2f}", (r["N"], r["prove_s"]["median"]), xytext=(0, 4),
+                    textcoords="offset points", ha="center", fontsize=6, color=INK)
+ax.set_xscale("log", base=2)
+ax.set_xticks([r["N"] for r in std], [str(r["N"]) for r in std])
+ax.set_ylim(0, 4.6)
+ax.set_xlabel("Response size $N$ (bytes)")
+ax.set_ylabel("Prove time (s)")
+ax.legend(frameon=False, loc="upper left", handlelength=1.5, fontsize=6.5)
+grid(ax)
 fig.savefig(OUT / "cost.pdf")
 plt.close(fig)
 
-# ---------------------------------------------------------------- Fig: detection vs baselines (held-out test)
+# ---------------------------------------------------------------- Fig: R3 detection (horizontal bars)
 cmp = load("compare_test.json")
-AQUA, YELLOW, MAGENTA = "#1baf7a", "#eda100", "#e87ba4"
-SYS = [  # key, label, colour, marker, filled
-    ("zkpriv_std", "ZKPriv std", BLUE, "o", True),
-    ("zkpriv_strict", "ZKPriv strict", BLUE, "s", True),
-    ("zkpriv_std_t2", "ZKPriv std+T2", BLUE, "o", False),
-    ("zkpriv_strict_t2", "ZKPriv strict+T2", BLUE, "s", False),
-    ("presidio", "Presidio", ORANGE, "^", True),
-    ("presidio_rx", "Presidio patterns", AQUA, "D", True),
-    ("spacy_ner", "spaCy NER", YELLOW, "v", True),
-    ("llm", "LLM (Llama 3.2)", MAGENTA, "*", True),
-]
-NUDGE = {"zkpriv_std": (4, -9), "zkpriv_strict": (4, 3), "zkpriv_std_t2": (4, -9), "zkpriv_strict_t2": (4, 3),
-         "presidio": (-4, 4), "presidio_rx": (4, -9), "spacy_ner": (-4, 4), "llm": (4, 3)}
-
-
-def scatter(ax, ds, metric, title):
-    d = cmp[ds]
-    for key, lab, col, mk, filled in SYS:
-        if key not in d:
-            continue
-        x, y = 100 * d[key]["over_blocking"], d[key][metric]
-        ax.plot([x], [y], ls="none", marker=mk, ms=6.5 if mk != "*" else 9, mfc=col if filled else "white",
-                mec=col, mew=1.4, zorder=3, label=lab)
-    ax.set_xlim(-5, 100)
-    ax.set_title(title, loc="left")
-    ax.text(0.97, 0.04, "better: up and left", transform=ax.transAxes, fontsize=6, color=MUTED, ha="right")
-    grid(ax, "both")
-
-
-fig, axes = plt.subplots(1, 3, figsize=(PAGE_W, 2.15), gridspec_kw={"wspace": 0.22})
-scatter(axes[0], "ai4privacy_test_500", "structured_recall", "(a) Structured PII, ai4privacy")
-scatter(axes[1], "synth_test_500", "structured_recall", "(b) Structured PII, synthetic US")
-scatter(axes[2], "ai4privacy_test_500", "all_recall", "(c) All PII incl. names, places, ai4privacy")
-axes[0].set_ylabel("Recall (held-out test)")
-for ax in axes:
-    ax.set_ylim(0.05, 1.04)
-fig.supxlabel("Over-blocking: records still refused after all PII is removed (%)", fontsize=7.5, y=-0.06)
-h, l = axes[0].get_legend_handles_labels()
-fig.legend(h, l, frameon=False, loc="upper center", ncol=8, bbox_to_anchor=(0.5, 1.1), handletextpad=0.3,
-           columnspacing=1.1, fontsize=6.5)
+SYSB = [("zkpriv_strict", "ZKPriv"), ("presidio", "Presidio"), ("presidio_rx", "Presidio patterns"),
+        ("spacy_ner", "spaCy NER"), ("llm", "LLM detector")]
+DS = [("ai4privacy_test_500", "ai4privacy", BLUE), ("synth_test_500", "Synthetic US", ORANGE)]
+fig, axes = plt.subplots(1, 2, figsize=(COL_W, 1.9), sharey=True, gridspec_kw={"wspace": 0.12})
+h = 0.38
+ys = list(range(len(SYSB)))[::-1]
+for ax, metric, scale, title, xmax, fmt in [(axes[0], "structured_recall", 1, "(a) Recall (higher is better)", 1.32, "{:.3f}"),
+                                            (axes[1], "over_blocking", 100, "(b) Over-blocking % (lower is better)", 118, "{:.0f}")]:
+    for k, (ds, dlab, col) in enumerate(DS):
+        yy = [y + (0.5 - k) * h for y in ys]
+        vals = [scale * cmp[ds][s][metric] for s, _ in SYSB]
+        ax.barh(yy, vals, height=h * 0.9, color=col, label=dlab)
+        for y, v in zip(yy, vals):
+            ax.text(v + xmax * 0.015, y, fmt.format(v), va="center", fontsize=5.5, color=INK)
+    ax.set_xlim(0, xmax)
+    ax.set_title(title, loc="left", fontsize=6.8)
+    ax.tick_params(axis="y", length=0)
+    grid(ax, "x")
+axes[0].set_xticks([0, 0.5, 1.0])
+axes[1].set_xticks([0, 50, 100])
+axes[0].set_yticks(ys, [n for _, n in SYSB], fontsize=6.5)
+axes[0].get_yticklabels()[0].set_fontweight("bold")
+hh, ll = axes[0].get_legend_handles_labels()
+fig.legend(hh, ll, frameon=False, loc="upper center", ncol=2, bbox_to_anchor=(0.58, 1.08), fontsize=6.5, handlelength=1.2)
 fig.savefig(OUT / "detection.pdf")
 plt.close(fig)
 print("wrote", sorted(p.name for p in OUT.glob("*.pdf")))
