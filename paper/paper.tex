@@ -233,7 +233,7 @@ Place (tier 2) & \tAiNPlace{} & \tAiStrictTGPlace{} & \tAiPresGPlace{} & -- && -
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:r3} breaks recall down by category. \sys{}'s lead comes from international phone numbers with mixed dot, space and hyphen separators (e.g.\ \texttt{+44.88 299-2125}), which Presidio misses; from 18- and 19-digit cards; and from birth dates in month/year form (\texttt{October/17}). Presidio leads on ai4privacy's tax numbers, whose non-US formats (\texttt{77739.08202}) our US-centred SSN detector does not express, and on ``Other ID'', where our misses are ID cards with trailing letters (\texttt{IV45087AW}) and licence numbers with embedded name fragments. Both gaps are detector-language gaps, not proof-system gaps: adding a pattern adds an automaton, and the proof covers it with no change to the protocol. For names and places, tier~2 runs the same NER family as Presidio but a smaller model, which explains its lower recall on ai4privacy.
+Table~\ref{tab:r3} breaks recall down by category. \sys{}'s lead comes from international phone numbers with mixed dot, space and hyphen separators (e.g.\ \texttt{+44.88 299-2125}), which Presidio misses; from 18- and 19-digit cards; and from birth dates in month/year form (\texttt{October/17}). Presidio leads on ai4privacy's tax numbers, whose non-US formats (\texttt{77739.08202}) our US-centred SSN detector does not express, and on ``Other ID'', where our misses are ID cards with trailing letters (\texttt{IV45087AW}) and licence numbers with embedded name fragments. Both gaps are detector-language gaps, not proof-system gaps: adding a pattern adds an automaton, and the proof covers it with no change to the protocol.
 
 \subsection{R4: Real LLM Outputs}
 
@@ -259,7 +259,7 @@ Each model received 50 held-out synthetic records (temperature 0) and was asked 
 
 \subsection{Deployment}
 
-\textbf{When a proof fails.} A failed proof is a policy decision, not an error: the provider can regenerate the response, redact the matched span and prove the redacted text, or return a refusal. Either way, the user never receives an uncertified answer.
+\textbf{When a proof fails.} A failed proof is a policy decision, not an error: the provider can regenerate the response, redact the matched span and prove the redacted text, or return a refusal.
 
 \textbf{Changing a policy.} A policy is a mask over compiled detectors, so enabling or disabling one needs no new setup; only the registry gains a record $(v, h_{\mathrm{pol}}^{(v)}, h_{\mathrm{pol}}^{(v-1)}, \tau_v)$. Adding a \emph{new} detector produces a new circuit and verification key, which the provider publishes beside the registry entry. Because the receipt names $v$, an auditor can tell which detector set certified a past response.
 
