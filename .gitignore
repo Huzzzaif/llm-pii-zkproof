@@ -20,3 +20,6 @@ paper/*.out
 tee-sim/enclave_key.pem
 circuits/digest_n*/Prover.toml
 eval/data/raw/
+paper/figs/*.log
+paper/build.log
+paper/bib.log
