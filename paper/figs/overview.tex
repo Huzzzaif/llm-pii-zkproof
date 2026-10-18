@@ -1,24 +1,7 @@
-% =====================================================================
-% Fig. 1 — ZKPriv overview (thesis-figure-skill, mode C, medium + hero)
-% Core claim:  the provider can only produce a receipt if every in-circuit
-%              automaton scans the committed response without reaching an
-%              accepting state; reaching one (PII) leaves no proof.
-% Archetype:   protocol flow with one central hero.
-% Evidence:    hero = white prover box with a byte strip feeding a state
-%              chain that either never accepts (green, => proof) or reaches
-%              the accepting state a_k (red, => no proof).
-% Can it be less?  Commitment / verifier-key boxes and metrics panel removed.
-% Layout (form B), width <= 8.5 cm: provider zone right (LLM, optional
-% tier-2 enclave, hero), user left, auditor + registry strip below.
-% Revision 3 (after 4-lens review): enclave input y; receipt r defined in
-%   caption; neutral byte text; accept/reject branch in hero; step markers
-%   on the outer (left) side of their own arrow; no label crosses the zone
-%   border; LLM/enclave edges aligned with the hero; white hero; smaller
-%   secondary text; provider label inside the zone; tighter bottom row.
-%
+% Fig. 1: ZKPriv data flow. Provider zone (LLM, optional tier-2 enclave,
+% prover) on the right, user on the left, auditor and policy registry below.
 % Included by paper.tex via \input{figs/overview}. Needs TikZ libraries:
 % arrows.meta, bending, positioning, fit, backgrounds, calc.
-% =====================================================================
 \definecolor{provBg}{HTML}{EAF2FC}   \definecolor{provLine}{HTML}{2A78D6}
 \definecolor{encBg}{HTML}{FFF6DD}    \definecolor{encLine}{HTML}{C98500}
 \definecolor{userFill}{HTML}{E3F5EC} \definecolor{userLine}{HTML}{1B8F63}
