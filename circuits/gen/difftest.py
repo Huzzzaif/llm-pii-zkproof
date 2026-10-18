@@ -1,5 +1,7 @@
 """Differential test: compiled DFAs vs independent Python references."""
+import json
 import random
+from pathlib import Path
 import sys
 
 from card_dfa import build_card_dfa
@@ -19,17 +21,24 @@ def main(n=200000, seed=42):
     dfas["card"] = build_card_dfa()
     refs = {k: (lambda s, k=k: ref_regex(k, s)) for k in dfas if k != "card"}
     refs["card"] = ref_card
-    bad = 0
+    bad = seeded = pos = 0
     for _ in range(n):
         s = bytes(rng.choice(ALPHA) for _ in range(rng.randint(0, 40)))
         if rng.random() < 0.4:
             s += rng.choice(SEEDS) + bytes(rng.choice(ALPHA) for _ in range(rng.randint(0, 6)))
+            seeded += 1
         for k, d in dfas.items():
-            if d.run(s) != refs[k](s):
+            got = d.run(s)
+            pos += bool(got)
+            if got != refs[k](s):
                 bad += 1
                 if bad <= 10:
                     print("MISMATCH", k, s)
     print(f"{n} strings x {len(dfas)} detectors: {bad} mismatches")
+    out = Path(__file__).resolve().parents[2] / "eval" / "results" / "difftest.json"
+    out.write_text(json.dumps({"strings": n, "detectors": len(dfas), "decisions": n * len(dfas),
+                               "mismatches": bad, "seeded_strings": seeded, "positive_decisions": pos,
+                               "seed_fraction": 0.4}, indent=2))
     return bad
 
 

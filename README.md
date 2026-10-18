@@ -132,7 +132,7 @@ All numbers come from `eval/results/`. They were measured on an Apple M4 Pro CPU
 
 | Check | Result |
 |---|---|
-| 13 automata vs. independent `re`/Luhn references, 300k random strings | 3.9 M / 3.9 M agree |
+| 13 automata vs. independent `re`/Luhn references, 300k random and pattern-seeded strings (64,747 matches) | 3.9 M / 3.9 M agree |
 | Generated Noir circuit vs. references (witness generation) | 300 / 300 agree |
 | Tier-2 forgeries (zeroed labels, flipped signature bit, other key, reused attestation) | 4 / 4 refused |
 
@@ -204,7 +204,7 @@ python3 prover/run.py "Thanks, your order has shipped."
 python3 prover/run_tee.py "Thanks, your order has shipped."
 
 # 3. R1: correctness and forgery checks
-python3 circuits/gen/difftest.py
+python3 circuits/gen/difftest.py 300000   # -> eval/results/difftest.json
 python3 eval/circuit_agreement.py 300
 python3 eval/tee_soundness.py
 

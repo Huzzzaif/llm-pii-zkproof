@@ -8,6 +8,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={ZKPriv: Zero-Knowledge Proofs That LLM Responses Contain No Prohibited Personal Data},pdfauthor={Huzaif Khan, Ghazal Mahdian, Ali Jalooli}}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{microtype}
@@ -39,7 +40,7 @@
 \maketitle
 
 \begin{abstract}
-Cloud LLMs can reproduce personal data, and a provider that filters its outputs offers users and auditors no evidence that it did. We present \sys{}, which attaches to every LLM response a zero-knowledge proof that the response contains no personally identifiable information (PII) forbidden by the provider's registered policy, without revealing the prompt, the response or the model. Detection runs \emph{inside} the circuit: 13 detectors, including a left-to-right Luhn automaton for payment cards, are compiled to minimized search automata, and the proof shows that none reaches an accepting state anywhere in the committed response. Names and places are handled by a second tier, in which an enclave signs named-entity labels that the circuit verifies. Implemented in Noir with zero-knowledge UltraHonk, a 256-byte response is proved in \strictProve{}\,s on a laptop CPU under the strict policy and verified in \strictVerify{}\,ms. On held-out data, \sys{} beats Presidio, Presidio's pattern recognizers, spaCy NER and an LLM detector on structured PII (recall \tAiStrictStruct{} vs.\ \tAiPresStruct{} for Presidio) while over-blocking far less (\tAiStrictOver{} vs.\ \tAiPresOver{}), and it refused \mTotRef{} of \mTotPii{} leaking responses from three LLMs.
+Cloud large language models (LLMs) can reproduce personal data, and a provider that filters its outputs offers users and auditors no evidence that it did. We present \sys{}, which attaches to every LLM response a zero-knowledge proof that the response contains no personally identifiable information (PII) forbidden by the provider's registered policy, without revealing the prompt, the response or the model. Detection runs \emph{inside} the circuit: 13 detectors, including a left-to-right Luhn automaton for payment cards, are compiled to minimized search automata, and the proof shows that none reaches an accepting state anywhere in the committed response. Names and places are handled by a second tier, in which an enclave signs named-entity labels that the circuit verifies. Implemented in Noir with zero-knowledge UltraHonk, a 256-byte response is proved in \strictProve{}\,s on a laptop CPU with the \strictDets{}-detector strict circuit and verified in \strictVerify{}\,ms. On held-out data, \sys{} beats Presidio, Presidio's pattern recognizers, spaCy NER and an LLM detector on structured PII (recall \tAiStrictStruct{} vs.\ \tAiPresStruct{} for Presidio) while over-blocking far less than full Presidio (\tAiStrictOver{} vs.\ \tAiPresOver{}), and it refused \mTotRef{} of \mTotPii{} leaking responses from three LLMs.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -52,27 +53,27 @@ Large language models, zero-knowledge proofs, privacy compliance, PII detection,
 
 Cloud LLMs are increasingly used in healthcare, finance and customer service, where responses may only be released if they do not disclose regulated personal data. LLMs reproduce PII from their prompts, retrieved documents and training data~\cite{carlini2021extracting}. A provider can filter outputs, but a filter offers no evidence to anyone outside the provider: a provider that disables it for one user, or for one request, looks the same to an auditor as one that never did.
 
-Zero-knowledge (ZK) systems for LLMs such as zkLLM~\cite{sun2024zkllm} and zkGPT~\cite{qu2025zkgpt} prove that a committed output came from a committed model, not whether it contains a Social Security number; guardrails~\cite{nemogauardrails,llamaguard2} check content but are not verifiable. Proving compliance over labels that the provider computes outside the proof does not help either: a dishonest prover sets every label to ``not sensitive''. \sys{} \emph{computes} detection inside the circuit for structured PII, and requires names and places to be labelled and signed by an attested enclave over the same commitment.
+Zero-knowledge (ZK) systems for LLMs such as zkLLM~\cite{sun2024zkllm} and zkGPT~\cite{qu2025zkgpt} prove that a committed output came from a committed model, not whether it contains a Social Security number; guardrails~\cite{nemogauardrails,llamaguard2} check content but are not verifiable. Proving compliance over labels that the provider computes outside the proof does not help either: a dishonest prover sets every label to ``not sensitive''. \sys{} \emph{computes} detection inside the circuit for structured PII, and requires names and places to be labeled and signed by an attested enclave over the same commitment.
 
 \sys{} complements input-side protection such as our edge framework SenseCLLM~\cite{sensecllm}, which anonymizes prompts before they reach the cloud: SenseCLLM controls what the model sees, \sys{} certifies what it returns. Zero knowledge matters not for the user, who sees the response, but for everyone else: a forwarded receipt tells an auditor that a response was compliant without revealing it, the prompt or the model, and the provider cannot later deny having certified it.
 
 \textbf{Contributions.}
 \begin{enumerate}[leftmargin=1.2em,itemsep=1pt]
-  \item \textbf{In-circuit absence proofs for structured PII:} detectors compiled to minimized search automata, so ``no match anywhere'' is one check on the final state, including a left-to-right Luhn automaton for payment cards.
+  \item \textbf{PII detectors as absence proofs:} detectors compiled to minimized search automata, so ``no match anywhere'' is one check on the final state, including a left-to-right Luhn automaton for payment cards.
   \item \textbf{A policy-bound receipt:} a Poseidon2~\cite{poseidon2} commitment to the response, its length and padding, the request and a versioned policy, checkable by the user and verifiable by anyone.
-  \item \textbf{A second tier for semantic PII:} enclave-signed NER labels verified in the circuit; tier 1 holds without trusting the enclave.
-  \item \textbf{A measured implementation} in Noir~\cite{noir} with ZK UltraHonk~\cite{barretenberg}, evaluated on held-out data against four baselines and on real LLM outputs, with all code and data released.
+  \item \textbf{A second tier for semantic PII:} enclave-signed named-entity recognition (NER) labels verified in the circuit; tier 1 holds without trusting the enclave.
+  \item \textbf{A measured implementation} in Noir~\cite{noir} with ZK UltraHonk~\cite{barretenberg}, evaluated on held-out data against four baselines and on real LLM outputs, with all code and data released.\footnote{\url{https://github.com/Huzzzaif/llm-pii-zkproof}}
 \end{enumerate}
 
 % ════════════════════════════════════════════════════
 \section{Related Work}
 % ════════════════════════════════════════════════════
 
-\textbf{Private and verifiable inference.} MPC~\cite{dong2023puma,gupta2023sigma}, FHE~\cite{decastro2025encryptedllm,park2025powerformer}, TEEs~\cite{chrapek2025confidentialllm} and prompt sanitization~\cite{tong2025inferdpt,zeng2025privacyrestore} hide data from the provider~\cite{andreoletti2026privacysurvey}; zkLLM, zkGPT and FairProof~\cite{yadav2024fairproof} prove inference or model properties. None certifies an individual response's content; \sys{}'s commitment can serve as the output commitment of such a proof.
+\textbf{Private and verifiable inference.} Multi-party computation~\cite{dong2023puma,gupta2023sigma}, homomorphic encryption~\cite{decastro2025encryptedllm,park2025powerformer}, trusted execution environments (TEEs)~\cite{chrapek2025confidentialllm} and prompt sanitization~\cite{tong2025inferdpt,zeng2025privacyrestore} hide data from the provider~\cite{andreoletti2026privacysurvey}; zkLLM, zkGPT and FairProof~\cite{yadav2024fairproof} prove inference or model properties. None certifies an individual response's content; \sys{}'s commitment can serve as the output commitment of such a proof.
 
 \textbf{ZK proofs over text.} Reef~\cite{reef} proves that a committed document matches, or does not match, a regular expression, and zk-regex~\cite{zkregex} and Londhe~\emph{et al.}~\cite{londhe2026regex} prove regex matches for e-mail verification. Path-witness constructions prove that a match \emph{exists}; they cannot prove absence. \sys{} applies a forced, whole-string automaton run, as in Reef's non-match case, to LLM responses, and adds what output compliance needs: detectors with checksum validation, length and padding binding, policy selection with versioning, and per-request binding. Zero-Knowledge Middleboxes~\cite{zkmiddlebox} prove that encrypted traffic complies with a policy; \sys{} transfers that model to LLM responses.
 
-\textbf{Governance and filtering.} Blockchain audit logs~\cite{jan2025blockchainagentic,ameen2025audittrails} record that a check occurred, not that a response passed it; Presidio~\cite{presidio}, guardrails~\cite{selfcheckgpt} and SenseCLLM filter text without verifiable evidence.
+\textbf{Governance and filtering.} Blockchain audit logs~\cite{jan2025blockchainagentic,ameen2025audittrails} record that a check occurred, not that a response passed it; Presidio~\cite{presidio}, hallucination checks~\cite{selfcheckgpt} and SenseCLLM filter text without verifiable evidence.
 
 % ════════════════════════════════════════════════════
 \section{System Model}
@@ -82,13 +83,13 @@ Zero-knowledge (ZK) systems for LLMs such as zkLLM~\cite{sun2024zkllm} and zkGPT
 \begin{figure}[t]
 \centering
 \input{figs/overview}
-\caption{Data flow. \textbf{1}~The user sends prompt $q$ and a fresh request id. \textbf{2}~The provider's LLM answers $y$; the prover commits to it. \textbf{3}~Optionally, an enclave runs named-entity recognition (NER) on $y$ and signs the labels $\sigma$ with the commitment. \textbf{4}~The prover scans every byte with 13 automata; only if none reaches its accepting state does a proof $\pi$ exist, and the provider returns $y$, the opening $\rho$ and the receipt $r=(\pi,\mathit{com},v,\mathit{pid})$. \textbf{5}~Any auditor verifies $r$ without $y$, using the policy hash for version $v$ from the public registry.}
+\caption{Data flow. \textbf{1}~The user sends prompt $q$ and a fresh request id. \textbf{2}~The provider's LLM answers $y$; the prover commits to it. \textbf{3}~Optionally, an enclave runs named-entity recognition (NER) on $y$ and signs the labels $\sigma$ with the commitment. \textbf{4}~The prover scans every byte with the automata of the enabled detectors; only if none reaches its accepting state does a proof $\pi$ exist, and the provider returns $y$, the opening $\rho$ and the receipt $r=(\pi,\mathit{com},v,\mathit{pid})$. \textbf{5}~Any auditor verifies $r$ without $y$, using the policy hash for version $v$ from the public registry.}
 \label{fig:system}
 \end{figure}
 
 \textbf{Principals.} A user $\mathcal{U}$ sends prompt $q$ with a fresh request identifier $\mathit{pid}$ to a provider $\mathcal{S}$ that runs an LLM. $\mathcal{S}$ publishes policies in an append-only, hash-chained registry $\mathcal{R}$ of records $(v, h_{\mathrm{pol}}^{(v)}, h_{\mathrm{pol}}^{(v-1)}, \tau_v)$. An auditor $\mathcal{V}$ (a regulator or the user) holds the public verification key and reads $\mathcal{R}$ (Fig.~\ref{fig:system}).
 
-\textbf{Protocol.} For response $y$ (UTF-8 bytes, $|y| \le N$), $\mathcal{S}$ samples a blinding value $\rho$ and computes
+\textbf{Protocol.} For response $y$ (UTF-8 bytes, $|y| \le N$, the circuit's capacity), $\mathcal{S}$ samples a blinding value $\rho$ and computes
 \begin{equation}
 \begin{aligned}
   \mathit{com} &= H\bigl(\mathrm{pack}(y\,\|\,0^{N-|y|}),\; |y|,\; \rho,\; \mathit{pid}\bigr),\\
@@ -96,9 +97,9 @@ Zero-knowledge (ZK) systems for LLMs such as zkLLM~\cite{sun2024zkllm} and zkGPT
 \end{aligned}
   \label{eq:com}
 \end{equation}
-where $H$ is a Poseidon2 sponge over BN254 and $m$ is the policy mask. $\mathcal{S}$ proves the statement of Section~\ref{sec:circuit} and returns $(y, \rho, \pi, \mathit{com}, v)$. $\mathcal{U}$ recomputes $\mathit{com}$ from the received $y$ and $\rho$, checks that $h_{\mathrm{pol}}$ equals the registry entry for $v$ and that $v$ is current, and verifies $\pi$. A receipt $(\pi, \mathit{com}, v, \mathit{pid})$ can be forwarded to $\mathcal{V}$, who verifies it without $y$. \sys{} makes compliance \emph{checkable}, not enforced: a provider can always send a response without a proof, so clients treat an unreceipted response as non-compliant, much as a browser rejects a connection without a valid certificate.
+where $H$ is a Poseidon2 sponge over BN254 and $m$ is the policy mask. $\mathcal{S}$ proves the statement of Section~\ref{sec:circuit} and returns $(y, \rho, \pi, \mathit{com}, v)$. $\mathcal{U}$ recomputes $\mathit{com}$ from the received $y$ and $\rho$, checks that $v$ is current, and verifies $\pi$ with $h_{\mathrm{pol}}$ taken from the registry entry for $v$. A receipt $(\pi, \mathit{com}, v, \mathit{pid})$ can be forwarded to $\mathcal{V}$, who verifies it without $y$. \sys{} makes compliance \emph{checkable}, not enforced: a provider can always send a response without a proof, so clients treat an unreceipted response as non-compliant, much as a browser rejects a connection without a valid certificate.
 
-\textbf{Threat model.} $\mathcal{S}$ is malicious: it may run any model, alter or skip filters, and try to certify a response other than the one delivered. The user is honest for its own checks. We consider:
+\textbf{Threat model.} $\mathcal{S}$ is malicious: it may run any model, alter or skip filters, and try to certify a response other than the one delivered. The user performs its own checks honestly. We consider:
 \begin{itemize}[leftmargin=1.1em,itemsep=1pt]
   \item \emph{A1, false certification:} delivering $y^\ast$ containing PII with a valid receipt. Prevented by soundness of the proof together with the user's commitment check, which requires a Poseidon2 collision to open $\mathit{com}$ to a different string.
   \item \emph{A2, policy downgrade:} proving against a weaker, older policy. Prevented by binding $h_{\mathrm{pol}}$ and $v$ to the proof and checking $v$ against the head of $\mathcal{R}$.
@@ -106,7 +107,7 @@ where $H$ is a Poseidon2 sponge over BN254 and $m$ is the policy mask. $\mathcal
   \item \emph{A4, hiding past the end:} placing PII after the declared length. Prevented because the circuit forces every byte beyond $|y|$ to zero and binds $|y|$.
   \item \emph{A5, label forgery (tier 2):} claiming that a response contains no names, or reusing labels from another response. Prevented because the labels must carry the enclave's signature over a digest that includes $\mathit{com}$.
 \end{itemize}
-\textbf{Trust.} Tier 1 (structured PII) needs no trust in a TEE or a classifier binary: the detectors are public circuit code. Tier 2 (names, places, other identifiers recognized by NER) trusts that the enclave's signing key is bound by remote attestation to the published NER code; a compromised enclave can under-label, but cannot weaken tier 1. Out of scope are PII that neither tier expresses (for example digits spelled out as words), cross-query aggregation, and side channels.
+\textbf{Trust.} Tier 1 (structured PII) needs no trust in a TEE or a classifier binary: the detectors are public circuit code. Tier 2 (names, places, other identifiers recognized by NER) trusts that the enclave's signing key is bound by remote attestation to the published NER code; a compromised enclave can under-label, but cannot weaken tier 1.
 
 % ════════════════════════════════════════════════════
 \section{Proving the Absence of Structured PII}
@@ -115,7 +116,7 @@ where $H$ is a Poseidon2 sponge over BN254 and $m$ is the policy mask. $\mathcal
 
 \subsection{From Detectors to Search Automata}
 
-Each detector $D_k$ is a regular expression over bytes with explicit boundaries: an SSN must not be preceded or followed by an alphanumeric byte, so ``1234-56-78901'' is not reported. We write the start and end of the text as a virtual byte $\beta$. To prove that $D_k$ occurs nowhere in $y$, we compile it to a DFA for $\Sigma^\ast D_k$ by Thompson construction and subset construction~\cite{hopcroft_ullman}, re-injecting the start state at every step so that matches beginning at any position, including overlapping ones, are tracked. We then make accepting states absorbing and minimize the DFA. After these steps
+Each detector $D_k$ is a regular expression over bytes with explicit boundaries: an SSN must not be preceded or followed by an alphanumeric byte, so ``1234-56-78901'' is not reported. We write the start and end of the text as a virtual byte $\beta$. To prove that $D_k$ occurs nowhere in $y$, we compile it to a deterministic finite automaton (DFA) for $\Sigma^\ast D_k$ by Thompson's NFA construction and Rabin--Scott subset construction~\cite{hopcroft_ullman}, re-injecting the start state at every step so that matches beginning at any position, including overlapping ones, are tracked. We then make accepting states absorbing and minimize the DFA. After these steps
 \begin{equation}
   D_k \text{ occurs in } \beta y \beta
   \iff \delta_k^\ast(s_0, \beta y \beta) = a_k,
@@ -123,7 +124,7 @@ Each detector $D_k$ is a regular expression over bytes with explicit boundaries:
 \end{equation}
 where $a_k$ is the unique accepting state left by minimization. A witness that ``skips'' a match is impossible: every transition is fixed by the table, so the circuit only checks the final state.
 
-\sys{} ships 13 detectors: SSN; e-mail, including obfuscated forms such as ``name AT host DOT com''; US and international (E.164-style) phone numbers; IPv4; numeric and written dates; dates of birth, i.e.\ a date within 20 characters of a cue such as ``born'' or ``DOB''; payment cards; account numbers (8+ digits); prefixed identifiers (passport, record and account numbers such as \texttt{G34800996} or \texttt{MRN-315378}); and IBAN. A \emph{standard} policy blocks birth dates only, a \emph{strict} policy every date, following HIPAA Safe Harbor's treatment of dates.
+\sys{} ships 13 detectors: SSN; e-mail and obfuscated e-mail (``name AT host DOT com''); US and international (E.164-style) phone numbers; IPv4; numeric and written dates; dates of birth, i.e.\ a date within 20 characters of a cue such as ``born'' or ``DOB''; payment cards; account numbers (8+ digits); prefixed identifiers (passport, record and account numbers such as \texttt{G34800996} or \texttt{MRN-315378}); and IBAN. A \emph{standard} policy blocks birth dates only, a \emph{strict} policy every date, following HIPAA Safe Harbor's treatment of dates.
 
 To shrink the tables we partition the 256 byte values into classes with identical transition columns. A step costs two table lookups: byte to class, then (state, class) to the next state.
 
@@ -134,11 +135,11 @@ Card numbers are 12--19 digits (ISO/IEC 7812; Maestro cards may have 12), option
   S_0' = d + S_1,\qquad S_1' = \mathrm{dbl}(d) + S_0 \pmod{10},
   \label{eq:luhn}
 \end{equation}
-with $\mathrm{dbl}(d) = 2d - 9[d \ge 5]$. A run ending at a non-alphanumeric byte with $12 \le k \le 19$ and $S_0 \equiv 0$ is a card. The automaton has states $(k, S_0, S_1, \text{after-separator})$ plus idle, in-word and too-long states, which minimizes to a few thousand states (Fig.~\ref{fig:cost}).
+with $\mathrm{dbl}(d) = 2d - 9[d \ge 5]$. A run ending at a non-alphanumeric byte with $12 \le k \le 19$ and $S_0 \equiv 0$ is a card. The automaton has states $(k, S_0, S_1, \text{after-separator})$ plus idle, in-word and too-long states, which minimizes to 3,447 states.
 
 \subsection{The Circuit}
 
-The private inputs are the padded bytes $y_0\dots y_{N-1}$, length $\ell$, blinding $\rho$, policy mask $m$ and version $v$; $\mathit{pid}$ is public, and $(\mathit{com}, h_{\mathrm{pol}})$ are public outputs. The circuit enforces:
+The private inputs are the padded bytes $y_0\dots y_{N-1}$, length $\ell=|y|$, blinding $\rho$, policy mask $m$ and version $v$; $\mathit{pid}$ is public, and $(\mathit{com}, h_{\mathrm{pol}})$ are public outputs. The circuit enforces:
 \begin{enumerate}[leftmargin=1.4em,label=\textbf{P\arabic*},itemsep=1pt]
   \item \emph{Length and padding:} $\ell \le N$; $y_i \ne 0$ for $i < \ell$ and $y_i = 0$ for $i \ge \ell$.
   \item \emph{ASCII guard (policy bit 13):} $y_i < 128$ for all $i$, which rejects Unicode digits and look-alike characters that byte-level detectors would otherwise miss.
@@ -149,20 +150,20 @@ A response that violates the policy has no satisfying witness, so the prover fai
 
 \subsection{Tier 2: Enclave-Signed Semantic Labels}
 
-Patterns cannot recognize names or places. In tier 2 the enclave that runs the LLM also runs named-entity recognition (Presidio~\cite{presidio} with spaCy) and sets a label mask $\sigma$ with one bit each for PERSON, LOCATION, NRP and other identifiers (passport, driver licence, bank account). It computes $d = H(\mathit{com}, \sigma)$ and signs $d$ with ECDSA over secp256k1, using a key bound to the enclave by remote attestation. The circuit additionally takes $\sigma$ and the signature as private inputs and the enclave public key as a public input, and enforces
+Patterns cannot recognize names or places. In tier 2 an enclave attested to run published NER code (Presidio~\cite{presidio} with spaCy \texttt{en\_core\_web\_sm}) labels $y$ and sets a label mask $\sigma$ with one bit each for PERSON, LOCATION, NRP (nationality, religious or political group) and other identifiers (passport, driver license, bank account). It computes $d = H(\mathit{com}, \sigma)$ and signs $d$ with ECDSA over secp256k1, using a key bound to the enclave by remote attestation. The circuit additionally takes $\sigma$ and the signature as private inputs and the enclave public key as a public input, and enforces
 \begin{enumerate}[leftmargin=1.4em,label=\textbf{P\arabic*},itemsep=1pt,start=5]
   \item \emph{Signed labels:} $\mathrm{Verify}_{pk}(\mathrm{sig}, H(\mathit{com},\sigma)) = 1$ and $\sigma \wedge m_{\mathrm{sem}} = 0$, where $m_{\mathrm{sem}}$ is the semantic part of the policy mask.
 \end{enumerate}
 Because the digest contains $\mathit{com}$, labels signed for one response cannot be reused for another, and changing $\sigma$ invalidates the signature. The enclave computes $d$ with the same Poseidon2 code as the circuit, so the two cannot disagree.
 
-\textbf{Security.} The relation is $\mathcal{L} = \{(\mathit{pid}, \mathit{com}, h_{\mathrm{pol}}) : \exists (y, \ell, \rho, m, v)$ satisfying P1--P4 (and P5 in tier 2)$\}$. By knowledge soundness of UltraHonk, a verifying proof yields such a witness. By~\eqref{eq:dfa} and the correctness of compilation, which we test differentially (Section~\ref{sec:eval}), the extracted $y$ contains no match of any enabled detector. By collision resistance of Poseidon2, the user's opening $(y, \rho)$ of $\mathit{com}$ equals the extracted $y$, which gives A1; binding $h_{\mathrm{pol}}$, $v$ and $\mathit{pid}$ gives A2 and A3, P1 gives A4, and unforgeability of ECDSA together with the commitment inside the signed digest gives A5. Zero knowledge of the UltraHonk ZK variant hides $y$, $\rho$ and $m$ from $\mathcal{V}$. The guarantee is relative to the detector language: it says that no \emph{expressible} PII is present, not that no PII is present.
+\textbf{Security.} The relation is $\mathcal{L} = \{(\mathit{pid}, \mathit{com}, h_{\mathrm{pol}}) : \exists (y, \ell, \rho, m, v)$ satisfying P1--P4$\}$, with $pk$ and P5 added in tier 2. By knowledge soundness of UltraHonk, a verifying proof yields such a witness. By~\eqref{eq:dfa} and the correctness of compilation, which we test differentially (Section~\ref{sec:eval}), the extracted $y$ contains no match of any enabled detector. By collision resistance of Poseidon2, the user's opening $(y, \rho)$ of $\mathit{com}$ equals the extracted $y$, which gives A1; binding $h_{\mathrm{pol}}$, $v$ and $\mathit{pid}$ gives A2 and A3, P1 gives A4, and unforgeability of ECDSA together with the commitment inside the signed digest gives A5. Zero knowledge of the UltraHonk ZK variant hides $y$ and $\rho$ from $\mathcal{V}$; the policy $m$ is public through the registry. The guarantee is relative to the detector language: it says that no \emph{expressible} PII is present, not that no PII is present.
 
 % ════════════════════════════════════════════════════
 \section{Evaluation}
 \label{sec:eval}
 % ════════════════════════════════════════════════════
 
-\textbf{Setup.} The detector compiler is written in Python and generates the Noir circuit (Noir \nargoVer{}, Barretenberg \bbVer{}, ZK UltraHonk with a Poseidon2 transcript). All timings use one Apple \hwName{} CPU (24\,GB), median of \benchRuns{} runs, with the verification key computed once per circuit. We developed the detectors on 500 ai4privacy~\cite{ai4privacy} records (train split) and 500 synthetic US-format records, then \emph{froze} them and report results on held-out data committed before any tuning: 500 records from the ai4privacy \emph{validation} split and 500 synthetic records from a new seed. All systems use one protocol: a value is caught if any flagged span overlaps it, and a record is \emph{over-blocked} if anything is still flagged after every annotated value is replaced by ``X''. Baselines are Presidio~\cite{presidio} with all recognizers at its default threshold, Presidio's pattern recognizers alone, spaCy NER, and an LLM detector (\texttt{llama3.2:3b} asked to list every PII substring, as in SenseCLLM~\cite{sensecllm}). We report four results, R1--R4.
+\textbf{Setup.} The detector compiler is written in Python and generates the Noir circuit (Noir \nargoVer{}, Barretenberg \bbVer{}, ZK UltraHonk with a Poseidon2 transcript). All timings use one MacBook Pro laptop (Apple \hwName{}, 24\,GB), median of \benchRuns{} runs, with the verification key computed once per circuit. We developed the detectors on 500 ai4privacy~\cite{ai4privacy} records (train split) and 500 synthetic US-format records, then \emph{froze} them and report results on held-out data fixed before any tuning: 500 records from the ai4privacy \emph{validation} split and 500 synthetic records from a new seed. All systems use one protocol: a value is caught if any flagged span overlaps it, and a record is \emph{over-blocked} if anything is still flagged after every annotated value is replaced by ``X''. Baselines are Presidio~\cite{presidio} with all recognizers at its default threshold, Presidio's pattern recognizers alone, spaCy NER, and an LLM detector (\texttt{llama3.2:3b} asked to list every PII substring, as in SenseCLLM~\cite{sensecllm}). We report four results, R1--R4.
 
 
 
@@ -177,39 +178,39 @@ Because the digest contains $\mathit{com}$, labels signed for one response canno
 \toprule
 Check & Result \\
 \midrule
-13 automata vs.\ independent \texttt{re}/Luhn reference on 300k random strings & 3.9\,M/3.9\,M agree \\
+13 automata vs.\ independent \texttt{re}/Luhn reference on \dtStrings{} random and pattern-seeded strings (\dtPos{} matches) & \dtOk{}/\dtDecisions{} agree \\
 Generated Noir circuit vs.\ reference (witness generation) & \agreeOk{}/\agreeCases{} agree \\
-Tier-2 label forgeries: zeroed labels, flipped signature bit, other enclave's key, attestation reused for another response & \teeAttacksRefused{}/\teeAttacks{} refused \\
+Tier-2 forgeries: zeroed labels, flipped signature bit, other enclave's key, labels reused for another response & \teeAttacksRefused{}/\teeAttacks{} refused \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:r1} summarizes the checks. Differential testing exposed two bugs during development, an e-mail boundary error and a mis-parsed \texttt{\textbackslash n} escape in the regex compiler, both fixed before every reported measurement. The enclave is simulated: code and keys are real, hardware attestation is not reproduced.
+In Table~\ref{tab:r1}, differential testing exposed two bugs during development, an e-mail boundary error and a mis-parsed \texttt{\char92 n} escape in the regex compiler, both fixed before any reported measurement. The enclave is simulated: code and keys are real, hardware attestation is not reproduced.
 
 \subsection{R2: Cost}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figs/cost.pdf}
-\caption{R2: proving time against response size (median of \benchRuns{} runs; shaded: interquartile range). Verification stays near \strictVerify{}\,ms and proofs are \proofKBTwoFiftySix{}\,KiB for every size.}
+\caption{R2: proving time against response size (median of \benchRuns{} runs; shaded: interquartile range). Verification takes \strictVerifyLo{}--\strictVerifyHi{}\,ms (strict) and \verifyTwoFiftySix{}\,ms (standard), and proofs are \proofKBTwoFiftySix{}\,KiB, at every size.}
 \label{fig:cost}
 \end{figure}
 
-Policies compile to circuits, and the two we evaluate differ sharply in cost (Fig.~\ref{fig:cost}); a 1\,KB response takes \strictProveOneK{}\,s under the strict policy. The strict circuit, whose generic date detectors already block every date, needs no birth-date detector: with \strictDets{} detectors it has \strictGates{} gates at $N=256$, proves in \strictProve{}\,s with \strictMem{}\,MiB and verifies in \strictVerify{}\,ms, with detection identical to Fig.~\ref{fig:detect} on both held-out sets. The standard circuit adds the context-sensitive birth-date detector, whose ``cue within 20 characters of a date'' automaton contributes \dobGates{} gates (\dobShare{} of the circuit) and raises proving to \proveTwoFiftySix{}\,s (\gatesTwoFiftySix{} gates; \proveTenTwentyFour{}\,s for 1\,KB). Cost is dominated by committing these transition tables once, not by the per-byte scan, so it grows slowly with $N$. Tier 2 adds \teeExtraGates{} gates for ECDSA verification (\teeProve{}\,s on the standard circuit); NER and signing take \teeNerMs{}\,ms and \teeSignMs{}\,ms. The prover already uses all cores of the machine, so running several provers in parallel does not raise throughput (\tputOne{} vs.\ \tputEight{} proofs/s with 1 and 8 provers); throughput scales across machines. Proofs are \proofKBTwoFiftySix{}\,KiB, and proving is shorter than generating the response: the median Llama~3.1~8B response took \mLlamaEightGenS{}\,s.
+Policies compile to circuits, and the two we evaluate differ sharply in cost (Fig.~\ref{fig:cost}); a 1\,KiB response takes \strictProveOneK{}\,s under the strict policy. The strict circuit, whose generic date detectors already block every date, needs no birth-date detector: with \strictDets{} detectors it has \strictGates{} gates at $N=256$, proves in \strictProve{}\,s with \strictMem{}\,MiB and verifies in \strictVerify{}\,ms, with detection identical to Fig.~\ref{fig:detect} on both held-out sets. The standard circuit adds the context-sensitive birth-date detector, whose ``cue within 20 characters of a date'' automaton accounts for \dobSaved{} gates (\dobSavedShare{} of the circuit) and raises proving to \proveTwoFiftySix{}\,s (\gatesTwoFiftySix{} gates; \proveTenTwentyFour{}\,s for 1\,KiB). Cost is dominated by committing these transition tables once, not by the per-byte scan, so it grows slowly with $N$. Tier 2 adds \teeExtraGates{} gates for ECDSA verification (\teeProve{}\,s on the standard circuit); NER and signing take \teeNerMs{}\,ms and \teeSignMs{}\,ms. The prover uses all cores, so parallel provers do not raise throughput (\tputOne{} vs.\ \tputEight{} proofs/s with 1 and 8, including witness generation). Proving is shorter than generating the response: the median Llama~3.1~8B response took \mLlamaEightGenS{}\,s.
 
 \subsection{R3: Detection Against Four Baselines}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figs/detection.pdf}
-\caption{R3: held-out detection of structured PII (SSN, e-mail, phone, card, date of birth, IP). (a) Recall. (b) Over-blocking: records still refused after every annotated PII value is removed. \sys{} uses the strict policy.}
+\caption{R3: held-out detection of structured PII (SSN, e-mail, phone, card, date of birth, IP). (a) Recall. (b) Over-blocking: records still refused after every annotated PII value is replaced by ``X''. Other ID (Table~\ref{tab:r3}) is not included. \sys{} uses the strict policy.}
 \label{fig:detect}
 \end{figure}
 
-On structured PII, \sys{}'s in-circuit detectors beat every baseline on both held-out sets (Fig.~\ref{fig:detect}): strict recall is \tAiStrictStruct{} (95\% CI \tAiStrictStructCI{}) on ai4privacy against \tAiPresStruct{} for Presidio, \tAiPresRxStruct{} for its pattern recognizers, \tAiSpacyStruct{} for spaCy and \tAiLlmStruct{} for the LLM detector, and \tSynStrictStruct{} on synthetic data against \tSynPresStruct{}. It does so while over-blocking far less than Presidio (\tAiStrictOver{} vs.\ \tAiPresOver{}; \tSynStrictOver{} vs.\ \tSynPresOver{}), and the standard policy reaches \tSynStdStruct{} recall with \tSynStdOver{} over-blocking on synthetic data. The largest gains are phone numbers (\tAiStrictGPhone{} vs.\ \tAiPresGPhone{}) and cards (\tAiStrictGCard{} vs.\ \tAiPresGCard{}); Presidio is stronger on ai4privacy's non-US social numbers (\tAiPresGSsnTaxId{} vs.\ \tAiStrictGSsnTaxId{}). Over-blocking on ai4privacy comes mostly from identifiers the dataset leaves unannotated and, under the strict policy, non-birth dates. With all PII including names and places, tier 2 reaches \tAiStrictTAll{} recall at \tAiStrictTOver{} over-blocking against Presidio's \tAiPresAll{} at \tAiPresOver{}: tier 2 inherits the recall of the small NER model it runs, so names remain the weakest category.
+On structured PII, \sys{}'s in-circuit detectors beat every baseline in aggregate structured recall on both held-out sets (Fig.~\ref{fig:detect}): strict recall is \tAiStrictStruct{} (95\% CI \tAiStrictStructCI{}) on ai4privacy against \tAiPresStruct{} for Presidio, \tAiPresRxStruct{} for its pattern recognizers, \tAiSpacyStruct{} for spaCy and \tAiLlmStruct{} for the LLM detector, and \tSynStrictStruct{} on synthetic data against \tSynPresStruct{}. It does so while over-blocking far less than Presidio (\tAiStrictOver{} vs.\ \tAiPresOver{}; \tSynStrictOver{} vs.\ \tSynPresOver{}); Presidio's pattern recognizers over-block \tAiPresRxOver{} and \tSynPresRxOver{}. The strict policy's synthetic over-blocking comes from non-birth dates: the standard policy reaches \tSynStdStruct{} recall with \tSynStdOver{} over-blocking on synthetic data. Over-blocking on ai4privacy comes mostly from identifiers the dataset leaves unannotated and, under the strict policy, non-birth dates. With all PII including names and places, tier 2 reaches \tAiStrictTAll{} recall at \tAiStrictTOver{} over-blocking against Presidio's \tAiPresAll{} at \tAiPresOver{}: tier 2 inherits the recall of the small NER model it runs, so names remain the weakest category.
 
 \begin{table}[t]
-\caption{R3 by category: held-out recall (tier 1, strict policy; names and places use tier 2). Pat.: Presidio's pattern recognizers.}
+\caption{R3 by category: held-out recall (tier 1, strict policy; names and places use tier 2). Pat.: Presidio's pattern recognizers. Bold: \sys{} strictly best.}
 \label{tab:r3}
 \centering\footnotesize
 \setlength{\tabcolsep}{2.5pt}
@@ -220,7 +221,7 @@ On structured PII, \sys{}'s in-circuit detectors beat every baseline on both hel
 Category & $n$ & \sys{} & Presidio & Pat. && $n$ & \sys{} & Presidio & Pat. \\
 \midrule
 SSN / tax ID  & \tAiNSsnTaxId{} & \tAiStrictGSsnTaxId{} & \tAiPresGSsnTaxId{} & \tAiPresRxGSsnTaxId{} && \tSynNSsnTaxId{} & \tSynStrictGSsnTaxId{} & \tSynPresGSsnTaxId{} & \tSynPresRxGSsnTaxId{} \\
-E-mail        & \tAiNEMail{} & \tAiStrictGEMail{} & \tAiPresGEMail{} & \tAiPresRxGEMail{} && \tSynNEMail{} & \tSynStrictGEMail{} & \tSynPresGEMail{} & \tSynPresRxGEMail{} \\
+E-mail        & \tAiNEMail{} & \tAiStrictGEMail{} & \tAiPresGEMail{} & \tAiPresRxGEMail{} && \tSynNEMail{} & \textbf{\tSynStrictGEMail{}} & \tSynPresGEMail{} & \tSynPresRxGEMail{} \\
 Phone         & \tAiNPhone{} & \textbf{\tAiStrictGPhone{}} & \tAiPresGPhone{} & \tAiPresRxGPhone{} && \tSynNPhone{} & \textbf{\tSynStrictGPhone{}} & \tSynPresGPhone{} & \tSynPresRxGPhone{} \\
 Card          & \tAiNCard{} & \textbf{\tAiStrictGCard{}} & \tAiPresGCard{} & \tAiPresRxGCard{} && \tSynNCard{} & \textbf{\tSynStrictGCard{}} & \tSynPresGCard{} & \tSynPresRxGCard{} \\
 Date of birth & \tAiNDateOfBirth{} & \textbf{\tAiStrictGDateOfBirth{}} & \tAiPresGDateOfBirth{} & \tAiPresRxGDateOfBirth{} && \tSynNDateOfBirth{} & \tSynStrictGDateOfBirth{} & \tSynPresGDateOfBirth{} & \tSynPresRxGDateOfBirth{} \\
@@ -233,7 +234,7 @@ Place (tier 2) & \tAiNPlace{} & \tAiStrictTGPlace{} & \tAiPresGPlace{} & -- && -
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:r3} breaks recall down by category. \sys{}'s lead comes from international phone numbers with mixed dot, space and hyphen separators (e.g.\ \texttt{+44.88 299-2125}), which Presidio misses; from 18- and 19-digit cards; and from birth dates in month/year form (\texttt{October/17}). Presidio leads on ai4privacy's tax numbers, whose non-US formats (\texttt{77739.08202}) our US-centred SSN detector does not express, and on ``Other ID'', where our misses are ID cards with trailing letters (\texttt{IV45087AW}) and licence numbers with embedded name fragments. Both gaps are detector-language gaps, not proof-system gaps: adding a pattern adds an automaton, and the proof covers it with no change to the protocol.
+Table~\ref{tab:r3} breaks recall down by category. \sys{}'s lead comes from international phone numbers with mixed dot, space and hyphen separators (e.g.\ \texttt{+44.88 299-2125}), which Presidio misses; from 18- and 19-digit cards; and from birth dates in month/year form (\texttt{October/17}). Presidio leads on ai4privacy's tax numbers, whose non-US formats (\texttt{77739.08202}) our US-centered SSN detector does not express, and on ``Other ID'', where our misses are ID cards with trailing letters (\texttt{IV45087AW}) and license numbers with embedded name fragments. Both gaps are detector-language gaps, not proof-system gaps: adding a pattern adds an automaton, and the proof covers it with no change to the protocol.
 
 \subsection{R4: Real LLM Outputs}
 
@@ -244,7 +245,7 @@ Table~\ref{tab:r3} breaks recall down by category. \sys{}'s lead comes from inte
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
-Model & Leaking & Refused & Benign refused \\
+Model & Leaking & Refused & General refused \\
 \midrule
 Qwen 2.5 7B   & \mQwenPii{}       & \mQwenRef{}       & \mQwenBenRef{}/\mQwenBen{} \\
 Llama 3.1 8B  & \mLlamaEightPii{} & \mLlamaEightRef{} & \mLlamaEightBenRef{}/\mLlamaEightBen{} \\
@@ -255,28 +256,24 @@ Total         & \mTotPii{}        & \mTotRef{}        & \mTotBenref{}/\mTotBen{}
 \end{tabular}
 \end{table}
 
-Each model received 50 held-out synthetic records (temperature 0) and was asked to list the record's identifiers, to draft a reply confirming the contact details on file, or to repeat the record verbatim, plus one general question without a record. A response is \emph{leaking} if it reproduces an identifier from the record. \sys{} refused every leaking response, catching \mTotCaught{} of the \mTotVals{} reproduced values, and no general answer (Table~\ref{tab:r4}). The Llama models mostly declined to list or repeat identifiers, while Qwen complied with almost every request.
+Each model received 50 held-out synthetic records (temperature 0) and was asked to list the record's identifiers, to draft a reply confirming the contact details on file, or to repeat the record verbatim, plus one general question without a record. A response is \emph{leaking} if it reproduces an identifier from the record. \sys{} refused every leaking response, catching \mTotCaught{} of the \mTotVals{} reproduced values, and none of the \mTotBen{} general answers (Table~\ref{tab:r4}). It also refused \mExtraRef{} responses with altered or invented identifiers. The Llama models mostly declined to list or repeat identifiers, while Qwen complied with almost every request.
 
 \subsection{Deployment}
 
-\textbf{When a proof fails.} A failed proof is a policy decision, not an error: the provider can regenerate the response, redact the matched span and prove the redacted text, or return a refusal.
+\textbf{Changing a policy.} A policy is a mask over the detectors compiled into a circuit, so changing it only appends a registry record. Adding a detector, or specializing a circuit to a policy as our strict circuit does, yields a new verification key published with that record; the receipt's $v$ thus identifies the detector set.
 
-\textbf{Changing a policy.} A policy is a mask over compiled detectors, so enabling or disabling one needs no new setup; only the registry gains a record $(v, h_{\mathrm{pol}}^{(v)}, h_{\mathrm{pol}}^{(v-1)}, \tau_v)$. Adding a \emph{new} detector produces a new circuit and verification key, which the provider publishes beside the registry entry. Because the receipt names $v$, an auditor can tell which detector set certified a past response.
-
-\textbf{Composition with SenseCLLM.} SenseCLLM~\cite{sensecllm} anonymizes prompts at the edge before they reach the cloud, and \sys{} certifies the cloud's response. Together they cover both directions of an LLM exchange: personal data that the edge filter misses, or that the model draws from training data or retrieved documents, still cannot appear in a receipted response. The two are independent: \sys{} needs no edge device, and SenseCLLM needs no proof system.
-
-\textbf{Adaptive evasion.} A provider that wants to leak cannot obtain a receipt for a response that matches an enabled pattern, but it can re-encode the value. Unicode digits and look-alike characters fail the ASCII guard (P2), and the obfuscated e-mail detector catches ``AT''/``DOT'' spellings. Digits spelled as words, values split across responses, and encodings such as base64 are not expressed by tier~1; each needs a further detector, at the cost of more over-blocking.
+\textbf{Adaptive evasion.} A provider that wants to leak can re-encode a value. Unicode digits and look-alike characters fail the ASCII guard (P2), and ``AT''/``DOT'' e-mails are detected; digits spelled as words, values split across responses and base64 each need a further detector, at the cost of more over-blocking.
 
 \subsection{Limitations}
 \label{sec:limits}
 
-\sys{} certifies the absence of PII that its two tiers express. Tier 1 is exact for its patterns but not for paraphrase such as digits spelled as words. Tier 2 is only as good as its NER model and trusts enclave attestation, which our prototype simulates. Our data are synthetic or semi-synthetic; responses longer than $N$ need a larger circuit or chunked proofs; and per-response checks do not bound leakage across many queries. The guarantee also depends on the detector compiler, which we test differentially rather than verify formally.
+\sys{} certifies the absence of PII that its two tiers express. Tier 2 is only as good as its NER model and trusts enclave attestation, which our prototype simulates. Our data are synthetic or semi-synthetic; responses longer than $N$ need a larger circuit or chunked proofs; and per-response checks do not bound leakage across many queries. The guarantee also depends on the detector compiler, which we test differentially rather than verify formally.
 
 % ════════════════════════════════════════════════════
 \section{Conclusion}
 % ════════════════════════════════════════════════════
 
-\sys{} turns an LLM provider's privacy promise into a receipt anyone can check: a zero-knowledge proof, computed in \strictProve{}\,s on a laptop CPU, that a response contains no PII forbidden by the registered policy, with detection inside the circuit rather than asserted by the provider. On held-out data it beats four baselines on structured PII while over-blocking far less than Presidio, and it refused every leaking response from three LLMs. Future work will run tier 2 on attested hardware, use stronger NER models, aggregate receipts across queries, and compose \sys{} with inference-correctness proofs.
+\sys{} turns an LLM provider's privacy promise into a receipt anyone can check: a zero-knowledge proof, computed in \strictProve{}\,s on a laptop CPU, that a response contains no PII forbidden by the registered policy, with detection inside the circuit rather than asserted by the provider. On held-out data it beats four baselines in structured-PII recall while over-blocking far less than full Presidio, and it refused every leaking response from three LLMs. Future work will run tier 2 on attested hardware, use stronger NER models, aggregate receipts across queries, and compose \sys{} with inference-correctness proofs.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

@@ -1,0 +1,9 @@
+{
+  "strings": 300000,
+  "detectors": 13,
+  "decisions": 3900000,
+  "mismatches": 0,
+  "seeded_strings": 120134,
+  "positive_decisions": 64747,
+  "seed_fraction": 0.4
+}

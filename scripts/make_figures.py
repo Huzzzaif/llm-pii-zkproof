@@ -67,7 +67,7 @@ plt.close(fig)
 cmp = load("compare_test.json")
 SYSB = [("zkpriv_strict", "ZKPriv"), ("presidio", "Presidio"), ("presidio_rx", "Presidio patterns"),
         ("spacy_ner", "spaCy NER"), ("llm", "LLM detector")]
-DS = [("ai4privacy_test_500", "ai4privacy", BLUE), ("synth_test_500", "Synthetic US", ORANGE)]
+DS = [("ai4privacy_test_500", "ai4privacy", BLUE), ("synth_test_500", "Synthetic", ORANGE)]
 fig, axes = plt.subplots(1, 2, figsize=(COL_W, 1.9), sharey=True, gridspec_kw={"wspace": 0.12})
 h = 0.38
 ys = list(range(len(SYSB)))[::-1]

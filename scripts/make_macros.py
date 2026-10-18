@@ -149,6 +149,13 @@ for fn, tag in models:
     tot["ben"] += sm["benign_responses"]; tot["benref"] += sm["benign_refused"]
     for v in sm["per_type_value_caught"].values():
         tot["vals"] += v["n"]; tot["caught"] += v["caught"]
+extra = 0
+for fn, tag in models:
+    f = R / fn
+    if f.exists():
+        extra += sum(1 for x in json.loads(f.read_text())["rows"]
+                     if not x["pii_present"] and x["kind"] != "benign" and x["detectors_fired"])
+mac("mExtraRef", extra)
 if tot["resp"]:
     for k, v in tot.items():
         mac("mTot" + k.capitalize(), v)
@@ -169,6 +176,24 @@ if bench:
     bd = bench["breakdown_n256"]
     mac("dobGates", comma(bd["dob"] - bd["none"]))
     mac("dobShare", f"{100 * (bd['dob'] - bd['none']) / bd['all']:.0f}\\%")
+    if bs.exists():
+        saved = bd["all"] - r256["gates"]
+        mac("dobSaved", comma(saved))
+        mac("dobSavedShare", f"{100 * saved / bd['all']:.0f}\\%")
+    mac("cardGates", comma(bd["card"] - bd["none"]))
+    sv = sorted(1000 * r["verify_s"] for r in b2["scaling"]) if bs.exists() else []
+    if sv:
+        mac("strictVerifyLo", f"{sv[0]:.0f}"); mac("strictVerifyHi", f"{sv[-1]:.0f}")
+    mac("stdWitness", f"{[r for r in bench['scaling'] if r['N'] == 256][0]['witness_s']['median']:.2f}")
+
+# ---- differential test
+dt = R / "difftest.json"
+if dt.exists():
+    d = json.loads(dt.read_text())
+    mac("dtStrings", f"{d['strings'] // 1000}k")
+    mac("dtDecisions", f"{d['decisions'] / 1e6:.1f}\\,M")
+    mac("dtOk", f"{(d['decisions'] - d['mismatches']) / 1e6:.1f}\\,M")
+    mac("dtPos", comma(d["positive_decisions"]))
 
 # ---- throughput
 if bench and "throughput_n256" in bench:
