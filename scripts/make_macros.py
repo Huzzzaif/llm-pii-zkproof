@@ -128,6 +128,8 @@ if ct.exists():
             for g, v in d["per_group"].items():
                 gk = "".join(w.capitalize() for w in g.replace("/", " ").replace("-", " ").split())
                 mac(f"t{tag}{short}G{gk}", f"{v['recall']:.2f}")
+                if k == "zkpriv_strict":
+                    mac(f"t{tag}N{gk}", v["n"])
 
 # ---- multi-model real-LLM study
 models = [("llm_outputs_llama31_8b.json", "LlamaEight"), ("llm_outputs_qwen25_7b.json", "Qwen"),
