@@ -1,0 +1,118 @@
+% =====================================================================
+% Fig. 1 — ZKPriv overview (thesis-figure-skill, mode C, medium + hero)
+% Core claim:  the provider can only produce a receipt if every in-circuit
+%              automaton scans the committed response without reaching an
+%              accepting state; reaching one (PII) leaves no proof.
+% Archetype:   protocol flow with one central hero.
+% Evidence:    hero = white prover box with a byte strip feeding a state
+%              chain that either never accepts (green, => proof) or reaches
+%              the accepting state a_k (red, => no proof).
+% Can it be less?  Commitment / verifier-key boxes and metrics panel removed.
+% Layout (form B), width <= 8.5 cm: provider zone right (LLM, optional
+% tier-2 enclave, hero), user left, auditor + registry strip below.
+% Revision 3 (after 4-lens review): enclave input y; receipt r defined in
+%   caption; neutral byte text; accept/reject branch in hero; step markers
+%   on the outer (left) side of their own arrow; no label crosses the zone
+%   border; LLM/enclave edges aligned with the hero; white hero; smaller
+%   secondary text; provider label inside the zone; tighter bottom row.
+%
+% Included by paper.tex via \input{figs/overview}. Needs TikZ libraries:
+% arrows.meta, bending, positioning, fit, backgrounds, calc.
+% =====================================================================
+\definecolor{provBg}{HTML}{EAF2FC}   \definecolor{provLine}{HTML}{2A78D6}
+\definecolor{encBg}{HTML}{FFF6DD}    \definecolor{encLine}{HTML}{C98500}
+\definecolor{userFill}{HTML}{E3F5EC} \definecolor{userLine}{HTML}{1B8F63}
+\definecolor{regFill}{HTML}{F2F1EE}  \definecolor{regLine}{HTML}{6B6A64}
+\definecolor{okGreen}{HTML}{1B8F63}  \definecolor{badRed}{HTML}{C0392B}
+\definecolor{ink}{HTML}{1F1F1E}
+\pgfdeclarelayer{zone}\pgfdeclarelayer{panel}
+\pgfsetlayers{zone,panel,main}
+\begin{tikzpicture}[
+  font=\footnotesize, text=ink,
+  box/.style={rectangle, rounded corners=2.5pt, align=center, inner sep=3pt,
+              minimum height=6.5mm, line width=0.6pt, font=\scriptsize},
+  user/.style={box, fill=userFill, draw=userLine, minimum width=11mm},
+  llm/.style={box, fill=white, draw=provLine, minimum width=11mm},
+  enc/.style={box, fill=encBg, draw=encLine, densely dashed},
+  reg/.style={box, fill=regFill, draw=regLine},
+  arrow/.style={-{Stealth[length=4pt 1.3, width'=0pt 0.6]}, line width=0.8pt,
+                shorten >=0.5pt, shorten <=0.5pt, color=black!70},
+  arrowd/.style={arrow, densely dashed, color=encLine},
+  lbl/.style={font=\scriptsize},
+  stp/.style={circle, fill=ink, text=white, inner sep=0.5pt, font=\scriptsize\bfseries},
+  byte/.style={draw=provLine!60, fill=white, minimum width=3.0mm, minimum height=3.4mm,
+               inner sep=0pt, font=\scriptsize\ttfamily},
+  st/.style={circle, draw=provLine, fill=provLine!25, minimum size=2.4mm, inner sep=0pt},
+]
+
+% ---------------- hero: prover with accept/reject automaton story ----------------
+\node[font=\footnotesize\bfseries, anchor=west] (htitle) at (0,0) {ZKPriv prover (in ZK)};
+\foreach \c [count=\i from 0] in {Y,o,u,r,{},o,r,d,e,r}{
+  \node[byte] (b\i) at ($(htitle.south west)+(0.15+\i*0.30, -0.34)$) {\c};
+}
+\node[anchor=west, font=\scriptsize] at ($(b9.east)+(0.02,0)$) {\dots};
+\foreach \i in {0,2,4,6,8}{ \node[st] (s\i) at ($(b\i)+(0,-0.46)$) {}; }
+\foreach \i/\j in {0/2,2/4,4/6,6/8}{
+  \draw[-{Stealth[length=2pt]}, line width=0.45pt, color=provLine] (s\i) -- (s\j);
+}
+\node[anchor=west, font=\scriptsize, text=okGreen] (ok) at ($(s8.east)+(0.30,0.12)$)
+      {no accept $\Rightarrow$ $\pi$ \checkmark};
+\draw[-{Stealth[length=2pt]}, line width=0.45pt, color=okGreen] (s8) -- (ok.west);
+\node[circle, draw=badRed, double, double distance=0.6pt, minimum size=2.6mm, inner sep=0pt,
+      fill=badRed!12] (ak) at ($(s8)+(0.55,-0.42)$) {};
+\node[anchor=west, font=\scriptsize, text=badRed] (bad) at ($(ak.east)+(0.06,0)$)
+      {$a_k$ (PII) $\Rightarrow$ no $\pi$};
+\draw[-{Stealth[length=2pt]}, line width=0.45pt, color=badRed, densely dashed] (s8) -- (ak);
+\node[anchor=north west, font=\scriptsize, align=left, text=ink!85] (hfoot)
+      at ($(b0.west |- ak.south)+(0,-0.06)$)
+      {13 automata scan every byte; also binds\\
+       length, padding, $\mathit{com}$, policy hash $h_{\mathrm{pol}}$};
+\begin{pgfonlayer}{panel}
+  \node[draw=provLine, line width=1.1pt, fill=white, rounded corners=3pt,
+        fit=(htitle)(b0)(b9)(s0)(ok)(bad)(hfoot), inner sep=3pt] (hero) {};
+\end{pgfonlayer}
+
+% ---------------- provider zone: LLM + optional enclave above the hero ----------------
+\node[llm, anchor=south west] (llm) at ($(hero.north west)+(0,0.40)$) {LLM};
+\node[enc, anchor=south east] (enc) at ($(hero.north east)+(0,0.40)$)
+      {Enclave (tier 2, opt.)\\NER $\sigma$; signs $H(\mathit{com},\sigma)$};
+\node[font=\scriptsize\bfseries, text=provLine, anchor=south west] (plabel)
+      at ($(llm.north west)+(0,0.03)$) {Provider $\mathcal{S}$};
+\begin{pgfonlayer}{zone}
+  \node[draw=provLine!70, fill=provBg, rounded corners=4pt, fit=(hero)(llm)(enc)(plabel),
+        inner sep=3.5pt] (prov) {};
+\end{pgfonlayer}
+
+% ---------------- user (left), auditor + registry (below zone) ----------------
+\node[user, anchor=east] (user) at ($(prov.west |- llm)+(-0.8,0)$) {User\\$\mathcal{U}$};
+\node[user, anchor=north] (aud) at ($(user.south |- prov.south)+(0,-0.30)$) {Auditor\\$\mathcal{V}$};
+\node[reg, anchor=east] (reg) at ($(prov.east |- aud)$) {Policy registry $\mathcal{R}$};
+
+% ---------------- data flow ----------------
+% 1: user -> LLM (label + marker on the user side, outside the zone)
+\draw[arrow] (user.east) -- (llm.west);
+\node[lbl, anchor=south] at ($(user.east)!0.5!(prov.west |- user.east)+(0,0.02)$) {$q,\mathit{pid}$};
+\node[stp, anchor=north] at ($(user.east)!0.5!(prov.west |- user.east)+(0,-0.04)$) {1};
+% 2: LLM -> prover
+\draw[arrow] (llm.south) -- node[left]{\tikz\node[stp]{2};} node[right, lbl]{$y$}
+      (llm.south |- hero.north);
+% enclave input
+\draw[arrowd] (llm.east) -- node[above, lbl, text=encLine]{$y$} (enc.west);
+% 3: enclave -> prover
+\draw[arrowd] (enc.south) -- node[left]{\tikz\node[stp]{3};}
+      node[right, lbl, text=encLine]{$\sigma,\mathit{sig}$} (enc.south |- hero.north);
+% 4: prover -> user through the gutter; label right of the leg, marker left
+\coordinate (g4) at ($(user.east |- hero.west)+(-0.18,0)$);
+\draw[line width=0.8pt, color=black!70] (hero.west) -- (g4);
+\draw[arrow] (g4) -- (g4 |- user.south);
+\node[lbl, anchor=west] at ($(g4)!0.55!(g4 |- user.south)+(0.05,0)$) {$y,\rho,r$};
+\node[stp, anchor=east] at ($(g4)!0.55!(g4 |- user.south)+(-0.05,0)$) {4};
+% 5: user -> auditor (receipt r without y); label + marker left of the line
+\coordinate (g5a) at ($(user.south)+(-0.30,0)$);
+\coordinate (g5b) at ($(aud.north)+(-0.30,0)$);
+\draw[arrow] (g5a) -- (g5b);
+\node[stp, anchor=east] at ($(g5a)!0.30!(g5b)+(-0.05,0)$) {5};
+\node[lbl, anchor=east, align=right] at ($(g5a)!0.65!(g5b)+(-0.05,0)$) {$r$\\(no $y$)};
+% registry -> auditor
+\draw[arrow] (reg.west) -- node[above, lbl]{$h_{\mathrm{pol}}^{(v)}$} (aud.east);
+\end{tikzpicture}
